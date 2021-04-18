@@ -1,0 +1,124 @@
+% This file was created with JabRef 2.11.1.
+% Encoding: Cp1252
+
+
+@Book{fernandez2015,
+  Title                    = {Learning {ROS} for Robotics Programming: Your one-stop guide to the {R}obot {O}perating {S}ystem},
+  Author                   = {Enrique Fern\'andez and Luis S\'anchez Crespo and Anil Mahtani and Aaron Martinez},
+  Publisher                = {Packt Publishing},
+  Year                     = {2015},
+  Edition                  = {2},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:46}
+}
+
+@Book{lentin2015,
+  Title                    = {{L}earning Robotics Using {P}ython: {D}esign, simulate, program, and prototype an interactive autonomous mobile robot from scratch with the help of {P}ython, {ROS}, and {O}pen-{CV}},
+  Author                   = {Lentin Joseph},
+  Publisher                = {Packt Publishing},
+  Year                     = {2015},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:36}
+}
+
+@Book{lentin2017,
+  Title                    = {{ROS} {R}obotics {P}rojects: {B}uild a variety of awesome robots that can see, sense, move, and do a lot more using the powerful {R}obot {O}perating {S}ystem},
+  Author                   = {Lentin Joseph},
+  Publisher                = {Packt Publishing},
+  Year                     = {2017},
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\ROS-Robotics-Projects (1).pdf:PDF},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:51}
+}
+
+@Book{lentin2018,
+  Title                    = {Mastering {ROS} for Robotics Programming: Design, build, and simulate complex robots using the {R}obot {O}perating {S}ystem},
+  Author                   = {Lentin Joseph and Jonathan Cacace},
+  Publisher                = {Packt Publishing},
+  Year                     = {2018},
+  Edition                  = {2},
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\Lentin Joseph_ Jonathan Cacace - Mastering ROS for Robotics Programming - 2E (2018).pdf:PDF},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:53}
+}
+
+@Book{lentin2019,
+  Title                    = {{ROS} {R}obotics {P}rojects: {B}uild and control robots powered by the {R}obot {O}perating {S}ystem, {M}achine {L}earning, and {V}irtual {R}eality},
+  Author                   = {Ramkumar Gandhinathan and Lentin Joseph},
+  Publisher                = {Packt Publishing},
+  Year                     = {2019},
+  Edition                  = {2},
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\Lentin Joseph et al.- ROS Robotics Projects_ Build And Control Robots Powered By ROS, ML, And VR (2019).pdf:PDF},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:51}
+}
+
+@Book{mahtani2016,
+  Title                    = {{E}ffective Robotics Programming with {ROS}: {F}ind out everything you need to know t0 build powerful
+robots with the most up-to-date {ROS}},
+  Author                   = {Anil Mahtani and Luis S\'anchez and Enrique Fern\'andez and Aaron Martinez},
+  Publisher                = {Packt Publishing},
+  Year                     = {2016},
+  Edition                  = {3},
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\9781786463654-EFFECTIVE_ROBOTICS_PROGRAMMING_WITH_ROS_THIRD_EDITION.pdf:PDF},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:55}
+}
+
+@Book{mahtani2018,
+  Title                    = {{ROS} {P}rogramming: {B}uilding Powerful Robots},
+  Author                   = {Anil Mahtani and Luis Sanchez and Enrique Fernandez and Aaron Martinez and Lentin Joseph},
+  Publisher                = {Packt Publishing},
+  Year                     = {2018},
+  Month                    = mar,
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\Anil Mahtani et al. - ROS Programming_ Building Powerful Robots (2018).pdf:PDF},
+  ISBN                     = {9781788627436},
+  Timestamp                = {2020-12-27 13:02},
+  Url                      = {https://github.com/PacktPublishing/ROS-Programming-Building-Powerful-Robots}
+}
+
+@Book{newman2018,
+  Title                    = {A Systematic Approach to Learning Robot Programming with {ROS}},
+  Author                   = {Wyatt S. Newman},
+  Publisher                = {CRC Press},
+  Year                     = {2018},
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\A Systematic Approach to Learning Robot Programming with ROS (2017).pdf:PDF},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:59}
+}
+
+@TechReport{okane2014,
+  Title                    = {A Gentle Introduction to {ROS}},
+  Author                   = {Jason M. O’Kane},
+  Institution              = {{U}niversity of {S}outh {C}arolina},
+  Year                     = {2014},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:30}
+}
+
+@Book{pyo2017,
+  Title                    = {{ROS} Robot Programming},
+  Author                   = {{Y}oon{S}eok {P}yo and {H}an{C}heol {C}ho and {R}yu{W}oon {J}ung and {T}ae{H}oon {L}im},
+  Publisher                = {{R}obotis {C}o. {L}td},
+  Year                     = {2017},
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\ROS_Robot_Programming_EN.pdf:PDF},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 12:56}
+}
+
+@Book{quigley2016,
+  Title                    = {Programming Robots with {ROS}},
+  Author                   = {Morgan Quigley and Brian Gerkey and William D. Smart},
+  Publisher                = {{O}'{R}eilly {M}edia {I}nc.},
+  Year                     = {2016},
+  File                     = {:H\:\\$$ DESKTOP EBOOKS\\ROS\\Programming-Robots-with-ROS-A-Practical-Introduction-to-the-Robot-Operating-System.pdf:PDF},
+  Owner                    = {3537},
+  Timestamp                = {2020-12-27 13:02}
+}
+
+@comment{jabref-meta: databaseType:bibtex;}
+
+@comment{jabref-meta: fileDirectoryLatex-3537-Dalvi:F:\\$$$ VNIT\\reports n ppts subset2020-03-25;}
+
+@comment{jabref-meta: fileDirectoryLatex-Mohsin-Dalvi:F:\\$$$ VNIT\\reports n ppts subset2020-03-25;}
+
