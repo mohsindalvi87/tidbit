@@ -7,17 +7,10 @@ Ramkumar Gandhinathan and Lentin Joseph.
   {R}eality}.
 \newblock Packt Publishing, 2 edition, 2019.
 
-\bibitem{fernandez2015}
-Enrique Fern\'andez, Luis~S\'anchez Crespo, Anil Mahtani, and Aaron Martinez.
-\newblock {\em Learning {ROS} for Robotics Programming: Your one-stop guide to
-  the {R}obot {O}perating {S}ystem}.
-\newblock Packt Publishing, 2 edition, 2015.
-
-\bibitem{lentin2015}
-Lentin Joseph.
-\newblock {\em {L}earning Robotics Using {P}ython: {D}esign, simulate, program,
-  and prototype an interactive autonomous mobile robot from scratch with the
-  help of {P}ython, {ROS}, and {O}pen-{CV}}.
-\newblock Packt Publishing, 2015.
+\bibitem{kok2017}
+Manon Kok, Jeroen~D. Hol, and Thomas~B. Sch{\"o}n.
+\newblock Using inertial sensors for position and orientation estimation.
+\newblock {\em Foundations and Trends in Signal Processing}, 11(1-2):1--153,
+  2017.
 
 \end{thebibliography}
