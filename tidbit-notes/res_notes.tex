@@ -5,22 +5,30 @@
 \usepackage{lmodern}
 %\usepackage{microtype}
 \usepackage[margin=2cm]{geometry}
-\usepackage{enumitem, microtype}
+\usepackage{lscape,enumitem,microtype}
 \tolerance=1 \emergencystretch=\maxdimen \hyphenpenalty=10000 \hbadness=10000
 \setlength{\parindent}{0em} \setlength{\parskip}{1em}
-\usepackage{lscape}
-\usepackage{physics}
-\usepackage{amsmath, amsfonts, amssymb, amsthm, bm} % bm for italic-bold in math
-\usepackage{booktabs, multirow, multicol, makecell, array, longtable}
+
+\usepackage{physics,siunitx}
+\sisetup{per-mode=symbol-or-fraction, bracket-unit-denominator=false}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,bm} % bm for italic-bold in math
+\usepackage{booktabs,multirow,multicol,makecell,array,longtable}
 \usepackage{graphicx}
+\usepackage{caption}
 \usepackage[caption=false]{subfig}%{subcaption}
+
 %\usepackage{algorithm}
-\usepackage{algorithmic}
-\newcommand{\algorithmicinput}{\textbf{Input:}}
-\newcommand{\INPUT}{\item[\algorithmicinput]}
-\newcommand{\algorithmicoutput}{\textbf{Output:}}
-\newcommand{\OUTPUT}{\item[\algorithmicoutput]}
+%\usepackage{algorithmic}
+%\algsetup{linenosize=\small,linenodelimiter=.}
+%\DeclareCaptionFormat{algor}{%
+%	\hrulefill\par\offinterlineskip\vskip1pt%
+%	\textbf{#1#2}#3\offinterlineskip\hrulefill}
+%\DeclareCaptionStyle{algori}{singlelinecheck=off,format=algor,labelsep=space}
+%\captionsetup[algorithm]{style=algori}
+\newcommand{\INPUT}{\item[\textbf{Input:}]}
+\newcommand{\OUTPUT}{\item[\textbf{Output:}]}
 \usepackage[ruled,linesnumbered,vlined]{algorithm2e} % [ruled,vlined]
+
 \usepackage{hyperref}
 \usepackage[nameinlink]{cleveref} %[noabbrev,nameinlink]
 

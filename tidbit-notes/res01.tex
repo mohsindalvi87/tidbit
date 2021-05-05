@@ -3,12 +3,7 @@
 
 \section{Summary of Jeroen Hol}
 
-Pose Estimation and Calibration Algorithms for Vision and Inertial Sensors \\
-20088\\
-Division of Automatic Control\\
-Department of Electrical Engineering\\
-Link{\"o}ping University, Sweden
-
+Pose Estimation and Calibration Algorithms for Vision and Inertial Sensors \\  20088 \\  Division of Automatic Control \\  Department of Electrical Engineering \\  Link{\"o}ping University, Sweden
 
 Augmented reality (AR) involves overlaying a real scene with computer generated graphics in real-time by showing the virtual objects on see-through head-mounted displays or superimposing them on live video imagery. In order to have realistic augmentation, i.e.,  positioning and aligning the virtual objects correctly with the real world, it is essential to know the position and orientation (pose) of the camera with high accuracy and low latency. A ?vision only approach? gives good absolute accuracy, but is difficult to run at high frame rate and is not robust during fast motions. An  inertial measurement unit (IMU) is accurate for a short period and is drift-prone for longer time scales. 
 
@@ -22,9 +17,9 @@ J. D. Hol, T. B. Sch{\"o}n, and F. Gustafsson. On resampling algorithms for part
 G. Hendeby, J. D. Hol, R. Karlsson, and F. Gustafsson. A graphics processing unit
 implementation of the particle filter. In Proceedings of European Signal Processing Conference, Pozn{\'a}n, Poland, Sept. 2007.
 
-\subsection{System overview}
+\subsection{Robust real-time tracking by fusing measurements from inertial and vision 	sensors} %	System overview
 
-The pose of a camera is estimated in real-time by fusing measurements from  inertial sensors (accelerometers and rate gyroscopes) and a camera. The non-linear state estimation is based on a multi-rate extended Kalman filter using a dynamic model with 22 states, where 100 Hz inertial measurements and 12.5 Hz correspondences from vision are processed. The vision measurements are based on natural landmarks, which are detected guided by pose predictions. The measurements from the sensors are used directly rather than being processed to a vision based pose or an inertial based pose. Accurate short time pose estimates are available using the information from the IMU, reducing the need for fast vision updates, which would otherwise require high frame rates and compute.
+The pose of a camera is estimated in real-time by fusing measurements from inertial sensors (accelerometers and rate gyroscopes) and a camera. The non-linear state estimation is based on a multi-rate extended Kalman filter using a dynamic model with 22 states, where \SI{100}{\Hz} inertial measurements and \SI{12.5}{\Hz} correspondences from vision are processed.Vision measurements are based on natural landmarks, which are detected guided by pose predictions. The measurements from the sensors are used directly rather than being processed to a vision based pose or an inertial based pose. Accurate short time pose estimates are available using information from IMU hereby reducing the need for fast vision updates, which would otherwise require high frame rates and compute.
 
 Coordinate systems used:
 \begin{itemize}
@@ -35,9 +30,7 @@ Coordinate systems used:
 
 These coordinate systems are used to denote geometric quantities, for instance, $ \bm{c}^e $ is the position of the camera coordinate system expressed in the earth system and $ R^{cb} $ is the rotation matrix from the body system to the camera system.
 
-The IMU consists of 1200 deg/s gyroscopes and 5g accelerometers. The signals from the inertial components of the IMU are synchronously measured at 100 Hz using a 16 bit A/D converter. A temperature sensor is added to compensate for the temperature dependency of the different sensing components. The assembly containing the gyroscopes and accelerometers is subjected to a calibration procedure to calibrate for the exact physical alignment of each component, the gains, the offsets, and the temperature relations of the gains and offsets. With these, a 3D angular velocity vector and a 3D accelerometer vector, both resolved in the body coordinate system, are computed.
-
-The calibrated gyroscope signal $ \bm{y}_{\omega,t} $ contains measurements of the angular velocity $ \bm{\omega}^b_{eb,t} $ from body to earth $ ( _{eb} ) $ expressed in the body coordinate system $ ( ^b ) $:
+The IMU consists of \SI{1200}{\deg\per\s} gyroscopes and 5g accelerometers. The signals from the inertial components of the IMU are synchronously measured at \SI{100}{|\Hz} using a 16 bit A/D converter. A temperature sensor is added to compensate for the temperature dependency of the sensing components. The IMU sensor is subjected to a calibration procedure to calibrate for the exact physical alignment of each component, the gains, the offsets, and the temperature relations of the gains and offsets. With these, a 3D angular velocity vector and a 3D accelerometer vector, both resolved in the body coordinate system, are computed. The calibrated gyroscope signal $ \bm{y}_{\omega,t} $ contains measurements of the angular velocity $ \bm{\omega}^b_{eb,t} $ from body to earth $ ( _{eb} ) $ expressed in the body coordinate system $ ( ^b ) $:
 \begin{equation}
 \bm{y}_{\omega,t} = \bm{\omega}^b_{eb,t} + \bm{\delta}^b_{\omega,t} + \bm{e}^b_{\omega,t}
 \end{equation}
@@ -47,9 +40,9 @@ The calibrated accelerometer signal $ \bm{y}_{a,t} $ contains measurements of th
 \begin{equation}
 \bm{y}_{a,t} = \ddot{\bm{b}}^b_{t} - \bm{g}^b_{t} + \bm{\delta}^b_{a,t} + \bm{e}^b_{a,t}
 \end{equation}
-Here, $ \bm{\delta}^b_{a,t} $ is the low-frequency offset and $ \bm{e}^b_{a,t} $ is zero mean white noise. Gravity expressed in body coordinates depends on the orientation of the sensor unit. Once the orientation is known, the accelerometer signal is used to estimate the acceleration, or alternatively, once the acceleration is known, the direction of the vertical is estimated. Acceleration is integrated twice to obtain change in position, as long as an accurate orientation estimate is available from the gyroscopes. However, accuracy of position change will deteriorate quickly as a result of double integration and orientation errors. 
+Here, $ \bm{\delta}^b_{a,t} $ is the low-frequency offset and $ \bm{e}^b_{a,t} $ is zero mean white noise. Gravity expressed in body coordinates depends on the orientation of the sensor unit. Once the orientation is known, the accelerometer signal is used to estimate the acceleration, or alternatively, once the acc$\tpose[n]$ is known, the direction of the vertical is estimated. Acceleration is integrated twice to obtain change in position, as long as accurate orientation estimate is available from the gyroscopes. However, accuracy of position change deteriorates quickly as a result of double integration and orientation errors. 
 
-The camera has a perspective lens with focal length of 3.2 mm and captures images with a resolution of 320$ \times $240 pixels at a frame-rate of 12.5 Hz.  The camera is triggered by the IMU clock allowing for synchronized measurements. Extracting camera position and orientation from images is a known and well studied problem in computer vision. The key ingredient is to find correspondences, i.e., relations between features in the image which correspond to an element in the scene model. Point correspondences $ \bm{z}^{c} \leftrightarrow \bm{z}^{i} $ are the relation between 3D points $ \bm{z}^{c} $ and 2D image points $ \bm{z}^{i} $.  For a perspective lens and a pinhole camera, the correspondence relation is
+The camera has a perspective lens with focal length of \SI{3.2}{\mm} and captures images with a resolution of $ 320 \times 240 $ pixels at a frame-rate of \SI{12.5}{Hz}.  The camera is triggered by the IMU clock allowing for synchronized measurements. Extracting camera position and orientation from images is a known and well studied problem in computer vision. The key ingredient is to find correspondences, i.e., relations between features in the image which correspond to an element in the scene model. Point correspondences $ \bm{z}^{c} \leftrightarrow \bm{z}^{i} $ are the relation between 3D points $ \bm{z}^{c} $ and 2D image points $ \bm{z}^{i} $.  For a perspective lens and a pinhole camera, the correspondence relation is
 
 \begin{subequations}
 	\begin{equation}
@@ -60,63 +53,52 @@ The camera has a perspective lens with focal length of 3.2 mm and captures image
 	\bm{0} \approx \Bmtrx{ -f\bm{I}_{2} & \bm{z}_{t}^{i} } \bm{z}_{t}^{c} = \Bmtrx{ -f\bm{I}_{2} & \bm{z}_{t}^{i} } \bm{R}_{t}^{cc} \left( \bm{z}^{c} - \bm{z}_{t}^{c} \right) 
 	\end{equation}
 \end{subequations}
-where $ f $ is te focal length, $ \bm{I}_{2} $ is $ 2 \times 2 $ identity matrix, $ \bm{e}_{t}^{i} $ is zero-mean white noise. The camera pose depends on the rotation matrix $ R^{ce} $ and the position $ \bm{c}^{c} $. Hence, given sufficient  correspondences and a calibrated camera, the camera pose can be found. 
+where $ f $ is the focal length, $ \bm{I}_{2} $ is $ 2 \times 2 $ identity matrix, $ \bm{e}_{t}^{i} $ is zero-mean white noise. The camera pose depends on the rotation matrix $ R^{ce} $ and the position $ \bm{c}^{c} $. Hence, given sufficient  correspondences and a calibrated camera, the camera pose can be found. 
 
 The computer vision implementation is based on a sum of absolute difference (SAD) block matcher in combination with a planar patch or free-form surface model of the scene. Both pixel data and 3D positions are stored for each feature. While tracking, search templates are generated by warping the patches in the model according to homographies calculated from the latest prediction of the camera pose. These templates are then matched with the current calibrated camera image using the block matcher. In this way correspondences are generated.
 
 
-\subsection{Sensor fusion}
+\subsubsection{Sensor fusion}
 
-Vision in combination with the map gives accurate absolute pose information at a low rate, but experiences problems during moderately fast motions. The IMU provides high rate relative pose information regardless of the motion speed, but becomes inaccurate after a short period of time. By fusing information from both sources it is possible to obtain robust camera pose estimates.
+Vision in combination with the map gives accurate absolute pose information at a low rate, but experiences problems during moderately fast motions. The IMU provides high rate relative pose information regardless of the motion speed, but becomes inaccurate after a short period of time. By fusing information from both sources, it is possible to obtain robust camera pose estimates.
 
-One way is to extend vision-based methods by using pose predictions from the IMU. These pose predictions are used to determine where in the image the features are to be expected. Once detected, the features are used to calculate the pose and this pose is then used as a starting point for the next pose prediction by the IMU. Another way is to consider IMU to be the main sensor, which is quite common in the navigation industry. Then vision is used for error correction, similar to how radio beacons or global positioning system (GPS) are used to correct the drift in an inertial navigation system (INS). 
+One way is to extend vision-based methods by using pose predictions from the IMU to determine where in the image the features are to be expected. Once detected, the features are used to calculate the pose, and this pose is then used as a starting point for the next pose prediction by the IMU. Another way is to consider IMU to be the main sensor, which is quite common in the navigation industry. Then vision is used for error correction, similar to how radio beacons or global positioning system (GPS) are used to correct the drift in an inertial navigation system (INS). 
 
 The objective in filtering is to extract as much information as possible from the measurements. More specifically, this amounts to finding the best possible estimate of the filtering probability density function (pdf) $ p( x_{t} | y_{1:t} ) $ where $ y_{1:t} \triangleq %\overset{\Delta}{=}
-\{ y_{1}, \ldots, y_{t} \} $
-
-The objective in sensor fusion is to recursively in time estimate the state in the dynamic model,
-\begin{subequations} \label{eq:fusion}
-	\begin{align}
+\{ y_{1}, \ldots, y_{t} \} $. The objective in sensor fusion is to recursively in time estimate the state in the dynamic model,
+\begin{subequations} \label{eq:fusion} \begin{align}
 	x_{t+1} &= f_{t} ( x_{t} ,u_{t} , v_{t} )\\
 	y_{t} &= h_{t} ( x_{t} ,u_{t} , e_{t} )
-	\end{align}
-\end{subequations}
+\end{align} \end{subequations}
 where $ x_{t} \in \mathbb{R}^{n_{x}} $ denotes state estimate, $ y_{t} \in \mathbb{R}^{n_{y}} $ denotes  measurements from sensors, $ v_{t} $ and $ e_{t} $ denote the stochastic process and measurement noise respectively, $ f : \mathbb{R}^{n_{x}} \times \mathbb{R}^{n_{u}} \times \mathbb{R}^{n_{v}} \rightarrow \mathbb{R}^{n_{x}} $ is process model that describes evolution of state over time, and $ h : \mathbb{R}^{n_{x}} \times \mathbb{R}^{n_{u}} \times \mathbb{R}^{n_{e}} \rightarrow \mathbb{R}^{n_{y}} $ is measurement model that describes how measurements from IMU and  camera relate to the state.  
 
 The goal is to infer information from measurements $ y_{t} $ onto the state $ x_{t} $ by computing the filtering pdf $ p ( x_{t} | y_{1:t} ) $.  The filtering pdf contains everything there is to know about the state at time $ t $, given the information in all the past measurements $ y_{1:t} $. The approximation of $ p ( x_{t} | y_{1:t} ) $ is used to form different (point) estimates, including maximum likelihood estimates, confidence intervals and expectation estimate $ \hat{x}_{t} = E( x_{t} | y_{1:t} ) $. The key element in solving the nonlinear state estimation problem in real-time is the propagation of $ p ( x_{t} | y_{1:t} ) $ over time. 
 
-\begin{subequations}\label{eq:update1}
-	\begin{align}
-	p ( x_{t} | y_{1:t} ) &= \frac { p ( y_{t} | x_{t} ) p ( x_{t} | y_{1:t-1} ) } { \int p ( y_{t} | x_{t} ) p ( x_{t} | y_{1:t-1} ) \dd{x_{t}} } \label{eq:meas1}\\
-	p ( x_{t+1} | y_{1:t} ) &= \int p ( x_{t+1} | x_{t} ) p ( x_{t} | y_{1:t} ) \dd{x_{t}} \label{eq:time1}
-	\end{align}
-\end{subequations}
+\begin{subequations}\label{eq:update1} \begin{align}
+	p ( x_{t} | y_{1:t} ) &= \frac { p ( y_{t} | x_{t} ) p ( x_{t} | y_{1:t-1} ) } { \int p ( y_{t} | x_{t} ) p ( x_{t} | y_{1:t-1} ) \dd{x_{t}} } \label{subeq:measupd1}\\
+	p ( x_{t+1} | y_{1:t} ) &= \int p ( x_{t+1} | x_{t} ) p ( x_{t} | y_{1:t} ) \dd{x_{t}} \label{subeq:timeupd1}
+\end{align} \end{subequations}
 
-Eqs. \ref{eq:meas1} and \ref{eq:time1}  are called measurement update and time update, respectively.  The sensor fusion problem has now been reduced to propagating eq. \ref{eq:update1} over time as new measurements arrive. When eq. \ref{eq:fusion} is linear and noise is Gaussian, then involved densities will be Gaussian and the updating recursions ar given by the Kalman Filter (KF). It is often sufficient to assume that the noise enters additively, according to
-\begin{subequations}
-	\begin{align}
+Eqs. \ref{subeq:measupd1} and \ref{subeq:timeupd1}  are called measurement update and time update, respectively.  The sensor fusion problem is reduced to propagating eq. \ref{eq:update1} over time as new measurements arrive. When eq. \ref{eq:fusion} is linear and noise is Gaussian, then involved densities become Gaussian and updating recursions are given by the Kalman Filter (KF). It is sufficient to assume that noise enters additively, according to
+\begin{subequations} \begin{align}
 	x_{t+1} &= f_{t} ( x_{t} ) + v_{t} \\
 	y_{t} &= h_{t} ( x_{t} ) + e_{t}
-	\end{align}
-\end{subequations}
-Additive noise modifies \ref{eq:update1} to
+\end{align} \end{subequations}
 
-\begin{subequations}
-	\begin{align}
+Additive noise modifies Eq. \ref{eq:update1} to
+\begin{subequations} \begin{align}
 	p ( x_{t+1} | x_{t} ) &= p_{v_{t}} ( x_{t+1} - f_{t} ( x_{t} ) ) \\
 	p ( y_{t} | x_{t} ) &= p_{e_{t}} ( y_{t} - h_{t} ( x_{t} ) )
-	\end{align}
-\end{subequations}
+\end{align} \end{subequations}
 where $ p_{v_{t}} (\cdot) $ and $ p_{e_{t}} (\cdot) $ denote the pdf's for the noise $ v_{t} $ and $ e_{t} $, respectively.
 
 The state vector consists of position of the IMU (the body coordinate system) expressed in the earth system $ b^{e} $, its velocity $ \dot{\bm{b}}^{e} $ and acceleration $ \ddot{\bm{b}}^{e} $, the orientation (quaternion) of the body wrt earth $ q^{be} $, its angular velocity $ \omega_{eb}^{b} $, the gyroscope bias $ \delta_{\omega}^{b} $ and the accelerometer bias $ \delta_{a}^{b} $. The state vector has dimension 22 and is given by
 \begin{equation}\label{eq:state1}
-x_{t} = \Bmtrx{ \bm{b}_{t}^{e} & \dot{\bm{b}}_{t}^{e} & \ddot{\bm{b}}_{t}^{e} & q_{t}^{be} & \bm{\omega}_{eb,t}^{b} & \bm{\delta}_{\omega,t}^{b} & \bm{\delta}_{a,t}^{b} } \tpose
+x_{t} = \Bmtrx{ \bm{b}_{t}^{e} \\ \dot{\bm{b}}_{t}^{e} \\ \ddot{\bm{b}}_{t}^{e} \\ q_{t}^{be} \\ \bm{\omega}_{eb,t}^{b} \\ \bm{\delta}_{\omega,t}^{b} \\ \bm{\delta}_{a,t}^{b} }
 \end{equation}
 
 The process model is given by
-\begin{subequations}\label{eq:proc1}
-	\begin{align}
+\begin{subequations}\label{eq:procmod1} \begin{align}
 	\bm{b}_{t+1}^{e} &= \bm{b}_{t}^{e} + T \dot{\bm{b}}_{t}^{e} + \tfrac {T^{2}} {2} \ddot{\bm{b}}_{t}^{e} \\
 	\dot{\bm{b}}_{t+1}^{e} &= \dot{\bm{b}}_{t}^{e} + T \ddot{\bm{b}}_{t}^{e} \\
 	\ddot{\bm{b}}_{t+1}^{e} &= \ddot{\bm{b}}_{t}^{e} + \bm{v}_{b,t}^{e} \\
@@ -124,83 +106,100 @@ The process model is given by
 	\bm{\omega}_{eb,t+1}^{b} &= \bm{\omega}_{eb,t}^{b} + \bm{v}_{\omega,t}^{b} \\
 	\bm{\delta}_{\omega,t+1}^{b} &= \bm{\delta}_{\omega,t}^{b} + \bm{v}_{\delta_{\omega},t}^{b} \\
 	\bm{\delta}_{a,t+1}^{b} &= \bm{\delta}_{a,t}^{b} + \bm{v}_{\delta_{a},t}^{b}
-	\end{align}
-\end{subequations}
-
+\end{align} \end{subequations}
 where the quaternion multiplication and exponential are defined according to
-\begin{subequations}
-	\begin{align}
+\begin{subequations} \begin{align}
 	\Bmtrx{ p_{0} \\ \bm{p} } \odot \Bmtrx{ q_{0} \\ \bm{q} } &\triangleq \Bmtrx{ q_{0} q_{0} - \bm{p} \cdot \bm{q} \\ q_{0} \bm{q} + q_{0} \bm{p} + \bm{p} \times \bm{q} } \\
 	\exp( \bm{v} ) &\triangleq \Bmtrx{ \cos \| \bm{v} \| \\ \tfrac { \bm{v} }{ \| \bm{v} \| } \sin \| \bm{v} \| }
-	\end{align}
-\end{subequations}
+\end{align} \end{subequations}
 
 The measurement models are given by
-\begin{subequations}
-	\begin{align}
-	\bm{y}_{a,t} &= R_{t}^{be} ( \ddot{\bm{b}}_{t}^{e} - \bm{g}^{e} ) + \bm{\delta}_{a,t}^{b} + \bm{e}_{a,t}^{b} \\
-	\bm{y}_{\omega,t} &= \bm{\omega}_{eb,t}^{b} + \bm{\delta}_{\omega,t}^{b} + \bm{e}_{\omega,t}^{b} \\
-	\bm{y}_{c,t} &= \Bmtrx{ -f\bm{I}_{2} & \bm{z}_{t}^{i} } \bm{R}^{cb} ( \bm{R}_{t}^{be} ( \bm{z}_{t}^{e} - \bm{b}_{t}^{e} ) - \bm{c}^{b} )  + \bm{e}_{a,t}^{b}
-	\end{align}
-\end{subequations}
+\begin{subequations} \label{eq:measmod1} \begin{align}
+	\bm{y}_{a,t} &= R_{t}^{be} ( \ddot{\bm{b}}_{t}^{e} - \bm{g}^{e} ) + \bm{\delta}_{a,t}^{b} + \bm{e}_{a,t}^{b} \label{subeq:accel}\\
+	\bm{y}_{\omega,t} &= \bm{\omega}_{eb,t}^{b} + \bm{\delta}_{\omega,t}^{b} + \bm{e}_{\omega,t}^{b} \label{subeq:gyro}\\
+	\bm{y}_{c,t} &= \Bmtrx{ -f\bm{I}_{2} & \bm{z}_{t}^{i} } \bm{R}^{cb} ( \bm{R}_{t}^{be} ( \bm{z}_{t}^{e} - \bm{b}_{t}^{e} ) - \bm{c}^{b} )  + \bm{e}_{a,t}^{b} \label{subeq:cam}
+\end{align} \end{subequations}
 The rotation matrix $ \bm{R}_{t}^{be} $ is constructed from $ q_{t}^{be} $. The transformation from body to camera coordinate system is included in vision measurement.
 
-\begin{algorithm}
-	\caption{Orientation estimation using EKF with orientation deviation states \cite{kok2017} }  \label{alg:dq-pose-err1}
-		\begin{algorithmic}[1]
-		%\DontPrintSemicolon \SetAlgoLongEnd \SetAlgoLined 
-		%\SetKwInOut{Output}{Output} \SetKwInOut{Input}{Input}
-		\INPUT Inertial data $ \lbrace \bm{y} _{a,t} , \bm{y} _{\omega,t}  \rbrace _{t=1} ^{N} $, magnetometer data $ \lbrace \bm{y} _{m,t}  \rbrace _{t=1} ^{N} $ 
-		\OUTPUT  Orientation estimate  and covariance $ \bm{P} _{t | t} $ for $ t = 1, \cdots, N $
-		\STATE Compute $ \breve{q} ^{nb} _{1} $ and $ \Sigma _{i} $. 
-		\STATE Set $ \tilde{q} ^{nb} _{1 | 1} = \breve{q} ^{nb} _{1}$ and $ \bm{P} _{1 | 1} = \Sigma _{i} $. 
-		\FOR { $ t = 2 $ \TO $ N $ }    
-		\STATE \textbf{Time update:}\\
-		\STATE $ \bm{p} _{t}   =   \bm{p} _{t-1} + T\ \bm{v} ^{n} _{t-1}  +  \tfrac {T ^{2}} {2} \left( \bm{R} ^{nb} _{t-1} \ \bm{y} _{a,t-1} + \bm{g} ^{n} \right)  $ 
-		\STATE $ \bm{v} _{t}   =   \bm{v} _{t-1} + T \left( \bm{R} ^{nb} _{t-1} \ \bm{y} _{a,t-1} + \bm{g} ^{n} \right) $ 
-		\STATE $ \tilde{q} ^{nb} _{t | t-1}   =   \tilde{q} ^{nb} _{t-1 | t-1}   \odot   \exp \bpose{q} \left( \tfrac{T}{2} \ \bm{y} _{\omega, t-1} \right) $ 
-		\STATE $ \bm{F} _{t-1}   =   \Bmtrx{   \bm{I} _{3}   &   T\bm{I} _{3}   &   - \tfrac {T ^{2}} {2} [ \tilde{\bm{R}} ^{nb} _{t | t} \ \bm{y} _{a,t} \times]   \\   \bm{0} _{3 \times 3}   &   \bm{I} _{3}   &   -T [ \tilde{\bm{R}} ^{nb} _{t | t} \ \bm{y} _{a,t} \times ]   \\   \bm{0} _{3 \times 3}   &   \bm{0} _{3 \times 3}   &   \bm{I} _{3}   } $ 
-		\STATE $ \bm{G} _{t-1}   =   \Bmtrx{   \bm{I} _{6}   &   \bm{0} _{3 \times 3}   \\   \bm{0} _{3 \times 3}   &   T \tilde{\bm{R}} _{t | t-1}   } ,    \quad   \bm{Q}   =   \Bmtrx{   \bm{\Sigma} _{a}   &   \bm{0} _{3 \times 3}   &   \bm{0} _{3 \times 3}   \\   \bm{0} _{3 \times 3}   &   \bm{\Sigma} _{a}   &   \bm{0} _{3 \times 3}   \\   \bm{0} _{3 \times 3}   &   \bm{0} _{3 \times 3}   &   \bm{\Sigma} _{\omega}   } $  %\bm{I} _{3} $, $ \bm{G} _{t-1} = T \tilde{\bm{R}} ^{nb} _{t | t-1} , \quad  \bm{Q} = \bm{\Sigma_{\omega}} $ \; 
-		\STATE $ \bm{P} _{t | t-1}   =   \bm{F} _{t-1} \bm{P} _{t-1 | t-1} \bm{F} _{t-1} \tpose   +   \bm{G} _{t-1} \bm{Q} \bm{G} _{t-1} \tpose $   \COMMENT{approximation of covariance}
-		\STATE \textbf{Measurement update:}\\
-		\STATE $ \bm{\varepsilon} _{t}   =   \bm{y}_{t} - \hat{\bm{y}} _{t | t-1}   =   \Bmtrx{ \bm{y} _{a,t}  \\  \bm{y} _{m,t} }   -   \Bmtrx{ - \tilde{\bm{R}} ^{bn} _{t | t-1} \ \bm{g} ^{n}  \\  \tilde{\bm{R}} ^{bn} _{t | t-1} \ \bm{m} ^{n} }  $ 
-		\STATE $ \bm{H} _{t}   =   \bm{I} _{3} % \Bmtrx{ -\tilde{\bm{R}} ^{bn} _{t | t-1} \vex{ \bm{g} ^{n} }  \\  \tilde{\bm{R}} ^{bn} _{t | t-1} \vex{ \bm{m} ^{n} } }   
-		,   \qquad   \bm{R}   =   \bm{\Sigma} _{p} $ \; %\Bmtrx{ \bm{\Sigma} _{a}  &  \bm{0} _{3 \times 3}   \\  \bm{0} _{3 \times 3}   &   \bm{\Sigma} _{m} }  $  \;
-		\STATE $ \bm{S} _{t}  =  \bm{H} _{t}  \bm{P} _{t | t}  \bm{H} _{t} \tpose  + \bm{R}   \qquad   \bm{K} _{t}   =   \bm{P} _{t | t-1} \bm{H} _{t} \bm{S} ^{-1} _{t} $ 
-		\STATE $ \hat{ \bm{\eta} } ^{n} _{t}   =   \bm{K} _{t}   \bm{\varepsilon} _{t} $ \COMMENT{State variable update}
-		\STATE $ \bm{P} _{t | t}  =  \bm{P} _{t | t-1}   -   \bm{K} _{t} \bm{S} _{t} \bm{K} _{t} \tpose $  \COMMENT{Covariance update}
-		\STATE \textbf{Linearization point update:}\\
-		\STATE $ \tilde{q} ^{nb} _{t | t}  =  \exp \bpose{q} \left( \dfrac { \hat{ \bm{\eta} } ^{n} _{t} } {2} \right)  \odot  \tilde{q} ^{nb} _{t | t-1} $
-		\ENDFOR
-	\end{algorithmic}
-\end{algorithm}
+Algorithm \ref{alg:orient-ekf1} uses models in Eqs. \ref{eq:procmod1} and \ref{eq:measmod1} to perform updates given in Eq. \ref{eq:update1}. The algorithm runs in real time with inertial measurements at \SI{100}{Hz} and frame rates up to \SI{25}{Hz} and uses EKF to compute pose estimates. 
 
+%\hrulefill \vspace{-0.5\baselineskip} \captionof{algorithm}{Recursive camera pose calculation}\label{alg:orient-ekf1}  \hrule
+%%\begin{algorithm}
+%%	\caption{Orientation estimation using EKF with orientation deviation states \cite{kok2017} }  \label{alg:dq-pose-err1}
+%\begin{algorithmic}[1]
+%	\INPUT Inertial data $ \lbrace \bm{y} _{a,t} , \bm{y} _{\omega,t}  \rbrace _{t=1} ^{N} $, magnetometer data $ \lbrace \bm{y} _{m,t}  \rbrace _{t=1} ^{N} $ 
+%	\OUTPUT  Orientation estimate  and covariance $ \bm{P} _{t | t} $ for $ t = 1, \cdots, N $
+%	\FOR { $ t = 2 $ \TO $ N $ }     
+%		\STATE Time update. Calculate $ p( \bm{x}_{t} | \bm{y}_{1:t-1} ) $ by propagating $ p( \bm{x}_{t-1} | \bm{y}_{1:t-1} ) $ through process model Eq. \ref{eq:proc1}.
+%%		\STATE \COMMENT{\textbf{Measurement update:}}
+%		\STATE Accelerometer and gyroscope measurement update using model Eqs. \ref{subeq:accel} and \ref{subeq:gyro}.
+%		\STATE $ \qquad\qquad \bm{x}_{t} \sim p ( \bm{x}_{t} | \bm{y}_{1:t} ) $
+%		\IF {there is a new image from the camera}
+%			\STATE  Predict feature positions from the scene model using $ \hat{\bm{x}}_{t} = E( \bm{x}_{t} | \bm{y}_{1:t} ) $.
+%			\STATE Detect features in the image.
+%			\STATE  Measurement update with the found point correspondences using model Eq. \ref{subeq:cam}.
+%			\STATE $ \qquad\qquad \bm{x}_{t} \sim p ( \bm{x}_{t} | \bm{y}_{1:t} ) $
+%		\ENDIF
+%	\ENDFOR
+%\end{algorithmic} \vspace{-0.75\baselineskip} \hrulefill
+%%\end{algorithm}
 
 \begin{algorithm}[H]
+	\caption{Recursive camera pose calculation}\label{alg:orient-ekf1}
 	\DontPrintSemicolon \SetAlgoLongEnd \SetAlgoLined 
 	\SetKwInOut{Output}{Output} \SetKwInOut{Input}{Input}
-	\Input{Inertial data $ \lbrace \bm{y} _{a,t} , \bm{y} _{\omega,t}  \rbrace _{t=1} ^{N} $, magnetometer data $ \lbrace \bm{y} _{m,t}  \rbrace _{t=1} ^{N} $ \; } 
-	\Output{Orientation estimate  and covariance $ \bm{P} _{t | t} $ for $ t = 1, \cdots, N $ \; }
-	Compute $ \breve{q} ^{nb} _{1} $ and $ \Sigma _{i} $. \;
-	Set $ \tilde{q} ^{nb} _{1 | 1} = \breve{q} ^{nb} _{1}$ and $ \bm{P} _{1 | 1} = \Sigma _{i} $. \;
-	\For{ $ t = 2 $ \KwTo $ N $ } {   
-		\tcc{Time update:}
-		$ \bm{p} _{t}   =   \bm{p} _{t-1} + T \bm{v} ^{n} _{t-1}  +  \dfrac {T ^{2}} {2} \left( \bm{R} ^{nb} _{t-1} \ \bm{y} _{a,t-1} + \bm{g} ^{n} \right)  $ \;
-		$ \bm{v} _{t}   =   \bm{v} _{t-1} + T \left( \bm{R} ^{nb} _{t-1} \ \bm{y} _{a,t-1} + \bm{g} ^{n} \right) $ \;
-		$ \tilde{q} ^{nb} _{t | t-1}   =   \tilde{q} ^{nb} _{t-1 | t-1}   \odot   \exp \bpose{q} \left( \tfrac{T}{2} \ \bm{y} _{\omega, t-1} \right) $ \;
-		$ \bm{F} _{t-1}   =   \Bmtrx{   \bm{I} _{3}   &   T\bm{I} _{3}   &   - \tfrac {T ^{2}} {2} \bmtrx{ \tilde{\bm{R}} ^{nb} _{t | t} \ \bm{y} _{a,t} \times}   \\   \bm{0} _{3 \times 3}   &   \bm{I} _{3}   &   -T \bmtrx{ \tilde{\bm{R}} ^{nb} _{t | t} \ \bm{y} _{a,t} \times}   \\   \bm{0} _{3 \times 3}   &   \bm{0} _{3 \times 3}   &   \bm{I} _{3}   } $ \;
-		$ \bm{G} _{t-1}   =   \Bmtrx{   \bm{I} _{6}   &   \bm{0} _{3 \times 3}   \\   \bm{0} _{3 \times 3}   &   T \tilde{\bm{R}} _{t | t-1}   } ,    \quad   \bm{Q}   =   \Bmtrx{   \bm{\Sigma} _{a}   &   \bm{0} _{3 \times 3}   &   \bm{0} _{3 \times 3}   \\   \bm{0} _{3 \times 3}   &   \bm{\Sigma} _{a}   &   \bm{0} _{3 \times 3}   \\   \bm{0} _{3 \times 3}   &   \bm{0} _{3 \times 3}   &   \bm{\Sigma} _{\omega}   } $ \; %\bm{I} _{3} $, $ \bm{G} _{t-1} = T \tilde{\bm{R}} ^{nb} _{t | t-1} , \quad  \bm{Q} = \bm{\Sigma_{\omega}} $ \; 
-		$ \bm{P} _{t | t-1}   =   \bm{F} _{t-1} \bm{P} _{t-1 | t-1} \bm{F} _{t-1} \tpose   +   \bm{G} _{t-1} \bm{Q} \bm{G} _{t-1} \tpose $   \tcp*{approximation of covariance}
-		\tcc{Measurement update:}
-		$ \bm{\varepsilon} _{t}   =   \bm{y}_{t} - \hat{\bm{y}} _{t | t-1}   =   \Bmtrx{ \bm{y} _{a,t}  \\  \bm{y} _{m,t} }   -   \Bmtrx{ - \tilde{\bm{R}} ^{bn} _{t | t-1} \ \bm{g} ^{n}  \\  \tilde{\bm{R}} ^{bn} _{t | t-1} \ \bm{m} ^{n} }  $ \;
-		$ \bm{H} _{t}   =   \bm{I} _{3} % \Bmtrx{ -\tilde{\bm{R}} ^{bn} _{t | t-1} \bmtrx{ \bm{g} ^{n} \times}  \\  \tilde{\bm{R}} ^{bn} _{t | t-1} \bmtrx{ \bm{m} ^{n} \times} }   
-		,   \qquad   \bm{R}   =   \bm{\Sigma} _{p} $ \; %\Bmtrx{ \bm{\Sigma} _{a}  &  \bm{0} _{3 \times 3}   \\  \bm{0} _{3 \times 3}   &   \bm{\Sigma} _{m} }  $  \;
-		$ \bm{S} _{t}  =  \bm{H} _{t}  \bm{P} _{t | t}  \bm{H} _{t} \tpose  + \bm{R}   \qquad   \bm{K} _{t}   =   \bm{P} _{t | t-1} \bm{H} _{t} \bm{S} ^{-1} _{t} $ \;
-		$ \hat{ \bm{\eta} } ^{n} _{t}   =   \bm{K} _{t}   \bm{\varepsilon} _{t} $ \tcp*{State variable update}
-		$ \bm{P} _{t | t}  =  \bm{P} _{t | t-1}   -   \bm{K} _{t} \bm{S} _{t} \bm{K} _{t} \tpose $ \tcp*{Covariance update}
-		\tcc{Linearization point update:}
-		$ \tilde{q} ^{nb} _{t | t}  =  \exp \bpose{q} \left( \dfrac { \hat{ \bm{\eta} } ^{n} _{t} } {2} \right)  \odot  \tilde{q} ^{nb} _{t | t-1} $ \;
-	} % end while
-	\caption{Orientation estimation using EKF with orientation deviation states \cite{kok2017} }  \label{alg:dq-pose-err2}
+	\Input{Inertial data $ \lbrace \bm{y} _{a,t} , \bm{y} _{\omega,t}  \rbrace _{t=0} ^{N} $\\ magnetometer data $ \lbrace \bm{y} _{m,t}  \rbrace _{t=0} ^{N} $ \; } 
+	\Output{Pose estimate  $ \bm{x} _{t} $ for $ t = 1, \cdots, N $ \; }
+	\For{ $ t = 1 $ \KwTo $ N $ } {    % \tcp{Time update:}
+		Time update. Calculate $ p( \bm{x}_{t} | \bm{y}_{1:t-1} ) $ by propagating $ p( \bm{x}_{t-1} | \bm{y}_{1:t-1} ) $ through process model Eq. \ref{eq:procmod1}. \;
+		Accelerometer and gyroscope measurement update using model Eqs. \ref{subeq:accel} and \ref{subeq:gyro}. \;
+       	$ \qquad\qquad \bm{x}_{t} \sim p ( \bm{x}_{t} | \bm{y}_{1:t} ) $ \;
+		\If{there is a new image from the camera}{
+			Predict feature positions from the scene model using $ \hat{\bm{x}}_{t} = E( \bm{x}_{t} | \bm{y}_{1:t} ) $. \;
+			Detect features in the image. \;
+			Measurement update with the found point correspondences using model Eq. \ref{subeq:cam}. \;
+			$ \qquad\qquad \bm{x}_{t} \sim p ( \bm{x}_{t} | \bm{y}_{1:t} ) $ \;
+		} % end if
+	} % end for
 \end{algorithm}
+
+The camera and the IMU both deliver measurements which are resolved respectively in the camera and the body coordinate system .As the sensors are physically translated and rotated with respect to each other, this rigid transformation should be taken into account while fusing the measurements.  
+
+The high frequency inertial measurement updates provide a rather accurate state estimate when a new image is acquired. This implies that the feature positions can be predicted with an improved accuracy, which in turn makes it possible to use a guided search in the image using reduced search regions. The algorithm can calculate the expected covariance of a measurement. 
+
+The information from the IMU makes Algorithm \ref{alg:orient-ekf1} robust for temporary absence of vision due to motion blur, obstruction of the camera or unmodeled scene. Without vision measurements, the estimates will eventually drift away. The algorithm is flexible and can be rather straightforwardly extended to include other information sources. When the sensor unit is static during initialization, the IMU provides partial or full orientation estimates (using magnetometers). This information is used to constrain the search space when initializing from vision.
+
+Vision-only methods suffer from scale ambiguity, since projections are used. Changing the scale of a scene model will give scaled, but indistinguishable poses. As sensor fusion utilizes position information both from the camera and the IMU, the scale is relevant and these quantities must have identical units. Introducing a metric scale into the scene model solves this issue. An existing scene model with arbitrary scale can be converted by comparing it with a CAD model or by measuring an object with known dimension.
+
+To separate the contribution of gravity in acceleration measurement, the gravity vector is rotated from earth frame to body frame and subtracted. The scene model should be vertically aligned, or the gravity vector should be known in the scene model. But, this is not the case. The performance of the system is extremely sensitive to this alignment, since gravity is typically an order of magnitude larger than normal body accelerations. A misalignment of \ang{1} introduces an artificial acceleration of \SI{0.17}{\m\per\s\squared} which gives rise to a systematic position drift of \SI{8.5}{\cm} when integrated over \SI{1}{\s}. Hence, even for small errors, a systematic drift is introduced which causes the system to lose track without continuous corrections from correspondences. Drifts followed by a correction gives rise to a saw tooth pattern in the estimates, which is visible as `jitter'. The gravity vector can be determined by averaging the accelerometer readings over some time, while the camera is stationary in a known pose. However, a preferable method is to record accelerometer measurements while scanning the scene and include this data in the model building procedure to align the scene model vertically.
+
+
+\subsubsection{Implementation considerations}  
+
+Sensor pose calibration: The problem of determining the relative position and orientation is a well studied problem in robotics where it is known as hand-eye calibration. However, most methods do not apply directly since the IMU does not provide an absolute position reference. Absolute orientation is available when the IMU is stationary, since the accelerometers measure only gravity. The orientation part of the calibration is determined using a slight modification of standard camera calibration procedures. As floors and desks in buildings are better horizontally aligned than walls are vertically aligned, it is recommended to use horizontal surfaces. The calibration pattern is placed on a horizontal surface and accelerometer readings are taken at various camera poses. The camera poses are determined in the camera calibration procedure, from which the vertical directions in the camera frame are determined. The combination of these and the vertical directions in the body frame measured by the accelerometers allows for calculation of the rotation between the frames. This method requires accurate positioning of the calibration pattern. 
+
+Time synchronization: It is very important to know exactly when the different measurements are taken. Time synchronization between clocks of multiple sensors is achieved by hardware synchronization, i.e., one central clock is used to trigger the other sensors. This solves the problem of simultaneously started clocks diverging after operating for a while. 
+
+Filter tuning: The models have stochastic components which are used to tune the EKF (Refer Table 2.1 in report page 21). For IMU, noise covariance is calculated either experimentally from measurements of a few seconds with a static pose, or directly from manufacturer specification. The noise in vision measurements is harder to determine as accuracy for each match is highly individual, and variations due to lighting conditions, local texture, viewing angle, distance and motion blur cannot be captured by a common noise setting. Hence, it would be beneficial to include accuracy estimation in the image processing algorithms. 
+The current implementation uses a predefined noise covariance. Again, the process model is a random walk in acceleration and angular velocity, and though not informative, the model is useful for tracking uncontrolled motions such as those generated by a human. Also, the motion model is to be considered as a separate source of information, apart from the sensors. Including additional information (such as control signals) in the model improves filter performance. The covariances in the process model can be seen as tuning knobs, controlling the relative importance of the measurements and the process model and as such they are important parameters for stable tracking. The innovations, defined as the difference between a measurement and its expected value, $ e_{t} = y_{t} - \hat{y_{}}t $, asses whether the models are correctly tuned. The innovations should be normally distributed, and the squared normalized innovations $ e_{t}\tpose {S_{t}}\tpose[-1] e^{t} $, where $ S_{t} $ is the predicted covariance of the measurement, should have a $ \chi^{2} $ distribution. These performance indicators should be monitored during both testing and normal operation.
+
+\subsubsection{Experiments}
+
+The sensor unit is mounted onto a high precision 6 degrees of freedom (DoF) ABB IRB1440 industrial robot. The robot will allows repeatable 6 DoF motions andl provides true positions and orientations. The robot has an absolute accuracy of 2 mm and a repeatability of 0.2 mm. This enables systematic and rather objective performance evaluation of various algorithms, based on absolute pose errors instead of the commonly used feature reprojection errors. The sensor unit provides 100 Hz inertial measurements synchronized with 12.5 Hz images. The complete specification is listed in Table 2.1. The scene used for the experiments consists of two orthogonal planar surfaces as shown in Figure 2.3. Because of the simple geometry, the scene model could be constructed from a textured CAD model. Its coordinate system is such that the x-axis points upward and that the y and z-axis span the horizontal plane. Although the scene was carefully positioned, it had to be calibrated w.r.t. gravity as described in Section 2.4.2. It should be emphasized that the scene has been kept simple for experimentation purposes only. The system itself can handle very general scenes and these are modeled using the methods described in Koeser et al. (2007).
+
+With the setup several trajectories have been tested. In this paper, an eight-shaped trajectory, shown in Figure 2.4, will be discussed in detail. The sensor unit traverses this 2.6 m eight-shaped trajectory in 5.4 s, keeping the scene in view at all times. The motion contains accelerations up to 4 m/s 2 and angular velocities up to 1 rad/s. Hence, the motion is quite aggressive and all six degrees of freedom are exited. As the displacement between images is limited to 15 pixels it is still possible to use vision-only tracking, which allows for a comparison between tracking with and without an IMU.
+
+The experiment starts with a synchronization motion, which is used to synchronize the ground truth data from the industrial robot with the estimates from the system. Time synchronization is relevant, since a small time offset between the signals will result in a significant error. After the synchronization, the eight-shaped trajectory 
+
+
+
+
+
+
+
+
+
+
+
+
 
