@@ -7,4 +7,38 @@ Ramkumar Gandhinathan and Lentin Joseph.
   {R}eality}.
 \newblock Packt Publishing, 2 edition, 2019.
 
+\bibitem{hol2008}
+Jeroen Hol.
+\newblock {\em Pose Estimation and Calibration Algorithms for Vision and
+  Inertial Sensors}.
+\newblock PhD thesis, Link\"{o}ping University, Sweden, 2008.
+
+\bibitem{lee2012a}
+Jung~Keun Lee, Edward~J. Park, and Stephen~N. Robinovitch.
+\newblock Estimation of {A}ttitude and {E}xternal {A}cceleration {U}sing
+  {I}nertial {S}ensor {M}easurement {D}uring {V}arious {D}ynamic {C}onditions.
+\newblock {\em IEEE Transactions on Instrumentation and Measurement},
+  61(8):2262--2273, 2012.
+
+\bibitem{oland2018a}
+Espen Oland.
+\newblock Quaternion-based control of fixed-wing uavs using logarithmic
+  mapping.
+\newblock In {\em 9th International Conference on Mechanical and Aerospace
+  Engineering}, 2018.
+
+\bibitem{oliveira2015a}
+Andre~Schneider de~Oliveira, Edson Roberto~De Pieri, and Ubirajara~Franco
+  Moreno.
+\newblock A new method of applying dfferential kinematics through dual
+  quaternions.
+\newblock {\em Robotica}, 35:907--921, 2015.
+
+\bibitem{wang2012a}
+Xiangke Wang, Dapeng Han, Changbin Yu, and Zhiqiang Zheng.
+\newblock The geometric structure of unit quaternion with application in
+  kinematic control.
+\newblock {\em Journal of Mathematical Analysis and Applications},
+  389:1352--1364, 2012.
+
 \end{thebibliography}
