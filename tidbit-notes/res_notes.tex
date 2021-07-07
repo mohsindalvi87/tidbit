@@ -1,17 +1,23 @@
-\documentclass[runningheads, 10pt]{article}
+\documentclass[runningheads, 11pt]{article}
 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage{lmodern} % lmodern times fourier
-%\usepackage{}
+\usepackage{amsmath,amssymb,
+	amsthm} % amssymb loads amsfonts
+\usepackage{bm} % bm for math italic-bold
+%\usepackage{pxfonts}  % [charter]{mathdesign} {lmodern} {fourier} {pxfonts} {mathptmx} {newtxtext,newtxmath} {mathpazo} {txfonts} {cmbright} [math]{iwona} [light,condensed,math]{kurier} {arev} {nimbusserif} {crimson} {stix} {times} {bera} [sfdefault]{roboto}
+%\usepackage{newtxtext}  \usepackage[libertine]{newtxmath}
+\usepackage[charter]{mathdesign} %[charter][utopia][garamond] put % before amsfonts,amssymb
+
 \usepackage[margin=2cm]{geometry}
 \usepackage{lscape,enumitem,microtype}
 \tolerance=1 \emergencystretch=\maxdimen \hyphenpenalty=10000 \hbadness=10000
-\setlength{\parindent}{0em} \setlength{\parskip}{1em}
+\setlength{\parindent}{1em} \setlength{\parskip}{1em}
+\usepackage{indentfirst}  % \usepackage{parskip} to remove parindent
 
-\usepackage{physics,siunitx}
+\usepackage{physics}
+\usepackage{siunitx}
 \sisetup{per-mode=symbol-or-fraction, bracket-unit-denominator=false}
-\usepackage{amsmath,amsfonts,amssymb,amsthm,bm} % bm for italic-bold in math
 \usepackage{booktabs,multirow,multicol,makecell,array,longtable}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -32,6 +38,45 @@
 \usepackage{hyperref}
 \usepackage[nameinlink]{cleveref} %[noabbrev,nameinlink]
 
+\usepackage{tikz}
+%%from https://texample.net/tikz/examples/observer-estimator/
+%	\usetikzlibrary{decorations.pathmorphing} % for snake lines
+%	\usetikzlibrary{matrix} % for block alignment
+%	\usetikzlibrary{arrows} % for arrow heads
+%	\usetikzlibrary{shapes} %
+%	\usetikzlibrary{calc} % for manimulation of coordinates
+%	\tikzstyle{block} = [draw,rectangle,thick,minimum height=2em,minimum width=2em]
+%	\tikzstyle{sum} = [draw,circle,inner sep=0mm,minimum size=2mm]
+%	\tikzstyle{connector} = [->,thick]
+%	\tikzstyle{line} = [thick]
+%	\tikzstyle{branch} = [circle,inner sep=0pt,minimum size=1mm,fill=black,draw=black]
+%	\tikzstyle{guide} = []
+%	\tikzstyle{snakeline} = [connector, decorate, decoration={pre length=0.2cm,
+%		post length=0.2cm, snake, amplitude=.4mm,
+%		segment length=2mm},thick, magenta, ->]
+%	\renewcommand{\vec}[1]{\ensuremath{\boldsymbol{#1}}} % bold vectors
+%	\def \myneq {\skew{-2}\not =} % \neq alone skews the dash
+%%from https://texample.net/tikz/examples/inertial-navigation-system/
+%	\newcommand{\mx}[1]{\mathbf{\bm{#1}}} % Matrix command
+%	\newcommand{\vc}[1]{\mathbf{\bm{#1}}} % Vector command
+%	\tikzstyle{block} = [draw, fill=blue!20, rectangle, 
+%	minimum height=3em, minimum width=6em]
+%%from https://texample.net/tikz/examples/control-system-principles/
+%	\usetikzlibrary{shapes,arrows}
+%	\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+%	\tikzstyle{input} = [coordinate]
+%	\tikzstyle{output} = [coordinate]
+%	\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+%%from https://texample.net/tikz/examples/noise-shaper/
+%\usepackage{textcomp}
+
+
+%\usetikzlibrary{dsp,fit}
+
+
+
+
+
 
 
 
@@ -42,6 +87,18 @@
 \newcommand{\bmtrx}[1]{\left[ #1 \right]}
 \newcommand{\vex}[1]{\left[ #1 \times \right]}
 \newcommand{\multiline}[1]{\begin{itemize}[leftmargin=.75em,topsep=-1em,itemsep=0em]#1\end{itemize}}
+
+
+\DeclareTextFontCommand{\mytexttt}{\ttfamily\hyphenchar\font=63-+\relax} % new command for hyphenation put =63 for line break after ?, =45 for line break after -
+\newcommand\textvtt[1]{{\normalfont\fontfamily{cmvtt}\selectfont #1}} % variable typewriter font in computer modern
+
+
+
+
+
+
+
+
 
 \begin{document}
 	
@@ -89,11 +146,15 @@ Hello World! \cite{lentin2019}
 %	\shortstack {  $ \underline{q}^X = \left[ C_\alpha, S_\alpha, 0, 0 \right] +  \qquad $   \\   $ \qquad \epsilon \left[ - A S_\alpha,  A C_\alpha, 0, 0 \right] $  }  \\ \hline \end{tabular} 
 %\end{table}
 
-\input{res01}
+
+
+%\input{res01}
 
 
 \input{res02}
 
+
+%\input{res03}
 
 
 

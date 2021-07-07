@@ -3,7 +3,7 @@
 
 \section{Summary of Jeroen Hol \cite{hol2008}}
 
-Pose Estimation and Calibration Algorithms for Vision and Inertial Sensors \\  20088 \\  Division of Automatic Control \\  Department of Electrical Engineering \\  Link{\"o}ping University, Sweden
+Pose Estimation and Calibration Algorithms for Vision and Inertial Sensors \\  2008 \\  Division of Automatic Control \\  Department of Electrical Engineering \\  Link{\"o}ping University, Sweden
 
 Augmented reality (AR) involves overlaying a real scene with computer generated graphics in real-time by showing the virtual objects on see-through head-mounted displays or superimposing them on live video imagery. In order to have realistic augmentation, i.e.,  positioning and aligning the virtual objects correctly with the real world, it is essential to know the position and orientation (pose) of the camera with high accuracy and low latency. A ?vision only approach? gives good absolute accuracy, but is difficult to run at high frame rate and is not robust during fast motions. An  inertial measurement unit (IMU) is accurate for a short period and is drift-prone for longer time scales. 
 
@@ -30,16 +30,18 @@ Coordinate systems used:
 
 These coordinate systems are used to denote geometric quantities, for instance, $ \bm{c}^e $ is the position of the camera coordinate system expressed in the earth system and $ R^{cb} $ is the rotation matrix from the body system to the camera system.
 
-The IMU consists of \SI{1200}{\deg\per\s} gyroscopes and 5g accelerometers. The signals from the inertial components of the IMU are synchronously measured at \SI{100}{|\Hz} using a 16 bit A/D converter. A temperature sensor is added to compensate for the temperature dependency of the sensing components. The IMU sensor is subjected to a calibration procedure to calibrate for the exact physical alignment of each component, the gains, the offsets, and the temperature relations of the gains and offsets. With these, a 3D angular velocity vector and a 3D accelerometer vector, both resolved in the body coordinate system, are computed. The calibrated gyroscope signal $ \bm{y}_{\omega,t} $ contains measurements of the angular velocity $ \bm{\omega}^b_{eb,t} $ from body to earth $ ( _{eb} ) $ expressed in the body coordinate system $ ( ^b ) $:
+The IMU consists of \SI{1200}{\deg\per\s} gyroscopes and 5g accelerometers. The signals from the inertial components of the IMU are synchronously measured at \SI{100}{\Hz} using a 16 bit A/D converter. A temperature sensor is added to compensate for the temperature dependency of the sensing components. The IMU sensor is subjected to a calibration procedure to calibrate for the exact physical alignment of each component, the gains, the offsets, and the temperature relations of the gains and offsets. With these, a 3D angular velocity vector and a 3D accelerometer vector, both resolved in the body coordinate system, are computed. The calibrated gyroscope signal $ \bm{y}_{\omega,t} $ contains measurements of the angular velocity $ \bm{\omega}^b_{eb,t} $ from body to earth $ ( _{eb} ) $ expressed in the body coordinate system $ ( ^b ) $:
 \begin{equation}
 \bm{y}_{\omega,t} = \bm{\omega}^b_{eb,t} + \bm{\delta}^b_{\omega,t} + \bm{e}^b_{\omega,t}
 \end{equation}
+
 Here, $ \bm{\delta}^b_{\omega,t} $ is the low-frequency offset fluctuations due toe unmodeled acceleration dependency and $ \bm{e}^b_{\omega,t} $ is zero mean white noise. A change in orientation is obtained by integration of the gyroscope signal without relying on any infrastructure. However, accuracy in orientation deteriorates for periods longer than a few seconds. 
 
 The calibrated accelerometer signal $ \bm{y}_{a,t} $ contains measurements of the  combination of the body acceleration vector $ \ddot{\bm{b}}_{t} $ and the gravity vector $ \bm{g} $ both expressed in the body coordinate system $ ( ^b ) $:
 \begin{equation}
 \bm{y}_{a,t} = \ddot{\bm{b}}^b_{t} - \bm{g}^b_{t} + \bm{\delta}^b_{a,t} + \bm{e}^b_{a,t}
 \end{equation}
+
 Here, $ \bm{\delta}^b_{a,t} $ is the low-frequency offset and $ \bm{e}^b_{a,t} $ is zero mean white noise. Gravity expressed in body coordinates depends on the orientation of the sensor unit. Once the orientation is known, the accelerometer signal is used to estimate the acceleration, or alternatively, once the acc$\tpose[n]$ is known, the direction of the vertical is estimated. Acceleration is integrated twice to obtain change in position, as long as accurate orientation estimate is available from the gyroscopes. However, accuracy of position change deteriorates quickly as a result of double integration and orientation errors. 
 
 The camera has a perspective lens with focal length of \SI{3.2}{\mm} and captures images with a resolution of $ 320 \times 240 $ pixels at a frame-rate of \SI{12.5}{Hz}.  The camera is triggered by the IMU clock allowing for synchronized measurements. Extracting camera position and orientation from images is a known and well studied problem in computer vision. The key ingredient is to find correspondences, i.e., relations between features in the image which correspond to an element in the scene model. Point correspondences $ \bm{z}^{c} \leftrightarrow \bm{z}^{i} $ are the relation between 3D points $ \bm{z}^{c} $ and 2D image points $ \bm{z}^{i} $.  For a perspective lens and a pinhole camera, the correspondence relation is
@@ -85,7 +87,7 @@ Eqs. \ref{subeq:measupd1} and \ref{subeq:timeupd1}  are called measurement updat
 	y_{t} &= h_{t} ( x_{t} ) + e_{t}
 \end{align} \end{subequations}
 
-Additive noise modifies Eq. \ref{eq:update1} to
+\noindent Additive noise modifies Eq. \ref{eq:update1} to
 \begin{subequations} \begin{align}
 	p ( x_{t+1} | x_{t} ) &= p_{v_{t}} ( x_{t+1} - f_{t} ( x_{t} ) ) \\
 	p ( y_{t} | x_{t} ) &= p_{e_{t}} ( y_{t} - h_{t} ( x_{t} ) )
@@ -181,7 +183,7 @@ To separate the contribution of gravity in acceleration measurement, the gravity
 \textbf{Time synchronization}: It is very important to know exactly when the different measurements are taken. Time synchronization between clocks of multiple sensors is achieved by hardware synchronization, i.e., one central clock is used to trigger the other sensors. This solves the problem of simultaneously started clocks diverging after operating for a while. 
 
 \textbf{Filter tuning}: The models have stochastic components which are used to tune the EKF (Refer Table 2.1 in report page 21). For IMU, noise covariance is calculated either experimentally from measurements of a few seconds with a static pose, or directly from manufacturer specification. The noise in vision measurements is harder to determine as accuracy for each match is highly individual, and variations due to lighting conditions, local texture, viewing angle, distance and motion blur cannot be captured by a common noise setting. Hence, it would be beneficial to include accuracy estimation in the image processing algorithms. 
-The current implementation uses a predefined noise covariance. Again, the process model is a random walk in acceleration and angular velocity, and though not informative, the model is useful for tracking uncontrolled motions such as those generated by a human. Also, the motion model is to be considered as a separate source of information, apart from the sensors. Including additional information (such as control signals) in the model improves filter performance. The covariances in the process model can be seen as tuning knobs, controlling the relative importance of the measurements and the process model and as such they are important parameters for stable tracking. The innovations, defined as the difference between a measurement and its expected value, $ e_{t} = y_{t} - \hat{y_{t}} $, asses whether the models are correctly tuned. The innovations should be normally distributed, and the squared normalized innovations $ e_{t}\tpose {S_{t}}\tpose[-1] e^{t} $, where $ S_{t} $ is the predicted covariance of the measurement, should have a $ \chi^{2} $ distribution. These performance indicators should be monitored during both testing and normal operation.
+The current implementation uses a predefined noise covariance. Again, the process model is a random walk in acceleration and angular velocity, and though not informative, the model is useful for tracking uncontrolled motions such as those generated by a human. Also, the motion model is to be considered as a separate source of information, apart from the sensors. Including additional information (such as control signals) in the model improves filter performance. The covariances in the process model can be seen as tuning knobs, controlling the relative importance of the measurements and the process model and as such they are important parameters for stable tracking. The innovations, defined as the difference between a measurement and its expected value, $ e_{t} = y_{t} - \hat{y}_{t} $, asses whether the models are correctly tuned. The innovations should be normally distributed, and the squared normalized innovations $ e_{t}\tpose {S_{t}}\tpose[-1] e^{t} $, where $ S_{t} $ is the predicted covariance of the measurement, should have a $ \chi^{2} $ distribution. These performance indicators should be monitored during both testing and normal operation.
 
 \subsubsection{Experiments}
 
