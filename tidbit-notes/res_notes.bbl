@@ -7,6 +7,12 @@ Ramkumar Gandhinathan and Lentin Joseph.
   {R}eality}.
 \newblock Packt Publishing, 2 edition, 2019.
 
+\bibitem{hol2008}
+Jeroen Hol.
+\newblock {\em Pose Estimation and Calibration Algorithms for Vision and
+  Inertial Sensors}.
+\newblock PhD thesis, Link\"{o}ping University, Sweden, 2008.
+
 \bibitem{lee2012a}
 Jung~Keun Lee, Edward~J. Park, and Stephen~N. Robinovitch.
 \newblock Estimation of {A}ttitude and {E}xternal {A}cceleration {U}sing

@@ -1,3 +1,4 @@
+
 \documentclass{article}
 
 \usepackage[latin1]{inputenc}
@@ -5,14 +6,18 @@
 
 \usepackage{tikz}
 \usetikzlibrary{arrows,calc,positioning,shadows,shapes,matrix}
-\usetikzlibrary{dsp,fit,chains,arrows.meta,shapes.geometric}
+\usetikzlibrary{fit,chains,arrows.meta,shapes.geometric}
 \usetikzlibrary{datavisualization.formats.functions}
 
 \usepackage[american,siunitx]{circuitikz}
 \usepackage{pgfplots}
 \usepackage{schemabloc,calc,blox}
 
+\usepackage{pgfplots}
+%\usepgfplotslibrary{external}
+%\tikzexternalize[prefix=tikz/]
 
+\usepackage[miktex]{gnuplottex}
 
 
 \begin{document}
@@ -397,81 +402,81 @@ from https://tex.stackexchange.com/questions/166838/block-diagram-with-dsp-tikz-
 
 In a comment, some problem with cut labels was mentioned when including the figure from an external file. In this case, I'd suggest you to use the \verb|standalone| documentclass to produce your image as a separate pdf file that then can be easily included in your document using the standard \verb|\includegraphics| mechanism from graphicx; you can use the border option for standalone to control the padding around your figure, in case it is required:
 
-\begin{tikzpicture}
-% Blocks and nodes
-\node[dspnodeopen,dsp/label=below] (ns) {$v(t)$}; 
-\node[left=of ns,fill=gray,circle,draw] (mic) {};
-\draw ([yshift=8pt]mic.east) -- ([yshift=-8pt]mic.east);
-\node[dspadder,left=of mic,left=1.5cm,label={above right:$-$},label={below right:$+$}] (add) {};
-\node[coordinate,left=of add,left=2.35cm] (fp1) {};
-\node[dspfilter,minimum height=2cm,above=of fp1,above=1.5cm] (gain) {$G$};
-\node[coordinate,above=of gain,above=1.5cm] (fp2) {};
-\node[dspnodefull,right=of fp2,right=2.55cm] (adnode) {$u(t)$};
-\node[dspfilter,minimum height=2cm,right=of gain,right=1.15cm] (adfilt) {$\hat{F}$};
-\node[draw,right= 4cm of fp2,fill=gray,trapezium,shape border rotate=90,shape border uses incircle] (ls) {};
-\draw ([yshift=-10pt]ls.west) -- ([yshift=10pt]ls.west);
-\node[dspfilter,minimum height=2cm,right=of gain,right=4cm] (feedback) {F};
-\node[dspnodefull,left=of add] (afupd1) {};
-\node[coordinate,above=of afupd1,above=1cm] (afupd2) {};
-\coordinate (aux) at ([yshift=-4pt]adfilt.center);
-% Connections
-\draw[dspconn] (ns) -- (mic);
-\draw[dspconn] (mic) -- node[midway,below=0.09cm] {$y(t)$} (add);
-\draw[dspline] (add) -- node[midway,below] {$d[t,\hat{\mathbf{f}}(t)]$} (fp1);
-\draw[dspline,dashed] (afupd1) -- (afupd2);
-\draw[dspconn,dashed] (afupd2) -- ( $ (afupd2)!2.7cm!(aux) $ );
-\draw[dspconn] (fp1) -- (gain);
-\draw[dspline] (gain) -- (fp2);
-\draw[dspline] (fp2) -- (adnode);
-\draw[dspconn] (adnode) -- (ls);
-\draw[dspconn] (adnode) -- (adfilt);
-\draw[dspconn] (adfilt) -- node[midway,right] {$\hat{y}[t |\hat{\mathbf{f}}(t)]$} (add);
-\draw[dspconn] (ls) to[out=0,in=90] (feedback);
-\draw[dspconn] (feedback) to[out=-90,in=30] ([yshift=3pt]mic.east);
-\end{tikzpicture}
+%\begin{tikzpicture}
+%% Blocks and nodes
+%\node[dspnodeopen,dsp/label=below] (ns) {$v(t)$}; 
+%\node[left=of ns,fill=gray,circle,draw] (mic) {};
+%\draw ([yshift=8pt]mic.east) -- ([yshift=-8pt]mic.east);
+%\node[dspadder,left=of mic,left=1.5cm,label={above right:$-$},label={below right:$+$}] (add) {};
+%\node[coordinate,left=of add,left=2.35cm] (fp1) {};
+%\node[dspfilter,minimum height=2cm,above=of fp1,above=1.5cm] (gain) {$G$};
+%\node[coordinate,above=of gain,above=1.5cm] (fp2) {};
+%\node[dspnodefull,right=of fp2,right=2.55cm] (adnode) {$u(t)$};
+%\node[dspfilter,minimum height=2cm,right=of gain,right=1.15cm] (adfilt) {$\hat{F}$};
+%\node[draw,right= 4cm of fp2,fill=gray,trapezium,shape border rotate=90,shape border uses incircle] (ls) {};
+%\draw ([yshift=-10pt]ls.west) -- ([yshift=10pt]ls.west);
+%\node[dspfilter,minimum height=2cm,right=of gain,right=4cm] (feedback) {F};
+%\node[dspnodefull,left=of add] (afupd1) {};
+%\node[coordinate,above=of afupd1,above=1cm] (afupd2) {};
+%\coordinate (aux) at ([yshift=-4pt]adfilt.center);
+%% Connections
+%\draw[dspconn] (ns) -- (mic);
+%\draw[dspconn] (mic) -- node[midway,below=0.09cm] {$y(t)$} (add);
+%\draw[dspline] (add) -- node[midway,below] {$d[t,\hat{\mathbf{f}}(t)]$} (fp1);
+%\draw[dspline,dashed] (afupd1) -- (afupd2);
+%\draw[dspconn,dashed] (afupd2) -- ( $ (afupd2)!2.7cm!(aux) $ );
+%\draw[dspconn] (fp1) -- (gain);
+%\draw[dspline] (gain) -- (fp2);
+%\draw[dspline] (fp2) -- (adnode);
+%\draw[dspconn] (adnode) -- (ls);
+%\draw[dspconn] (adnode) -- (adfilt);
+%\draw[dspconn] (adfilt) -- node[midway,right] {$\hat{y}[t |\hat{\mathbf{f}}(t)]$} (add);
+%\draw[dspconn] (ls) to[out=0,in=90] (feedback);
+%\draw[dspconn] (feedback) to[out=-90,in=30] ([yshift=3pt]mic.east);
+%\end{tikzpicture}
 
 
 
-% ---------------------------------------------------------
-\vspace{5ex}
-
-\begin{tikzpicture}
-\renewcommand{\dspfilterwidth}{8mm}
-\newcommand{\dspfilterheight}{1.8cm}
-\tikzset{dspfilter/.append style = {minimum height=\dspfilterheight}}
-\newcommand{\dspvspace}{1.2cm}
-
-% Blocks and nodes
-\node[dspnodeopen, dsp/label=below] (ns) {$v(t)$}; 
-\node[left=of ns, fill=gray, circle, draw] (mic) {};
-\draw ([yshift=8pt] mic.east) -- ([yshift=-8pt] mic.east);
-\node[dspadder, left=of mic, left=2.35cm, label={above right:$-$}, label={below right:$+$}] (add) {};
-\node[coordinate, left=of add, left=1.8cm] (fp1) {};
-\node[dspfilter, above=of fp1, above=\dspvspace] (gain) {$G$};
-\node[coordinate, above=of gain, above=\dspvspace] (fp2) {$fp2$};
-\node[dspnodefull, above=of add, above=2*\dspvspace+\dspfilterheight-0.5*\dspoperatordiameter-\dspblocklinewidth] (adnode) {$u(t)$};
-\node[dspfilter, above=of add, above=\dspvspace-0.5*\dspoperatordiameter] (adfilt) {$\hat{F}$};
-\node[draw, above=of mic, above=2*\dspvspace+\dspfilterheight-\dspblocklinewidth-0.4cm, fill=gray, trapezium, shape border rotate=90, shape border uses incircle] (ls) {};
-\draw ([yshift=-10pt] ls.west) -- ([yshift=10pt] ls.west);
-\node[dspfilter, above=of ns, above=\dspvspace] (feedback) {$F$};
-\node[dspnodefull, left=of add, left=0.8cm] (afupd1) {};
-\node[coordinate, above=of afupd1, above=\dspvspace] (afupd2) {};
-\coordinate (aux) at (adfilt.center);
-% Connections
-\draw[dspconn] (ns) -- (mic);
-\draw[dspconn] (mic) -- node[midway,below=0.09cm] {$y(t)$} (add);
-\draw[dspline] (add) -- node[midway,below] {$d[t,\hat{\mathbf{f}}(t)]$} (fp1);
-\draw[dspline,dashed] (afupd1) -- (afupd2);
-\draw[dspconn,dashed] (afupd2) -- ( $ (afupd2)!3cm!(aux) $ );
-\draw[dspconn] (fp1) -- (gain);
-\draw[dspline] (gain) -- (fp2);
-\draw[dspline] (fp2) -- (adnode);
-\draw[dspconn] (adnode) -- (ls);
-\draw[dspconn] (adnode) -- (adfilt);
-\draw[dspconn] (adfilt) -- node[midway,right] {$\hat{y}[t |\hat{\mathbf{f}}(t)]$} (add);
-\draw[dspconn] (ls) to[out=0,in=90] (feedback);
-\draw[dspconn] (feedback) to[out=-90,in=30] ([yshift=3pt]mic.east);
-\end{tikzpicture}
+%% ---------------------------------------------------------
+%\vspace{5ex}
+%
+%\begin{tikzpicture}
+%\renewcommand{\dspfilterwidth}{8mm}
+%\newcommand{\dspfilterheight}{1.8cm}
+%\tikzset{dspfilter/.append style = {minimum height=\dspfilterheight}}
+%\newcommand{\dspvspace}{1.2cm}
+%
+%% Blocks and nodes
+%\node[dspnodeopen, dsp/label=below] (ns) {$v(t)$}; 
+%\node[left=of ns, fill=gray, circle, draw] (mic) {};
+%\draw ([yshift=8pt] mic.east) -- ([yshift=-8pt] mic.east);
+%\node[dspadder, left=of mic, left=2.35cm, label={above right:$-$}, label={below right:$+$}] (add) {};
+%\node[coordinate, left=of add, left=1.8cm] (fp1) {};
+%\node[dspfilter, above=of fp1, above=\dspvspace] (gain) {$G$};
+%\node[coordinate, above=of gain, above=\dspvspace] (fp2) {$fp2$};
+%\node[dspnodefull, above=of add, above=2*\dspvspace+\dspfilterheight-0.5*\dspoperatordiameter-\dspblocklinewidth] (adnode) {$u(t)$};
+%\node[dspfilter, above=of add, above=\dspvspace-0.5*\dspoperatordiameter] (adfilt) {$\hat{F}$};
+%\node[draw, above=of mic, above=2*\dspvspace+\dspfilterheight-\dspblocklinewidth-0.4cm, fill=gray, trapezium, shape border rotate=90, shape border uses incircle] (ls) {};
+%\draw ([yshift=-10pt] ls.west) -- ([yshift=10pt] ls.west);
+%\node[dspfilter, above=of ns, above=\dspvspace] (feedback) {$F$};
+%\node[dspnodefull, left=of add, left=0.8cm] (afupd1) {};
+%\node[coordinate, above=of afupd1, above=\dspvspace] (afupd2) {};
+%\coordinate (aux) at (adfilt.center);
+%% Connections
+%\draw[dspconn] (ns) -- (mic);
+%\draw[dspconn] (mic) -- node[midway,below=0.09cm] {$y(t)$} (add);
+%\draw[dspline] (add) -- node[midway,below] {$d[t,\hat{\mathbf{f}}(t)]$} (fp1);
+%\draw[dspline,dashed] (afupd1) -- (afupd2);
+%\draw[dspconn,dashed] (afupd2) -- ( $ (afupd2)!3cm!(aux) $ );
+%\draw[dspconn] (fp1) -- (gain);
+%\draw[dspline] (gain) -- (fp2);
+%\draw[dspline] (fp2) -- (adnode);
+%\draw[dspconn] (adnode) -- (ls);
+%\draw[dspconn] (adnode) -- (adfilt);
+%\draw[dspconn] (adfilt) -- node[midway,right] {$\hat{y}[t |\hat{\mathbf{f}}(t)]$} (add);
+%\draw[dspconn] (ls) to[out=0,in=90] (feedback);
+%\draw[dspconn] (feedback) to[out=-90,in=30] ([yshift=3pt]mic.east);
+%\end{tikzpicture}
 
 
 
@@ -502,88 +507,88 @@ from https://tex.stackexchange.com/questions/200235/is-there-a-predefined-bandpa
 
 
 
-% ---------------------------------------------------------
-\vspace{5ex}
-from https://tex.stackexchange.com/questions/127663/drawing-control-diagram-in-latex
+%% ---------------------------------------------------------
+%\vspace{5ex}
+%from https://tex.stackexchange.com/questions/127663/drawing-control-diagram-in-latex
+%
+%\tikzstyle{decision} = [diamond, draw, fill=blue!20,text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+%\tikzstyle{block} = [rectangle, draw, fill=blue!20,text width=5em, text centered, minimum height=4em]
+%\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,minimum height=2em]
+%\tikzstyle{line} = [draw, -stealth, thick]
+%\tikzstyle{input} = [coordinate]
+%\tikzstyle{output} = [coordinfor future referenceate]
+%\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+%
+%\begin{tikzpicture}[auto,node distance =3cm,>=latex',
+%path/.style={->, >=stealth, postaction = decorate},
+%decoration={markings, mark = at position 1cm with {\arrow[black]{stealth}}
+%}]
+%
+%% Place nodes
+%\node [input, name = input]{Input command};
+%\node [block, right of = input] (control) {Controller $C(\theta_c)$};
+%\node [block, right of = control](plant){Plant $G(\theta^*$)};
+%\node [right of = plant] (output){y};
+%\node [block, below of = plant][yshift=1.25cm] (O_p_e) {Online Parameter Estimator};
+%\node [block, below of = O_p_e] [yshift=1cm](C_c_p) {Calculation of control parameters};
+%\draw[draw,->] ([yshift=-1em]input) -- node [above of = input, node distance = 1em]{Input} ([yshift=-1em]control.west);
+%\draw [->] (control) -- node {$u$} (plant);
+%\draw [->] (O_p_e) -- node {$\theta(t)$}(C_c_p);
+%\draw [->] (control) -- (4.5,0) |- node {} (O_p_e);
+%\draw [->] (C_c_p) -| node {$\theta_c(t)$} (control);
+%\path[line] (plant) -- (output);
+%\draw [->] (plant) -- (7.5,0) |- node {} (O_p_e);
+%\draw [->] (plant) -- (7.5,0) -- (7.5,1) -| (0.5,1) |- node {} ([yshift = -0.2cm]control.north west);
+%\end{tikzpicture}
 
-\tikzstyle{decision} = [diamond, draw, fill=blue!20,text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
-\tikzstyle{block} = [rectangle, draw, fill=blue!20,text width=5em, text centered, minimum height=4em]
-\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,minimum height=2em]
-\tikzstyle{line} = [draw, -stealth, thick]
-\tikzstyle{input} = [coordinate]
-\tikzstyle{output} = [coordinfor future referenceate]
-\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
-
-\begin{tikzpicture}[auto,node distance =3cm,>=latex',
-path/.style={->, >=stealth, postaction = decorate},
-decoration={markings, mark = at position 1cm with {\arrow[black]{stealth}}
-}]
-
-% Place nodes
-\node [input, name = input]{Input command};
-\node [block, right of = input] (control) {Controller $C(\theta_c)$};
-\node [block, right of = control](plant){Plant $G(\theta^*$)};
-\node [right of = plant] (output){y};
-\node [block, below of = plant][yshift=1.25cm] (O_p_e) {Online Parameter Estimator};
-\node [block, below of = O_p_e] [yshift=1cm](C_c_p) {Calculation of control parameters};
-\draw[draw,->] ([yshift=-1em]input) -- node [above of = input, node distance = 1em]{Input} ([yshift=-1em]control.west);
-\draw [->] (control) -- node {$u$} (plant);
-\draw [->] (O_p_e) -- node {$\theta(t)$}(C_c_p);
-\draw [->] (control) -- (4.5,0) |- node {} (O_p_e);
-\draw [->] (C_c_p) -| node {$\theta_c(t)$} (control);
-\path[line] (plant) -- (output);
-\draw [->] (plant) -- (7.5,0) |- node {} (O_p_e);
-\draw [->] (plant) -- (7.5,0) -- (7.5,1) -| (0.5,1) |- node {} ([yshift = -0.2cm]control.north west);
-\end{tikzpicture}
 
 
-
-% ---------------------------------------------------------
-\vspace{5ex}
-
-\makeatletter
-\dspdeclareoperator{dspvoidshapeadder}{
-	% Coordinate offset for the plus
-	\pgfutil@tempdima=\radius
-	\pgfutil@tempdima=0.55\pgfutil@tempdima
-	\pgfusepathqstroke
-}
-\makeatother
-\begin{tikzpicture}
-\tikzset{
-	vdspadder/.style={ shape=dspvoidshapeadder, line cap=rect, 		line join=rect, line width=\dspblocklinewidth, minimum size=\dspoperatordiameter, label={185:$+$}, label={265:$-$}  },
-	vadspadder/.style={ shape=dspvoidshapeadder, line cap=rect, line join=rect, line width=\dspblocklinewidth, minimum size=\dspoperatordiameter, label=below right:$-$, label=above right:$+$ }  }
-
-% the nodes
-\matrix[row sep=10mm, column sep=10mm] 
-{	& \node[vdspadder] (g1) {}; &  & \node[dspsquare] (g2) {$k_{\text{pr}}$}; & \node[dspfilter,text width=2cm] (g3) {Yaw Model}; \\
-\node[dspnodeopen,label=above left:$r_{des}$] (g4) {}; &  &  &  & \node[dspfilter,text width=2cm,text height=1.5em,text depth=2em] (g5) {Adaptation \\Law}; & \node[vadspadder] (g6) {};  \\ 
-& \node[vdspadder] (g7) {}; & \node[dspsquare] (g8) {$k_{\text{pr}}$}; & \node[dspsquare] (g9) {$K$}; & \node[dspfilter,text width=2cm] (g10) {Yaw Plant}; \\
-};
-% the connections
-\draw (g4) -- +(-20pt,0);
-\draw[dspconn] (g4) -- (g5);
-\draw[dspconn] (g4) |- coordinate[pos=0.85] (aux4) (g1);
-\draw[dspconn] (g1) -- (g2);
-\draw[dspconn] (g2) -- node[above] {$\delta_{\textrm{mod}}$} (g3);
-\draw[dspconn] (g3) -| node[dspnodeopen,pos=0.25] (aux1) {} (g6) node[label=right:$r_{\textrm{mod}}$,pos=0.75] {};
-\draw[dspconn] (g6) -- node[auto,swap] {$e$} (g5);
-\draw[dspconn] (aux1) -- +(0,-30pt) -| (g1);
-\draw[dspconn] (g4) |- (g7);
-\draw[dspconn] (g7) -- (g8);
-\draw[dspconn] (g8) -- (g9);
-\draw[dspconn] (g9) -- node[below,pos=0.25] {$\delta$} (g10);
-\draw[dspconn] (g10) -| node[dspnodeopen,pos=0.25] (aux2) {} (g6) node[label=right:$r$,pos=0.75] {};
-\draw[dspconn] (aux2) |- (g5.-20);
-\draw[dspconn] (aux2) |- +(0,-30pt) -| (g7);
-\draw (g5.270) |- +(0,-22pt) -| (g9);
-\draw[dspconn] (g9.south) -- +(0,-10pt);
-
-% the fitting dashed nodes
-\coordinate (aux3) at ([yshift=-20pt]aux1);
-\node[draw,inner xsep=10pt,inner ysep=20pt,dashed,fit=(aux4) (aux3),label=above:{Closed-Loop Yaw Model}] {};
-\node[draw,inner xsep=20pt,inner ysep=12pt,dashed,fit=(g8) (g9),label=above:{Yaw Rate Controller}] {};
-\end{tikzpicture}
+%% ---------------------------------------------------------
+%\vspace{5ex}
+%
+%\makeatletter
+%\dspdeclareoperator{dspvoidshapeadder}{
+%	% Coordinate offset for the plus
+%	\pgfutil@tempdima=\radius
+%	\pgfutil@tempdima=0.55\pgfutil@tempdima
+%	\pgfusepathqstroke
+%}
+%\makeatother
+%\begin{tikzpicture}
+%\tikzset{
+%	vdspadder/.style={ shape=dspvoidshapeadder, line cap=rect, 		line join=rect, line width=\dspblocklinewidth, minimum size=\dspoperatordiameter, label={185:$+$}, label={265:$-$}  },
+%	vadspadder/.style={ shape=dspvoidshapeadder, line cap=rect, line join=rect, line width=\dspblocklinewidth, minimum size=\dspoperatordiameter, label=below right:$-$, label=above right:$+$ }  }
+%
+%% the nodes
+%\matrix[row sep=10mm, column sep=10mm] 
+%{	& \node[vdspadder] (g1) {}; &  & \node[dspsquare] (g2) {$k_{\text{pr}}$}; & \node[dspfilter,text width=2cm] (g3) {Yaw Model}; \\
+%\node[dspnodeopen,label=above left:$r_{des}$] (g4) {}; &  &  &  & \node[dspfilter,text width=2cm,text height=1.5em,text depth=2em] (g5) {Adaptation \\Law}; & \node[vadspadder] (g6) {};  \\ 
+%& \node[vdspadder] (g7) {}; & \node[dspsquare] (g8) {$k_{\text{pr}}$}; & \node[dspsquare] (g9) {$K$}; & \node[dspfilter,text width=2cm] (g10) {Yaw Plant}; \\
+%};
+%% the connections
+%\draw (g4) -- +(-20pt,0);
+%\draw[dspconn] (g4) -- (g5);
+%\draw[dspconn] (g4) |- coordinate[pos=0.85] (aux4) (g1);
+%\draw[dspconn] (g1) -- (g2);
+%\draw[dspconn] (g2) -- node[above] {$\delta_{\textrm{mod}}$} (g3);
+%\draw[dspconn] (g3) -| node[dspnodeopen,pos=0.25] (aux1) {} (g6) node[label=right:$r_{\textrm{mod}}$,pos=0.75] {};
+%\draw[dspconn] (g6) -- node[auto,swap] {$e$} (g5);
+%\draw[dspconn] (aux1) -- +(0,-30pt) -| (g1);
+%\draw[dspconn] (g4) |- (g7);
+%\draw[dspconn] (g7) -- (g8);
+%\draw[dspconn] (g8) -- (g9);
+%\draw[dspconn] (g9) -- node[below,pos=0.25] {$\delta$} (g10);
+%\draw[dspconn] (g10) -| node[dspnodeopen,pos=0.25] (aux2) {} (g6) node[label=right:$r$,pos=0.75] {};
+%\draw[dspconn] (aux2) |- (g5.-20);
+%\draw[dspconn] (aux2) |- +(0,-30pt) -| (g7);
+%\draw (g5.270) |- +(0,-22pt) -| (g9);
+%\draw[dspconn] (g9.south) -- +(0,-10pt);
+%
+%% the fitting dashed nodes
+%\coordinate (aux3) at ([yshift=-20pt]aux1);
+%\node[draw,inner xsep=10pt,inner ysep=20pt,dashed,fit=(aux4) (aux3),label=above:{Closed-Loop Yaw Model}] {};
+%\node[draw,inner xsep=20pt,inner ysep=12pt,dashed,fit=(g8) (g9),label=above:{Yaw Rate Controller}] {};
+%\end{tikzpicture}
 
 
 
@@ -878,6 +883,125 @@ from https://texample.net/tikz/examples/consort-flowchart/
 \end{center}
 
 
+
+% ---------------------------------------------------------
+
+ from https://www.overleaf.com/learn/latex/Pgfplots\_package
+
+%\tikzexternalize
+\pgfplotsset{width=10cm,compat=1.9}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[color=red]{exp(x)};
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3[surf,]
+{exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[axis lines = left,xlabel = \(x\),ylabel = {\(f(x)\)},]
+\addplot [domain=-10:10, samples=100, color=red,]
+{x^2 - 2*x - 1};
+\addlegendentry{\(x^2 - 2x - 1\)}
+
+\addplot [domain=-10:10, samples=100, color=blue,]
+{x^2 + 2*x + 1};
+\addlegendentry{\(x^2 + 2x + 1\)}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[title={Temperature dependence of CuSO\(_4\cdot\)5H\(_2\)O solubility},xlabel={Temperature [$^\circ$C]}, ylabel={Solubility [g per 100 g water]}, xmin=0, xmax=100, ymin=0, ymax=120,
+xtick={0,20,40,60,80,100}, ytick={0,20,40,60,80,100,120},
+legend pos=north west, ymajorgrids=true, grid style=dashed,]
+\addplot[color=blue, mark=square,]
+coordinates {	(0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,114)};
+\legend{CuSO\(_4\cdot\)5H\(_2\)O}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=false,]
+	\addplot+[only marks,scatter,mark=halfcircle*,mark size=2.9pt]
+	table[meta=ma]{scattered_example.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[x tick label style={/pgf/number format/1000 sep=}, ylabel=Year, enlargelimits=0.05, legend style={at={(0.5,-0.1)}, anchor=north, legend columns=-1}, ybar interval=0.7, ]
+\addplot coordinates {(2012,408184) (2011,408348) (2010,414870) (2009,412156)};
+\addplot coordinates {(2012,388950) (2011,393007) (2010,398449) (2009,395972)};
+\legend{Men,Women}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[title=Example using the mesh parameter,hide axis,colormap/cool,]
+\addplot3[mesh, samples=50, domain=-8:8,]
+{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
+\addlegendentry{\(\frac{sin(r)}{r}\)}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[title={Contour plot, view from top}, view={0}{90} ]
+\addplot3[contour gnuplot={levels={0.8, 0.4, 0.2, -0.2}} ]
+{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[view={-60}{30},]
+\addplot3[surf,] 
+coordinates {(0,0,0) (0,1,0) (0,2,0)
+	
+	(1,0,0) (1,1,0.6) (1,2,0.7)
+	
+	(2,0,0) (2,1,0.7)(2,2,1.8)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[view={60}{30},]
+\addplot3[domain=0:5*pi,samples = 60,samples y=0,]
+({sin(deg(x))},{cos(deg(x))},{x});
+\end{axis}
+\end{tikzpicture}
+
+
+
+% ================================================
+
+from https://stackoverflow.com/questions/36386656/how-to-plot-in-latex-with-gnuplot
+
+
+\begin{figure}[h]
+	\centering
+	\begin{gnuplot}[terminal=pdf]
+		set terminal pdf enhanced size 14.5cm, 6cm
+		set key top left
+		set xlabel 'x [1]'
+		set ylabel 'y [1]'
+		
+		f1(x)=sin(x**2)
+		
+		plot f1(x) title 'y_1 = sin(x^2)'
+	\end{gnuplot}
+	\caption{Plot}
+\end{figure}
 
 
 

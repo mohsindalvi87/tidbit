@@ -1,0 +1,46 @@
+\documentclass[paper=a4paper,style=default]{powerdot}
+\pdsetup{palette=brown}
+
+
+\usepackage[utf8]{inputenc}
+
+\title{Powerdot Presentation}
+\author{Overleaf}
+\date{\today}
+
+\begin{document}
+%\begin{slide}{Slide Title}
+\maketitle
+%\end{slide}
+
+\begin{slide}[toc=,bm=]{Overview}
+	\tableofcontents[content=sections]
+\end{slide}
+
+\section{Sec1}
+\begin{slide}{Slide Title}
+  \begin{itemize}
+  \item This is an item
+  \item Second item
+  \item Third item
+  \end{itemize}
+\end{slide}
+
+
+\begin{slide}{Slide Title}
+	You can see a list of items below. \pause \\
+	There are commands to make them appear sequentially
+	\begin{itemize}[type=1]
+		\item<2> This is an item
+		\item<3> Second item
+		\item<4> Third item
+	\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=,bm={LaTeX, i*i=-1}]{\color{red}\LaTeX, $i^2=-1$}
+	My slide contents.
+\end{slide}
+
+
+
+\end{document}
