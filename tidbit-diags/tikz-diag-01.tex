@@ -27,17 +27,20 @@ from https://tex.stackexchange.com/questions/9386/difference-between-right-of-an
 
 centre-to-centre placing while using \texttt{right of=} option in tikz
 
-\begin{tikzpicture}
+\begin{figure}
+	\begin{tikzpicture}
 \node (a) {loooooooooooooooooooooooooooooong};
 \node[right of=a,font=\bfseries,blue] (b) {node b};
 \end{tikzpicture}
-
+\end{figure}
 boundary-to-boundary placing while using \texttt{right=of} option in tikz
 
-\begin{tikzpicture}
+\begin{figure}
+	\begin{tikzpicture}
 \node (a) {loooooooooooooooooooooooooooooong};
 \node[right=of a,font=\bfseries,blue] (b) {node b};
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -81,7 +84,8 @@ Below demos are from https://tex.stackexchange.com/questions/209355/drawing-a-bl
 % ---------------------------------------------------------
 \vspace{5ex}
 
-\begin{tikzpicture}[>=latex']
+\begin{figure}
+	\begin{tikzpicture}[>=latex']
 \tikzset{block/.style= {draw, rectangle, align=center,minimum width=2cm,minimum height=1cm},
 }
 \node [block]  (start) {One};
@@ -116,9 +120,9 @@ Below demos are from https://tex.stackexchange.com/questions/209355/drawing-a-bl
 (B1) edge (B2)
 (B2) -- (BDR)
 (BDR) -- (BUR)
-(BUR) -- (BEnd)
-;
+(BUR) -- (BEnd);
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -126,7 +130,8 @@ Below demos are from https://tex.stackexchange.com/questions/209355/drawing-a-bl
 % ---------------------------------------------------------
 \vspace{5ex}
 
-\begin{tikzpicture}[ > = latex',  node distance = 0mm and 5mm,   mynode/.style = {name = n#1, draw, minimum height = 10mm, minimum width = 20mm, inner sep = 4mm, outer sep = 1mm} ]
+\begin{figure}
+	\begin{tikzpicture}[ > = latex',  node distance = 0mm and 5mm,   mynode/.style = {name = n#1, draw, minimum height = 10mm, minimum width = 20mm, inner sep = 4mm, outer sep = 1mm} ]
 
 \node[mynode=1] {One};
 	\coordinate[right = 3mm of n1] (a);
@@ -145,13 +150,15 @@ Below demos are from https://tex.stackexchange.com/questions/209355/drawing-a-bl
 	\draw[->] (n5) -- (n6);
 	\draw[->] (n6) -| (b2) -- (b2 -| n4.west);
 \end{tikzpicture}
+\end{figure}
 
 
 
 % ---------------------------------------------------------
 \vspace{5ex}
 
-\begin{tikzpicture}[node distance=.25cm and 1cm]
+\begin{figure}
+	\begin{tikzpicture}[node distance=.25cm and 1cm]
 \tikzset{every node/.style={rectangle, draw, minimum width=2cm, minimum height=1cm}, > = latex, }
 % Nodes
 \node (one) {One};
@@ -168,6 +175,7 @@ Below demos are from https://tex.stackexchange.com/questions/209355/drawing-a-bl
 	\draw (\x2) -| ($(\x2)!.5!(two)$) |- (two.\r);  }
 \end{scope}
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -206,7 +214,8 @@ from https://tex.stackexchange.com/questions/123671/manual-automatic-line-breaks
 \vspace{5ex}
 from https://texample.net/tikz/examples/control-system-principles/ website.
 
-\begin{tikzpicture}[auto, node distance=2cm,> =latex']
+\begin{figure}
+	\begin{tikzpicture}[auto, node distance=2cm,> =latex']
 \tikzstyle{block} = [draw, fill=blue!20, rectangle, minimum height=3em, minimum width=6em]
 \tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
 \tikzstyle{input} = [coordinate]
@@ -229,6 +238,7 @@ from https://texample.net/tikz/examples/control-system-principles/ website.
 	\draw [->] (measurements) -| node[pos=0.95]{$-$} node[near end]{$y_m$} (sum);
 	draw \node at (y.south) {\textbullet};
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -274,7 +284,8 @@ from https://tex.stackexchange.com/questions/175969/block-diagrams-using-tikz we
 \vspace{5ex}
 Using \texttt{schemablock} package (terms in French):
 
-\begin{tikzpicture}
+\begin{figure}
+	\begin{tikzpicture}
 \sbEntree{E}                      
 \sbNomLien[1]{E}{$R(s)$}
 \sbComp{C1}{E}
@@ -298,6 +309,7 @@ Using \texttt{schemablock} package (terms in French):
 \sbNomLien[1]{E2}{$d_{\beta 2}$}
 \sbRelierxy{F2}{Somme}
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -306,7 +318,8 @@ Using \texttt{schemablock} package (terms in French):
 \vspace{5ex}
 Using \texttt{schemablock} package (terms in English):
 
-\begin{tikzpicture}
+\begin{figure}
+	\begin{tikzpicture}
 \bXInput{r}    \bXLinkName[1]{r}{$R(s)$}
 \bXComp{C1}{r}    \bXLink{r}{C1}  
 \bXBlocL[4]{Int}{$\frac{k_{i\beta}}{s}$}{C1}
@@ -324,6 +337,7 @@ Using \texttt{schemablock} package (terms in English):
 \bXBlocL{F2}{$\frac{1}{\alpha_{\beta2}}$}{E2}
 \bXLinkName[1]{E2}{$d_{\beta 2}$}    \bXLinkxy{F2}{Sum}
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -331,7 +345,8 @@ Using \texttt{schemablock} package (terms in English):
 \vspace{5ex}
 from https://tex.stackexchange.com/questions/206866/a-block-diagram-in-tikz website.
 
-\begin{tikzpicture}[> = Stealth] % use arrows.meta tikzlibrary
+\begin{figure}
+	\begin{tikzpicture}[> = Stealth] % use arrows.meta tikzlibrary
 	\tikzset{ function/.pic = { \tikzset{x=1.5cm/720, y=1cm/2} \draw [->] (0,0) -- (850,0); \draw [->] (0,0) -- (0,1.5); \draw  plot [domain=0:720, samples=180, smooth] (\x, {#1});  }  }
 
 	\path (0,0)  pic {function={sin(\x)}};
@@ -339,6 +354,7 @@ from https://tex.stackexchange.com/questions/206866/a-block-diagram-in-tikz webs
 	\path (0,2)  pic {function={1-exp(mod(\x,180)/180)/6}};
 	\path (0,3)  pic {function={1/sqrt(2)}};
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -346,7 +362,8 @@ from https://tex.stackexchange.com/questions/206866/a-block-diagram-in-tikz webs
 \vspace{5ex}
 from https://tex.stackexchange.com/questions/206866/a-block-diagram-in-tikz website.
 
-\begin{tikzpicture}[]
+\begin{figure}
+	\begin{tikzpicture}[]
 \tikzset{  block/.style = {rectangle, draw, fill=yellow!20, text width=4em, text centered, rounded corners, minimum height=6em},    line/.style = {draw, -latex'},    io/.style={draw, circle, inner sep=0pt, minimum size=4pt, fill=gray!50}  }
 
 \tikzset{
@@ -376,6 +393,7 @@ from https://tex.stackexchange.com/questions/206866/a-block-diagram-in-tikz webs
 	\pic at (8,2) [scale=0.2]{filted};
 	\pic at (10.5,-2) [scale=0.2]{dc};
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -383,7 +401,8 @@ from https://tex.stackexchange.com/questions/206866/a-block-diagram-in-tikz webs
 \vspace{5ex}
 from https://tex.stackexchange.com/questions/237765/block-diagram-using-tikz?rq=1 website.
 
-\begin{tikzpicture}[block1/.style={draw, minimum width=3cm, minimum height=1.8cm},    block2/.style={draw, minimum width=1cm, minimum height=.8cm},    > =Stealth]
+\begin{figure}
+	\begin{tikzpicture}[block1/.style={draw, minimum width=3cm, minimum height=1.8cm},    block2/.style={draw, minimum width=1cm, minimum height=.8cm},    > =Stealth]
 \node[block1,label=above:lol] (b1) {lol};
 \node[block1, right=5cm of b1] (b2) {lol2};
 \draw[->] ([yshift=3mm]b1.east) -- node[above] {c} ([yshift=3mm]b2.west);
@@ -393,6 +412,7 @@ from https://tex.stackexchange.com/questions/237765/block-diagram-using-tikz?rq=
 \draw[->] (b3.east) -- node[below]{b} ([yshift=-3mm]b2.west);
 \draw[->] (b2.east) --++(0:1cm) node[right]{thanks!};
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -596,7 +616,8 @@ from https://tex.stackexchange.com/questions/200235/is-there-a-predefined-bandpa
 \vspace{5ex}
 \noindent from https://www.overleaf.com/learn/latex/LaTeX\_Graphics\_using\_TikZ:\_A \_Tutorial\_for\_Beginners\_(Part\_1)\%E2\%80\%94Basic\_Drawing
 
-\begin{tikzpicture}
+\begin{figure}
+	\begin{tikzpicture}
 \draw[step=1cm,gray!25,very thin] (-2,-1.9) grid (6,5.9);
 \filldraw[fill=red!15!white, draw=red] (0,0) rectangle (4,4);
 \draw[green!75!black,dashed,thick,] (0,0) parabola (4,4);
@@ -608,14 +629,17 @@ from https://tex.stackexchange.com/questions/200235/is-there-a-predefined-bandpa
 \foreach \y in {0,1,2,3,4}
 \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
 \end{tikzpicture}
+\end{figure}
 
-\begin{tikzpicture}
+\begin{figure}
+	\begin{tikzpicture}
 \shade[left color=blue!30,right color=red!30] (2,2) circle (3cm);
 \shadedraw[inner color=blue,outer color=yellow, draw=black] (2,2) ellipse (3cm and 1cm);
 \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- cycle;
 \draw[blue,thick,] (0,0) parabola (4,4);
 \draw[black,dashed,thick] (3,0) arc (0:75:3cm);
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -660,7 +684,8 @@ from https://www.overleaf.com/learn/latex/LaTeX\_Graphics\_using\_TikZ:\_A \_Tut
 from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram-with-tikz-datavisualization
 
 
-\begin{tikzpicture}[>=stealth]
+\begin{figure}
+	\begin{tikzpicture}[>=stealth]
 \draw [->] (0,0,0) -- (2,0,0) node [at end, right] {$x$};
 \draw [->] (0,0,0) -- (0,2,0) node [at end, left] {$y$};
 \draw [->] (0,0,0) -- (0,0,2) node [at end, left] {$z$};
@@ -670,6 +695,7 @@ from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram
 \fill [blue,fill opacity=0.4, rotate around x=60] (0,0,0) -- (0,2,0) -- (1,0,0);
 \draw [fill=blue,draw opacity=0.5, rotate around x=90] (0,0,0) -- (0,2,0) -- (1,0,0);
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -678,6 +704,7 @@ from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram
 
 from https://tex.stackexchange.com/questions/110209/high-level-digital-design-in-tikz
 
+\begin{figure}
 \begin{tikzpicture}[every label/.style={font=\scriptsize},>=stealth]
 \tikzset{multiplexor/.style={rectangle, draw, align=center, minimum width = 6em, minimum height = 3em}}
 \tikzset{register/.style={multiplexor,fill=gray!30}}
@@ -707,6 +734,7 @@ from https://tex.stackexchange.com/questions/110209/high-level-digital-design-in
 \draw[->] (dig-scheme-2-1)--($(dig-scheme-2-1 |- dig-scheme.south west)-(0,1)$) coordinate[label=below:address];
 \draw[<-] (dig-scheme-2-3.east) -| ($(dig-scheme-2-3.east |- dig-scheme.north east)+(0.5,1)$) coordinate[label=above:sigma];
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -717,12 +745,12 @@ from https://tex.stackexchange.com/questions/110209/high-level-digital-design-in
 from https://tex.stackexchange.com/questions/149602/drawing-flow-diagram-in-latex-using-tikz
 
 
-\begin{tikzpicture}[node distance=1cm,>=latex',
+\begin{figure}
+	\begin{tikzpicture}[node distance=1cm,>=latex',
 block/.style = {draw, shape=rectangle, align=center},
 rblock/.style = {draw, shape=rectangle, rounded corners=0.5em},
 tblock/.style = {draw, shape=trapezium, trapezium left angle=60, 
-	trapezium right angle=120, align=center},
-]
+	trapezium right angle=120, align=center},]
 \linespread{0.9}
 \node [rblock]                      (start)     {Start};
 \node [block, right=of start]       (acquire)   {Acquire Image};
@@ -742,10 +770,12 @@ tblock/.style = {draw, shape=trapezium, trapezium left angle=60,
 \draw[->] (closing)  -- (detecting);
 \draw[->] (detecting) -- (speed);
 \end{tikzpicture}
+\end{figure}
 
 
 
-\begin{tikzpicture}[node distance=6mm, >=latex',
+\begin{figure}
+	\begin{tikzpicture}[node distance=6mm, >=latex',
 block/.style = {draw, rectangle, minimum height=10mm, minimum width=28mm,align=center},
 rblock/.style = {draw, rectangle, rounded corners=0.5em},
 tblock/.style = {draw, trapezium, minimum height=10mm, 
@@ -764,7 +794,7 @@ tblock/.style = {draw, trapezium, minimum height=10mm,
 (rgb2gray)edge(otsu)    (otsu)edge(gchannel)    (gchannel)edge(closing)
 (closing)edge(detecting)    (detecting)edge(speed)   ;
 \end{tikzpicture}
-
+\end{figure}
 
 
 % ---------------------------------------------------------
@@ -772,7 +802,8 @@ tblock/.style = {draw, trapezium, minimum height=10mm,
 
 fromhttps://tex.stackexchange.com/questions/306638/simple-block-diagram-tikz
 
-\begin{tikzpicture}[    node distance = 3mm and 21 mm,    start chain = A going below,    every node/.style = {draw, rounded corners, fill=white, minimum width=12mm, minimum height=6mm, drop shadow, on chain=A}    ]   
+\begin{figure}
+	\begin{tikzpicture}[    node distance = 3mm and 21 mm,    start chain = A going below,    every node/.style = {draw, rounded corners, fill=white, minimum width=12mm, minimum height=6mm, drop shadow, on chain=A}    ]   
 
 \node                       {$v_1$};            % A-1
 \node[below=12mm of A-1]    {$v_2$};            % A-2
@@ -788,6 +819,7 @@ fromhttps://tex.stackexchange.com/questions/306638/simple-block-diagram-tikz
 \draw[->] (A-6) -| (A-11);
 \foreach \i in {7,8,...,10}   \draw[->] (A-\i.east) -- (A-6.west);    % last arrow left
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -884,124 +916,7 @@ from https://texample.net/tikz/examples/consort-flowchart/
 
 
 
-% ---------------------------------------------------------
 
- from https://www.overleaf.com/learn/latex/Pgfplots\_package
-
-%\tikzexternalize
-\pgfplotsset{width=10cm,compat=1.9}
-\begin{tikzpicture}
-\begin{axis}
-\addplot[color=red]{exp(x)};
-\end{axis}
-\end{tikzpicture}
-
-\begin{tikzpicture}
-\begin{axis}
-\addplot3[surf,]
-{exp(-x^2-y^2)*x};
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[axis lines = left,xlabel = \(x\),ylabel = {\(f(x)\)},]
-\addplot [domain=-10:10, samples=100, color=red,]
-{x^2 - 2*x - 1};
-\addlegendentry{\(x^2 - 2x - 1\)}
-
-\addplot [domain=-10:10, samples=100, color=blue,]
-{x^2 + 2*x + 1};
-\addlegendentry{\(x^2 + 2x + 1\)}
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[title={Temperature dependence of CuSO\(_4\cdot\)5H\(_2\)O solubility},xlabel={Temperature [$^\circ$C]}, ylabel={Solubility [g per 100 g water]}, xmin=0, xmax=100, ymin=0, ymax=120,
-xtick={0,20,40,60,80,100}, ytick={0,20,40,60,80,100,120},
-legend pos=north west, ymajorgrids=true, grid style=dashed,]
-\addplot[color=blue, mark=square,]
-coordinates {	(0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,114)};
-\legend{CuSO\(_4\cdot\)5H\(_2\)O}
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[enlargelimits=false,]
-	\addplot+[only marks,scatter,mark=halfcircle*,mark size=2.9pt]
-	table[meta=ma]{scattered_example.dat};
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[x tick label style={/pgf/number format/1000 sep=}, ylabel=Year, enlargelimits=0.05, legend style={at={(0.5,-0.1)}, anchor=north, legend columns=-1}, ybar interval=0.7, ]
-\addplot coordinates {(2012,408184) (2011,408348) (2010,414870) (2009,412156)};
-\addplot coordinates {(2012,388950) (2011,393007) (2010,398449) (2009,395972)};
-\legend{Men,Women}
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[title=Example using the mesh parameter,hide axis,colormap/cool,]
-\addplot3[mesh, samples=50, domain=-8:8,]
-{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
-\addlegendentry{\(\frac{sin(r)}{r}\)}
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[title={Contour plot, view from top}, view={0}{90} ]
-\addplot3[contour gnuplot={levels={0.8, 0.4, 0.2, -0.2}} ]
-{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[view={-60}{30},]
-\addplot3[surf,] 
-coordinates {(0,0,0) (0,1,0) (0,2,0)
-	
-	(1,0,0) (1,1,0.6) (1,2,0.7)
-	
-	(2,0,0) (2,1,0.7)(2,2,1.8)};
-\end{axis}
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\begin{axis}[view={60}{30},]
-\addplot3[domain=0:5*pi,samples = 60,samples y=0,]
-({sin(deg(x))},{cos(deg(x))},{x});
-\end{axis}
-\end{tikzpicture}
-
-
-
-% ================================================
-
-from https://stackoverflow.com/questions/36386656/how-to-plot-in-latex-with-gnuplot
-
-
-\begin{figure}[h]
-	\centering
-	\begin{gnuplot}[terminal=pdf]
-		set terminal pdf enhanced size 14.5cm, 6cm
-		set key top left
-		set xlabel 'x [1]'
-		set ylabel 'y [1]'
-		
-		f1(x)=sin(x**2)
-		
-		plot f1(x) title 'y_1 = sin(x^2)'
-	\end{gnuplot}
-	\caption{Plot}
-\end{figure}
 
 
 

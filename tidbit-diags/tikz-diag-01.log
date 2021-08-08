@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  5 AUG 2021 09:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.3.9)  9 AUG 2021 01:47
 entering extended mode
-**./block-diag-1.tex
-(block-diag-1.tex
+**./tikz-diag-01.tex
+(tikz-diag-01.tex
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 76 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -1064,16 +1064,16 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write5
-runsystem(echo t > "w18-test-202185578.tex")...executed.
+runsystem(echo t > "w18-test-202189107.tex")...executed.
 
-runsystem(del "w18-test-202185578.tex")...executed.
+runsystem(del "w18-test-202189107.tex")...executed.
 
 Package gnuplottex Info: Automatically converting gnuplot files. on input line 
 110.
 \c@fignum=\count300
 )
-(block-diag-1.aux)
-\openout1 = `block-diag-1.aux'.
+(tikz-diag-01.aux)
+\openout1 = `tikz-diag-01.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -1163,27 +1163,27 @@ between-right-
  []
 
 
-Overfull \hbox (23.27849pt too wide) in paragraph at lines 47--48
+Overfull \hbox (23.27849pt too wide) in paragraph at lines 50--51
 []\OT1/cmr/m/n/10 Below de-mos are from https://tex.stackexchange.com/questions
 /209355/drawing-
  []
 
-[1
 
-{C:/Users/alakshendra.veer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (11.94511pt too wide) in paragraph at lines 176--177
+Overfull \hbox (11.94511pt too wide) in paragraph at lines 184--185
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/71478/how-to-cen
 ter-one-node-
  []
 
 
-Overfull \hbox (13.02855pt too wide) in paragraph at lines 189--190
+Overfull \hbox (13.02855pt too wide) in paragraph at lines 197--198
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/123671/manual-au
 tomatic-line-
  []
 
+[1{C:/Users/Mohsin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-Overfull \hbox (5.9729pt too wide) in paragraph at lines 207--208
+] [2]
+Overfull \hbox (5.9729pt too wide) in paragraph at lines 215--216
 []\OT1/cmr/m/n/10 from https://texample.net/tikz/examples/control-system-princi
 ples/ web-site. 
  []
@@ -1192,62 +1192,62 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no w in font nullfont!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 230.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 239.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 230.
- [2]
-Overfull \hbox (7.0563pt too wide) in paragraph at lines 237--238
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 239.
+
+Overfull \hbox (7.0563pt too wide) in paragraph at lines 247--248
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/175969/block-dia
 grams-using-
  []
 
 [3]
 Missing character: There is no ; in font nullfont!
- [4]
-Overfull \hbox (2.94447pt too wide) in paragraph at lines 368--369
+
+Overfull \hbox (2.94447pt too wide) in paragraph at lines 385--386
  [][][][]\OT1/cmr/m/n/10 Regulator 
  []
 
 
-Overfull \hbox (84.3594pt too wide) in paragraph at lines 378--379
+Overfull \hbox (69.3594pt too wide) in paragraph at lines 395--396
 [][] 
  []
 
 
-Overfull \hbox (3.11186pt too wide) in paragraph at lines 384--385
+Overfull \hbox (3.11186pt too wide) in paragraph at lines 402--403
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/237765/block-dia
 gram-using-
  []
 
-
-Overfull \hbox (51.09904pt too wide) in paragraph at lines 395--396
+[4] [5]
+Overfull \hbox (36.09904pt too wide) in paragraph at lines 414--415
 [][] 
  []
 
 
-Overfull \hbox (14.77754pt too wide) in paragraph at lines 403--404
+Overfull \hbox (14.77754pt too wide) in paragraph at lines 423--424
 \OT1/cmr/m/n/10 then can be eas-ily in-cluded in your doc-u-ment us-ing the sta
 n-dard [][]\OT1/cmtt/m/n/10 \includegraphics
  []
 
 
-Overfull \hbox (3.97289pt too wide) in paragraph at lines 485--486
+Overfull \hbox (3.97289pt too wide) in paragraph at lines 505--506
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/200235/is-there-
 a-predefined-
  []
 
-[5]
-Overfull \hbox (249.65295pt too wide) in paragraph at lines 597--598
+
+Overfull \hbox (249.65295pt too wide) in paragraph at lines 617--618
 \OT1/cmr/m/n/10 from https://www.overleaf.com/learn/latex/LaTeX[]Graphics[]usin
 g[]TikZ:[]A []Tutorial[]for[]Beginners[](Part[]1)%E2%80%94Basic[]Drawing 
  []
 
-[6]
-Overfull \hbox (1.83124pt too wide) in paragraph at lines 624--625
+
+Overfull \hbox (1.83124pt too wide) in paragraph at lines 648--649
 []\OT1/cmr/m/n/10 from https://www.overleaf.com/learn/latex/LaTeX[]Graphics[]us
 ing[]TikZ:[]A
  []
@@ -1256,103 +1256,61 @@ ing[]TikZ:[]A
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (7.80623pt too wide) in paragraph at lines 660--661
+Overfull \hbox (7.80623pt too wide) in paragraph at lines 684--685
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/354401/how-to-dr
 aw-a-vector-
  []
 
 
-Overfull \hbox (18.36186pt too wide) in paragraph at lines 679--680
+Overfull \hbox (18.36186pt too wide) in paragraph at lines 705--706
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/110209/high-leve
 l-digital-design-
  []
 
-[7]
-Overfull \vbox (188.68391pt too high) has occurred while \output is active []
-
-
-[8]
-Overfull \hbox (9.47296pt too wide) in paragraph at lines 717--718
+[6] [7]
+Overfull \hbox (9.47296pt too wide) in paragraph at lines 745--746
 []\OT1/cmr/m/n/10 from https://tex.stackexchange.com/questions/149602/drawing-f
 low-diagram-
  []
 
 
-Overfull \hbox (82.09644pt too wide) in paragraph at lines 744--745
+Overfull \hbox (67.09644pt too wide) in paragraph at lines 772--773
 [][] 
  []
 
 
-Overfull \hbox (5.88965pt too wide) in paragraph at lines 773--774
+Overfull \hbox (5.88965pt too wide) in paragraph at lines 803--804
 []\OT1/cmr/m/n/10 fromhttps://tex.stackexchange.com/questions/306638/simple-blo
 ck-diagram-
  []
 
-
-Overfull \hbox (6.49686pt too wide) in paragraph at lines 882--883
+[8] [9]
+Overfull \hbox (6.49686pt too wide) in paragraph at lines 914--915
  [] 
  []
 
-[9] [10] [11]
-PGFPlots: reading {scattered_example.dat}
- [12]
-\openout3 = `block-diag-1_contourtmp0.dat'.
-
-\openout3 = `block-diag-1_contourtmp0.script'.
-
-runsystem(gnuplot "block-diag-1_contourtmp0.script")...executed.
-
-PGFPlots: reading {block-diag-1_contourtmp0.table}
- [13] [14]
-Overfull \hbox (14.16739pt too wide) in paragraph at lines 988--989
-[]\OT1/cmr/m/n/10 from https://stackoverflow.com/questions/36386656/how-to-plot
--in-latex-with-
- []
-
-\openout5 = `block-diag-1-gnuplottex-fig1.gnuplot'.
-
-Opening gnuplot stream block-diag-1-gnuplottex-fig1.gnuplot
-runsystem(gnuplot block-diag-1-gnuplottex-fig1.gnuplot)...executed.
-
-Package gnuplottex Info: block-diag-1-gnuplottex-fig1.gnuplot converted on inpu
-t line 1002.
-<block-diag-1-gnuplottex-fig1.pdf, id=88, 412.54124pt x 170.6375pt>
-File: block-diag-1-gnuplottex-fig1.pdf Graphic file (type pdf)
-<use block-diag-1-gnuplottex-fig1.pdf>
-Package pdftex.def Info: block-diag-1-gnuplottex-fig1.pdf  used on input line 1
-002.
-(pdftex.def)             Requested size: 412.54024pt x 170.63707pt.
-
-Overfull \hbox (67.54024pt too wide) in paragraph at lines 1002--1003
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[15] [16 <./block-diag-1-gnuplottex-fig1.pdf>] (block-diag-1.aux) ) 
+[10] [11] (tikz-diag-01.aux) ) 
 Here is how much of TeX's memory you used:
- 47307 strings out of 493308
- 1235181 string characters out of 3138735
- 2867504 words of memory out of 3000000
- 50289 multiletter control sequences out of 15000+200000
+ 46938 strings out of 493308
+ 1226474 string characters out of 3138766
+ 1585922 words of memory out of 3000000
+ 49927 multiletter control sequences out of 15000+200000
  532588 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,17n,129p,10390b,4641s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on block-diag-1.pdf (16 pages, 305223 bytes).
+ 64i,16n,96p,10390b,2152s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmtt10.pfb>
+Output written on tikz-diag-01.pdf (11 pages, 179341 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
