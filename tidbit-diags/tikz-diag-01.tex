@@ -3,10 +3,13 @@
 
 \usepackage[latin1]{inputenc}
 \usepackage{caption}
+\usepackage{upgreek}
 
 \usepackage{tikz}
+\usepackage{tikz-3dplot}
 \usetikzlibrary{arrows,calc,positioning,shadows,shapes,matrix}
 \usetikzlibrary{fit,chains,arrows.meta,shapes.geometric}
+\usetikzlibrary{angles,intersections,3d,decorations.pathreplacing} %,3dtools}
 \usetikzlibrary{datavisualization.formats.functions}
 
 \usepackage[american,siunitx]{circuitikz}
@@ -691,9 +694,9 @@ from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram
 \draw [->] (0,0,0) -- (0,0,2) node [at end, left] {$z$};
 
 \filldraw [blue, opacity=0.2, rotate around x=0] (0,0,0) -- (0,2,0) -- (1,0,0);
-\filldraw [blue,fill opacity=0.3, rotate around x=30] (0,0,0) -- (0,2,0) -- (1,0,0);
+\filldraw [blue,fill opacity=0.3, rotate around y=-90, rotate around x=90] (0,0,0) -- (0,2,0) -- (1,0,0);
 \fill [blue,fill opacity=0.4, rotate around x=60] (0,0,0) -- (0,2,0) -- (1,0,0);
-\draw [fill=blue,draw opacity=0.5, rotate around x=90] (0,0,0) -- (0,2,0) -- (1,0,0);
+\draw [fill=yellow,draw opacity=0.5, rotate around z=-90] (0,0,0) -- (0,2,0) -- (1,0,0);
 \end{tikzpicture}
 \end{figure}
 
@@ -917,9 +920,370 @@ from https://texample.net/tikz/examples/consort-flowchart/
 
 
 
+% ================================================
+
+from https://stackoverflow.com/questions/34236801/tikz-draw-edge-from-node-to-label-of-another-edge
+
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}[shorten >=1pt,node distance=3cm,on grid,auto]
+	\tikzstyle{state}=[shape=circle,thick,draw,minimum size=1.5cm]
+	
+	\node[state] (A1) {$A_1$};
+	\node[state,above of=A1] (B1) {$B_1$};
+	\node[state,above of=B1] (C1) {$C_1$};
+	\node[state,right of=A1] (A2) {$A_2$};
+	\node[state,above of=A2] (B2) {$B_2$};
+	\node[state,above of=B2] (C2) {$C_2$};
+	
+	\path[->,draw,thick]
+	(A1) edge node[name=la] {$l_A$} (B2)
+	(B1) edge node[name=lb] {$l_B$} (B2);
+	\draw[->, thick, bend left=15]  (C1) edge (la); 
+	\draw[->, thick, bend left=25]  (C1) edge (lb); 
+	\end{tikzpicture}
+	\caption{Model}	\label{fig:f1}
+\end{figure}
+
+
+
+% ================================================
+
+%from https://tex.stackexchange.com/questions/19972/draw-a-plane-in-space-and-a-coordinate-system-using-tikz/
+%
+%\begin{figure}[h!]  	\centering
+%	% Generat amb TikZ  De https://tex.stackexchange.com/a/20009/61233
+%	\begin{tikzpicture}[x={(240:0.8cm)}, y={(-10:1cm)}, z={(0,1cm)}, plane max z=3]
+%	\draw[->, red] (0,0,0) -- (3,0,0);
+%	\draw[->, yellow] (0,0,0) -- (0,3,0);
+%	\draw[->, green] (0,0,0) -- (0,0,3);
+%	
+%	% Plane of equation 1x+1.5y+0z = 2
+%	\definePlaneByEquation{myplane}{1}{1.5}{0}{2}
+%	\drawPlane[thick,fill=blue]{myplane}
+%	
+%	% Plane of equation -4z = 0
+%	% It is determined by the four points:
+%	% (2,0,0), (0,4/3,0), (a,4/3+1.5a,0), (2+a,1.5a,0)
+%	% a \in \mathbb{R}
+%	%\definePlaneByEquation{myplane2}{0}{0}{-4}{0}      
+%	%\drawPlane[thick,fill=green]{myplane2}
+%	
+%	\filldraw[color=green!80,thick,draw=black] (2,0,0) -- (0,1.3333333,0)--(1,2.8333333,0) -- (3,1.5,0) -- cycle;
+%	
+%	% Intersection line
+%	\draw[ultra thick] (2.75,-0.5,0) -- (-1,2,0);
+%	\draw (-1,2,0) node[anchor=south] {$r$};
+%	
+%	% Normal vectors: (-4,-6,0) and (0,0,-4)
+%	%% Medium point of (2,0,0) and (1,4/6,0)
+%	%\draw (1,0.66666,0) circle (2pt);
+%	%% + (0.5, 0.5,0); 
+%	%\draw (1.5,1.16666,0) circle (2pt);
+%	%% Plus normal director (0,0,4)
+%	\draw[->,thick] (1.5,1.16666,0) -- (1.5,1.16666,1);
+%	%% Name of the normal vector
+%	\draw (1.5,1.16666,0.5) node[anchor=west] {$n_\pi$};
+%	
+%	%% The name of the plane
+%	\draw (0.5,2.08333333,0) node[anchor=west] {$\pi$};
+%	
+%	%% Medium point of (2,0,0) and (1,4/6,0) elevated +2
+%	%\draw (1.5,1.166666,2) circle (2pt);
+%	%% Plus normal director 1.2*(1,1.5,0)
+%	\draw[->,thick] (1.5,1.166666,2) -- (2.2,2.133333,2);
+%	%% Name of the normal vector
+%	\draw (1.85,1.649999,2) node[anchor=east] {$n_\rho$};
+%	
+%	%% The name of the plane 2
+%	\draw (2,0,2) node[anchor=east] {$\rho$};
+%	
+%	\end{tikzpicture}
+%	\caption{Vector director d'una recta com a producte vectorial dels vectors normals dels plans que la defineixen}
+%	\label{fig:repr-vector-director-a-partir-plans}
+%\end{figure}
+
+
+% ================================================
+
+from https://tex.stackexchange.com/questions/158585/draw-3d-intersecting-surfaces
+
+\begin{tikzpicture}[xscale=0.8,>=latex]
+% axis
+\draw[ultra thick,->] (0.3,-3.5) -- +(0,7) node[yshift=5pt] {$\mu$};
+\draw[ultra thick,->] (0.3,-3.5) -- +(220:4) node[yshift=-5pt,xshift=-5pt] {$p$};
+\draw[ultra thick,->] (0.3,-3.5) -- +(12,0) node[xshift=6pt] {$T$};
+
+% borders of surface1
+\path[draw,name path=border1] (0,0) to[out=-10,in=150] (6,-2);
+\path[draw,name path=border2] (12,1) to[out=150,in=-10] (5.5,3.2);
+\draw[draw,thick,name path=line1] (6,-2) -- (12,1);
+\path[draw,name path=line2] (5.5,3.7) -- (0,0);
+% draw surface1
+\shade[left color=yellow!10,right color=gray!30]   (0,0) to[out=-10,in=150] (6,-2) -- (12,1) to[out=150,in=-10] (5.5,3.7) -- cycle;
+
+% borders of surface2
+\path[draw,name path=border3] (-1,-4) to[out=20,in=220] (3,3);
+\path[draw,name path=border4] (6,-7) to[out=40,in=210] (9,1);
+\path[draw,name path=border5] (-1,-4) to[out=0,in=90] (6,-7);
+\path[draw,name path=border6] (3,3) to[out=10,in=140] (9,1);
+% draw surface2
+\shade[top color=blue!10,bottom color=cyan!90,opacity=.30]   (-1,-4) to[out=20,in=220] (3,3)  to[out=10,in=140] (9,1)  to[out=210,in=40] (6,-7) to[out=90,in=0] (-1,-4);
+
+% labels
+\node at (0.5,-3.8) {$\alpha$};
+\node at (10,1) {$\beta$};
+\node at (9.4,-4.5) (label) {$p_{\alpha\beta}(T)$};
+\draw[->] (label) -- +(185:3.35);
+
+% intersection points
+\path[name intersections={of=border3 and line2,by={a}}];
+\path[name intersections={of=border4 and line1,by={b}}];
+% intersection of the surfaces
+\draw[thick,dashed,red] (a) to[out=-10,in=130] (b);
+
+% proyections of the intersection points
+\draw[help lines,gray!70] (a) -- +(0,-4.9) coordinate (proy1);
+\draw[help lines] (b) -- +(0,-5) coordinate (proy2);
+% proyection of the intersection path
+\draw[ultra thick,red] (proy1) to[out=0,in=130] (proy2);
+
+%\shade[left color=gray!10,right color=yellow!70,opacity=.30]   (a) to[out=-10,in=150] (b) -- (12,1) to[out=150,in=-10] (5.5,3.7) -- cycle;
+%\shade[top color=blue!10,bottom color=cyan!90,opacity=.30]   (-1,-4) to[out=20,in=220] (3,3)  to[out=10,in=140] (9,1)  to[out=210,in=40] (6,-7) to[out=90,in=0] (-1,-4);
+%\shade[left color=gray!10,right color=yellow!70,opacity=.30]   (0,0) to[out=-10,in=150] (6,-2) -- (b) to[out=130,in=-10] (a) -- cycle;
+
+\end{tikzpicture}
+
+
+
+% ================================================
+
+from
+
+\begin{tikzpicture}
+[x={(-0.5cm,-0.5cm)}, y={(1cm,0cm)}, z={(0cm,1cm)}, 
+scale=4,fill opacity=0.80,very thin,rounded corners=3mm,double,every node/.append style={transform shape}]
+\newcommand\drawface{\draw[fill=gray!10,double] (-1,-1) rectangle (1,1)}
+
+% face #1
+\begin{scope}[canvas is yz plane at x=-1]
+\drawface;  \node[magenta]  {Magenta};  \end{scope}
+% face #2
+\begin{scope}[canvas is yx plane at z=-1]
+\drawface;  \node[violet,yscale=-1] {Violet};  \end{scope} 
+% face #3
+\begin{scope}[canvas is zx plane at y=-1]
+\drawface;  \node[green,rotate=-90] {Green};  \end{scope}
+% face #slice
+\begin{scope}[canvas is yx plane at z=-0.25]  
+\draw[fill=gray!10,double,rounded corners=1mm] (-1,-1) rectangle (1,1);
+\node[black,yscale=-1,opacity=.8] {Slice};  \end{scope}
+% face #4
+\begin{scope}[canvas is zx plane at y=1]
+\drawface;  \node[orange,rotate=-90] {Orange};  \end{scope}
+% face #5
+\begin{scope}[canvas is yx plane at z=1]
+\drawface;  \node[blue,yscale=-1] {Blue};  \end{scope}
+% face #6
+\begin{scope}[canvas is yz plane at x=1]
+\drawface;  \node[red]  {Red};  \end{scope}
+\end{tikzpicture}
+
+
+
+% ================================================
+
+from https://tex.stackexchange.com/questions/489682/drawing-a-simple-plane-in-3d-space
+
+\begin{tikzpicture}[>=Latex,z={(-0.4,-0.4)},x={(1,0)},y={(0,1)}]
+\coordinate (O) at (0, 0, 0);
+\coordinate (A) at (2,3,1);
+\draw[thick,->] (O) --++ (4.5,0,0) node[anchor=north east]{spot 0};     
+\draw[thick,->] (O) --++ (0,4.5,0) node[anchor=north east]{spot 1};     
+\draw[thick,->] (O) --++ (0,0,4.5) node[anchor=east]{spot 2};
+\draw[->, ultra thick] (O)--(A) node[anchor=west]{$\Phi$};
+\draw[thick] ($(O)!4cm!270:(A)$) -- ($(O)!3cm!90:(A)$)  node[anchor=south east]{$X$};
+\begin{scope}%[rotate around z=45]
+\filldraw[fill=blue!10, opacity=0.6] (0,-2,2) -- (0,-2,-2) --  (0,2,-2) -- (0,2,2) -- cycle;  \draw[very thick] (0,2,0) -- (0,-2,0);
+\end{scope}
+\end{tikzpicture}
+
+
+
+% ================================================
+
+from https://tex.stackexchange.com/questions/98753/ellipse-with-eigenvectors-and-eigenvalus-in-tikz
+
+\begin{tikzpicture}
+\begin{scope}[remember picture,rotate=45]
+\coordinate (O) at (0,0);
+\coordinate (A) at (4.5,0);
+\coordinate (B) at (0,2);
+% draw ellipse
+\draw[line width = 0.5mm] (O) ellipse (4.5cm and 2.0cm);
+% draw axis
+\draw[line width = 0.5mm, ->] (-5, 0) -- (5, 0) coordinate[right] (e1);
+\draw[line width = 0.5mm, ->] (0, -5) -- (0, 5) coordinate[above] (e2);
+% calculate brace points for major axis
+\path (O) -- (A) coordinate[pos=.02] (a1) coordinate[pos=.98] (a2);
+\draw[decorate, decoration = {brace, amplitude = 15pt, mirror, raise =4pt}, yshift = 0pt]
+(a2) -- (a1) coordinate[midway] (tl1);
+\coordinate (l1) at ([yshift=1cm]tl1);
+% calculate brace points for minor axis
+\path (O) -- (B) coordinate[pos=.05] (b1) coordinate[pos=.95] (b2);
+\draw[decorate, decoration = {brace, amplitude = 15pt, mirror, raise =4pt}, yshift = 0pt]
+(b2) -- (b1) coordinate[midway] (tl2);
+\coordinate (l2) at ([xshift=-.9cm]tl2);
+\end{scope}
+\draw[line width = 0.5mm, dashed, ->] (-5, 0) -- (5, 0) node[right]{$X_{1}$};
+\draw[line width = 0.5mm, dashed, ->] (0, -5) -- (0, 5) node[above]{$X_{2}$};
+\node[anchor=south west] at (e1) {$e_1$};
+\node[anchor=south east] at (e2) {$e_2$};
+\node[anchor=south west] at (l1) {$\frac{c}{\sqrt{\lambda_1}}$};
+\node[anchor=south east] at ([xshift=.1cm]l2) {$\frac{c}{\sqrt{\lambda_2}}$};   
+\end{tikzpicture}
+
+
+
+% ================================================
+
+from https://tex.stackexchange.com/questions/36534/symbol-for-rotate-around-axis
+
+\newcommand{\AxisRotator}[1][rotate=0]{ \tikz [x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw (0,0) arc (-150:150:1 and 1);  }
+\begin{tikzpicture}
+\draw (0,0)  -- (3,0)  node [midway] {\AxisRotator};
+\draw (0,0)  -- (0,-3) node [midway] {\AxisRotator[rotate=-90]};
+\draw (0,-3) -- (3,0)  node [midway] {\AxisRotator[rotate=60]};
+\end{tikzpicture}
+%
+\begin{tikzpicture}
+\draw (0,0)  -- (3,0)  node [midway] {\AxisRotator[x=0.2cm,y=0.4cm,->,densely dotted]};
+\draw (0,0)  -- (0,-3) node [midway] {\AxisRotator[x=0.2cm,y=0.4cm,->,rotate=-90,blue, dashed]};
+\draw (0,-3) -- (3,0)  node [midway] {\AxisRotator[x=0.2cm,y=0.4cm,->, rotate=60, red ]};
+\end{tikzpicture}
+
+
+
+% ================================================
+
+from https://tex.stackexchange.com/questions/47950/confused-about-tikz-drawrotate-angle
+
+\begin{tikzpicture}
+\draw (0,0)--(10,0);
+\foreach \x in {0,...,10}  \draw (\x,0)--(\x,-.1) node[anchor=north] {\x};
+\draw (0,0)--(0,10);
+\foreach \y in {0,...,10}  \draw (0,\y)--(-.1,\y) node[anchor=east] {\y};
+
+\draw[help lines] (0,0) grid (10,10);
+\draw (5,5) ellipse (10pt and 20pt);  
+\draw[rotate=45] (5,5) ellipse (10pt and 20pt);
+\draw[rotate around={45:(5,5)},red] (5,5) ellipse (10pt and 20pt);
+\draw[rotate around={45:(3,3)},blue] (5,5) ellipse (10pt and 20pt);
+\end{tikzpicture}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ================================================
+
+formula from https://tex.stackexchange.com/questions/163302/indicate-a-right-angle-in-3d
+\newcommand{\RightAngle}[4][10pt]{ \draw ($#3!#1!#2$)
+	-- ($ #3!2!($($#3!#1!#2$)!.5!($#3!#1!#4$)$) $) -- ($#3!#1!#4$) ; }
+
+figure is self-made. 
+\begin{tikzpicture}%[z={(-0.4,-0.4)},x={(1,0)},y={(0,1)}]
+%\draw[style=help lines] (-1,-1) grid +(5,5);
+\coordinate (fO) at (0,0,0);
+\path [-latex, thick] (fO) edge (1.1,0,0) edge (0,1.1,0) edge (0,0,1.1) node [left, pos=0, anchor=east] {O};
+\coordinate (fN) at (7.5,0,3);
+\path [-latex, rotate around ={20:(10,0)}, rotate around y=10, thick] (fN) edge +(1.1,0,0) edge +(0,1.1,0) edge +(0,0,1.1) node [above, anchor=north west] {N};
+
+\coordinate (fD) at (7.7,0,8.5);
+\draw [-latex, thin] (fO) -- (fD);
+\path[-latex, green!70!black, bend left=45] (fO) edge  node[right,pos=0.75]{$|\mathbf{\uptheta}|$} (fD);
+\draw [green!70!black, -latex] (fD) -- node[right,pos=0.5]{$\mathbf{d}$} (fN);
+
+\coordinate (ax) at (4,0,7);
+\draw [-latex,] (ax) +(0,0,2)  --  node[right,pos=1]{$\mathbf{n}$}  +(0,0,-10);
+\path[dashed]  (ax)  edge  node[left,pos=0.5]{$\mathbf{c}$} (fO)  edge   node[below,pos=0.5]{$\mathbf{l}$}  (fD); 
+
+%\fill[fill=yellow,opacity=0.3]  (fO)  --  node[left,pos=0.5]{$\mathbf{c}$} (ax)  --   node[below,pos=0.5]{$\mathbf{l}$}  (fD) to[out=97,in=9] (fO) ; 
+%\node at (6,0,8.5) {$l$};
+\draw [blue!20!red,-latex] (fO) to[out=0,in=160] node[above,pos=0.75]{$\mathbf{p}^b$} (fN);
+\RightAngle{(fO)}{(ax)}{(fD)}; 
+\RightAngle{(fO)}{(fD)}{(fN)}; 
+
+\end{tikzpicture}
+
+%
+
+
+
+
+% ================================================
+
+from https://tex.stackexchange.com/questions/46682/making-a-3d-colored-pyramid-in-tikz
+
+\begin{tikzpicture} %[x={(-0.4,-0.4)},z={(0,1)},y={(1,0)}]
+\draw[thick,-stealth] (0,0,0)--(0,0,6); 
+\draw[thick,-stealth] (0,0,0)--(0,6,0);
+\draw[-stealth] (0,0,0)--(6,0,0);
+\coordinate[label={$(0,0,0)$}] (O) at (0,0,0);
+\coordinate[label={$(0,0,5)$}] (A1) at (0,0,5);
+\coordinate[label={$(0,5,0)$}] (A2) at (0,5,0);
+\coordinate[label={$(5,0,0)$}] (A3) at (5,0,0);
+\coordinate[label={$(3,0,0)$}] (B1) at (3,0,0);
+\coordinate[label={$(0,0,2)$}] (B2) at (0,0,2);
+\coordinate[label={$(2,0,2)$}] (B3) at (2,0,2);
+\coordinate[label={$(0,3,3)$}] (C2) at (0,3,3);
+\coordinate[label={$(3,2,0)$}] (C3) at (3,2,0);
+
+%draw[fill=black,opacity=0.1] (O)--(B2)--(B3)--(B1)
+\filldraw[draw=brown, fill=brown, fill opacity=0.1] (B3)--(B1)--(C3);
+\filldraw[draw=brown, fill=brown, fill opacity=0.1] (C2)--(B2)--(B3);
+\filldraw[draw=brown, fill=brown, fill opacity=0.1] (B3)--(C2)--(A2)--(C3)--cycle;
+\filldraw[draw=blue, fill=blue, fill opacity=0.1](B3)-- (A1)--(C2);
+\filldraw[draw=red, fill=red, fill opacity=0.1] (B3)--(A3)--(C3);
+\end{tikzpicture}
+
+\begin{tikzpicture} [ z={(0, 1)}, x={(-0.866, -0.5)}, y={(-1,-1)},]
+\draw [->] (0,0) -- (6,0,0) node [below right] {$x$};
+\draw [->] (0,0) -- (0,6,0) node [above] {$y$};
+\draw [->] (0,0) -- (0,0,6) node [below left] {$z$};
+\coordinate (compoint) at (2,3,0);
+\filldraw[draw=brown, fill=brown, fill opacity=.1] (2,0,2) -- (compoint) -- (0,3,3) -- node[above right, opacity=0.9, pos=1]{$(0,0,5)$} (0,0,5) -- cycle;
+\filldraw[draw=brown, fill=brown, fill opacity=.1] (compoint) -- (2,0,0) -- node [above left, opacity=.9,pos=1]{$(2,0,2)$} (2,0,2) -- cycle;
+\filldraw[draw=brown, fill=brown, fill opacity=.1] (compoint) -- (0,3,0) -- node [above right, opacity=0.9, pos=1]{$(0,3,3)$} (0,3,3);
+\filldraw[draw=blue, fill=blue, fill opacity=0.1] (0,3,3) -- node [above right, opacity=.9, pos=1]{$(0,5,0)$} (0,5,0) -- (compoint);
+\filldraw[draw=blue, fill=blue, fill opacity=.1] (2,0,2) -- node[above left, opacity=0.9, pos=1] {$(5,0,0)$} (5,0,0) -- (compoint);
+\end{tikzpicture}
+	
+	
 \end{document} 

@@ -179,6 +179,20 @@ from https://stackoverflow.com/questions/36386656/how-to-plot-in-latex-with-gnup
 
 
 
+% ================================================
+
+from https://tex.stackexchange.com/questions/136288/pgfplots-how-to-fill-area-under-a-curve-in-a-3d-plot-similar-to-closedcycle-in
+
+\begin{tikzpicture}
+\begin{axis}[xmin=0,xmax=3,zmin=0,zmax=2]
+\addplot3[red,domain=0:1,fill=blue,opacity=0.5,samples y=0] (2,x,x^2) -- (axis cs:2,1,0) -- (axis cs:2,0,0);
+\end{axis}
+\end{tikzpicture}
+
+
+
+% ================================================
+
 
 
 

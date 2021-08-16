@@ -29,9 +29,9 @@ def v2mskew(v):
 
 
 class Quat:
-    def __init__( self, in_s=1.0, in_v=[0.0,0.0,0.0] ):
-        self.s = float(in_s)
-        self.v = np.copy(in_v).astype(float)
+    def __init__( self, s=0.0, v=[0.0,0.0,0.0] ):
+        self.s = float(s)
+        self.v = np.copy(v).astype(float)
 
     def __repr__(self):
         return 'Quat(%f, [%f, %f, %f])' % \
@@ -82,16 +82,16 @@ class Quat:
         is_eps = sumsquare < 1e-9
         return Quat(0, [0,0,0]) if is_eps==True else (1/sumsquare)*self.conj()
 
-    def dot(p):
+    def dot(self, p):
 #         return 0.5 * ( p.conj()*q + q.conj()*p )
         return (self.p*p.s + np.dot(self.v,p.v), np.zeros(3) )
         
-    def cross(p):
+    def cross(self, p):
 #         return 0.5 * ( p*q - q.conj()*p.conj() )
         return (0, self.s*p.v + p.s*self.v + np.cross(self.v,p.v) )
-        
-    def iden():
-        return Quat([1, 0, 0, 0])
+    
+    def adj(self, pvec):
+        return self * Quat(0, pvec) * self.conj()
     
     def q2axisangle(self):
         u = self.unit()
@@ -110,6 +110,9 @@ class Quat:
     def q2YPR(self):
         R = self.q2rotmat()
         return rotmat2YPR(R)
+        
+def q_iden():
+    return Quat( s=1 )
 
 
 ##########################################
@@ -149,59 +152,59 @@ def rotmat2YPR(R):
 
 
 class DualQuat(Quat):
-    def __init__( self, in_Rl = Quat(1, [0,0,0]), in_Dl = Quat(0, [0,0,0]) ):
-        self.Rl = in_Rl  # super().__init__(in_Rl)
-        self.Dl = in_Dl  # super().__init__(in_Dl)
+    def __init__( self, Re = Quat(1, [0,0,0]), Du = Quat(0, [0,0,0]) ):
+        self.Re = Re  # super().__init__(in_Re)
+        self.Du = Du  # super().__init__(in_Du)
     
     def __repr__(self):
         return 'DualQuat(Quat(%f, [%f, %f, %f])\n \
         + \u03B5 Quat(%f, [%f, %f, %f]))' % \
-            (self.Rl.s, self.Rl.v[0], self.Rl.v[1], self.Rl.v[2], \
-             self.Dl.s, self.Dl.v[0], self.Dl.v[1], self.Dl.v[2],)
+            (self.Re.s, self.Re.v[0], self.Re.v[1], self.Re.v[2], \
+             self.Du.s, self.Du.v[0], self.Du.v[1], self.Du.v[2],)
         
     def __str__(self):
         return 'DualQuat(Quat(%f, [%f, %f, %f])\n \
         + \u03B5 Quat(%f, [%f, %f, %f]))' % \
-            (self.Rl.s, self.Rl.v[0], self.Rl.v[1], self.Rl.v[2], \
-             self.Dl.s, self.Dl.v[0], self.Dl.v[1], self.Dl.v[2],)
+            (self.Re.s, self.Re.v[0], self.Re.v[1], self.Re.v[2], \
+             self.Du.s, self.Du.v[0], self.Du.v[1], self.Du.v[2],)
         
     def __add__(self, p):
-        return DualQuat(self.Rl+p.Rl, self.Dl+p.Dl)
+        return DualQuat(self.Re+p.Re, self.Du+p.Du)
         
     def __sub__(self, p):
-        return DualQuat(self.Rl-p.Rl, self.Dl-p.Dl)
+        return DualQuat(self.Re-p.Re, self.Du-p.Du)
         
     def __mul__(self, p):
-        real = self.Rl*p.Rl
-        dual = self.Rl*p.Dl + self.Dl*p.Rl
+        real = self.Re*p.Re
+        dual = self.Re*p.Du + self.Du*p.Re
         return DualQuat( real, dual )
     
     def __rmul__(self, scalar):
-        return DualQuat( scalar*self.Dl, scalar*self.Rl )
+        return DualQuat( scalar*self.Re, scalar*self.Du )
         
     def dconj(self):
-        return DualQuat( self.Rl, -1*self.Dl )
+        return DualQuat( self.Re, -1*self.Du )
     
     def qconj(self):
-        return DualQuat( self.Rl.conj(), self.Dl.conj() )
+        return DualQuat( self.Re.conj(), self.Du.conj() )
     
     def dqconj(self):
-        return DualQuat( self.Rl.conj(), -1*self.Dl.conj() )
+        return DualQuat( self.Re.conj(), -1*self.Du.conj() )
     
     def inv(self):
-        Rpart = self.Rl.inv()
-        Dpart = -1 * Rpart * self.Dl * Rpart
+        Rpart = self.Re.inv()
+        Dpart = -1 * Rpart * self.Du * Rpart
         return DualQuat( Rpart, Dpart )
-    
-    def dqiden():
-        return DualQuat( Quat(1, [0,0,0]), Quat(0, [0,0,0]) )
+
+    def adj(self, pvec):
+        return self * Dual( q_iden(), Quat(0, pvec) ) * self.qconj()
 
     def swap(self):
-        return DualQuat( self.Dl, self.Rl )
+        return DualQuat( self.Du, self.Re )
     
     def dq2angleaxisdist(self):
-        angle, axis = self.Rl.angleaxis()
-        tran = Quat( 2 * self.Dl * self.Rl.conj() ).v
+        angle, axis = self.Re.angleaxis()
+        tran = Quat( 2 * self.Du * self.Re.conj() ).v
         return angle, axis, tran
     
 #     def norm(self):
@@ -211,9 +214,12 @@ class DualQuat(Quat):
 #         return DualQuat(self.q / self.norm())
     
     def dq2htm(self):
-        tv = Quat( 2 * self.Dl * self.Rl.conj() ).v
-        row_123 = np.hstack(( self.Rl.q2rotmat(), tv ))
+        tv = Quat( 2 * self.Du * self.Re.conj() ).v
+        row_123 = np.hstack(( self.Re.q2rotmat(), tv ))
         return np.vstack(( row_123, np.array([0, 0, 0, 1]) ))
+    
+def dq_iden():
+    return DualQuat( q_iden(), Quat(0, [0,0,0]) )
 
     
 ##########################################
@@ -226,6 +232,75 @@ def htm2dq(T):
     tq = Quat(np.hstack(( 0, T[0:4,3] )))
     rq = Quat.rot2q( T[0:4,0:4] )
     return DualQuat.rqtq2dq( rq, tq )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########################################
+
+
+
+class SensorModel(DualQuat):
+    def __init__(self, ):
+        
+    def make_cov_mat(self, file):
+        # add code for making cov matrix from stationary sensor csv data
+    
+    def make_state_vec(self, dT)
+#         return hstack(( self.p(dT), self.p_dt(dT), self.p_dt2(dT), q))
+        return hstack(( self.q(dT), self.b(dT), self.p_dt2(dT), q))
+    
+    def make_noise_covmat(self, acc_covvec, gyr_covvec):
+        diag = np.stack(( acc_covvec, acc_covvec, gyr_covvec ))
+        a = np.eye(len(diag))
+        return np.fill_diagonal(a, diag )
+
+    
+    
+    
+class EKF(SensorModel):
+    def __init__(self, in_Gcov, in_Acov, ):
+        return in_Gcov
+    
+    def make_F_mat(self, T)
+    
+    def time_update():
+        
+        
+    def meas_update():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
