@@ -1284,6 +1284,87 @@ from https://tex.stackexchange.com/questions/46682/making-a-3d-colored-pyramid-i
 \filldraw[draw=blue, fill=blue, fill opacity=0.1] (0,3,3) -- node [above right, opacity=.9, pos=1]{$(0,5,0)$} (0,5,0) -- (compoint);
 \filldraw[draw=blue, fill=blue, fill opacity=.1] (2,0,2) -- node[above left, opacity=0.9, pos=1] {$(5,0,0)$} (5,0,0) -- (compoint);
 \end{tikzpicture}
+
+
+
+% ================================================
+
+
+
+%\begin{tikzpicture}[3d view={55}{20},declare function={a=2;b=3;l=5;},
+%perspective,
+%>=stealth,line cap=round,line join=round]
+%\draw[->]  (tpp cs:x=0,y=0,z=0) coordinate (O) -- (tpp cs:x=l,y=0,z=0);
+%\draw[->]  (O) -- (tpp cs:x=0,y=l,z=0);
+%\draw[->]  (tpp cs:x=0,y=0,z=b) -- (tpp cs:x=0,y=0,z=l);
+%\path foreach \X in {1,...,6}
+%{(tpp cs:x={a*cos(\X*60-30)},y={a*sin(\X*60-30)},z=0) coordinate (p\X)}
+%(tpp cs:x=0,y=0,z=b) coordinate (tip);
+%\draw[fill=white] plot[samples at={1,...,6}] (p\x) -- cycle;
+%\draw foreach \X in {1,...,6} {(p\X) edge (tip)};
+%\draw[dashed] foreach \X in {1,2,3} {(p\X) edge (p\the\numexpr\X+3)}
+%(O) edge (tip);
+%\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 \end{document} 

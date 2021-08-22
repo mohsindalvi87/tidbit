@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  17 AUG 2021 00:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  17 AUG 2021 02:00
 entering extended mode
 **./tikz-diag-01.tex
 (tikz-diag-01.tex
@@ -1086,9 +1086,9 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write5
-runsystem(echo t > "w18-test-202181753.tex")...disabled (restricted).
+runsystem(echo t > "w18-test-2021817120.tex")...disabled (restricted).
 
-runsystem(del "w18-test-202181753.tex")...disabled (restricted).
+runsystem(del "w18-test-2021817120.tex")...disabled (restricted).
 
 
 
@@ -1370,7 +1370,7 @@ Missing character: There is no ; in font nullfont!
 [16] [17] [18] (tikz-diag-01.aux) ) 
 Here is how much of TeX's memory you used:
  47748 strings out of 493308
- 1242052 string characters out of 3138735
+ 1242053 string characters out of 3138735
  1597648 words of memory out of 3000000
  50712 multiletter control sequences out of 15000+200000
  534056 words of font info for 36 fonts, out of 3000000 for 9000

@@ -1,0 +1,4 @@
+#/bin/sh
+cp *.pdf /tmp
+make -k "$@"
+cp *.pdf /tmp

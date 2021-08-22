@@ -1,5 +1,6 @@
 
 \documentclass{article}
+\usepackage[inner=3cm, outer=2cm, top=2cm, bottom=3cm]{geometry}
 
 \usepackage[latin1]{inputenc}
 \usepackage{caption}
@@ -13,17 +14,23 @@
 \usepackage{pgfplots}
 \usepackage{schemabloc,calc,blox}
 
-\usepackage{pgfplots}
-%\usepgfplotslibrary{external}
-%\tikzexternalize[prefix=tikz/]
-
+\usepackage{pgfplots,pgfplotstable}
+\usetikzlibrary{plotmarks,patterns,spy,decorations.markings}
+\usepgfplotslibrary{patchplots,dateplot,polar,clickable}
+\usepgfplotslibrary{groupplots,statistics}
+\usepackage{nicefrac}
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=pgffigures/]
 \usepackage[miktex]{gnuplottex}
+\pgfplotsset{width=7cm}
 
 
 \begin{document}
 %\pagestyle{empty}
 
-from https://tex.stackexchange.com/questions/9386/difference-between-right-of-and-right-of-in-pgf-tikz website.
+\section{PGFplots graph samples}
+
+\subsection{from https://tex.stackexchange.com/questions/9386/difference-between-right-of-and-right-of-in-pgf-tikz website.}
 
 centre-to-centre placing while using \texttt{right of=} option in tikz
 
@@ -45,7 +52,7 @@ boundary-to-boundary placing while using \texttt{right=of} option in tikz
 % ---------------------------------------------------------
 \vspace{5ex}
 
-from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram-with-tikz-datavisualization
+\subsection{from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram-with-tikz-datavisualization}
 
 
 \begin{tikzpicture}[>=stealth]
@@ -63,7 +70,7 @@ from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram
 
 % ---------------------------------------------------------
 
- from https://www.overleaf.com/learn/latex/Pgfplots\_package
+ \subsection{from https://www.overleaf.com/learn/latex/Pgfplots\_package}
 
 %\tikzexternalize
 \pgfplotsset{width=10cm,compat=1.9}
@@ -83,21 +90,19 @@ from https://tex.stackexchange.com/questions/354401/how-to-draw-a-vector-diagram
 
 \begin{tikzpicture}
 \begin{axis}[axis lines = left,xlabel = \(x\),ylabel = {\(f(x)\)},]
-\addplot [domain=-10:10, samples=100, color=red,]
-{x^2 - 2*x - 1};
+\addplot [domain=-10:10, samples=100, color=red,] {x^2 - 2*x - 1};
 \addlegendentry{\(x^2 - 2x - 1\)}
 
-\addplot [domain=-10:10, samples=100, color=blue,]
-{x^2 + 2*x + 1};
+\addplot [domain=-10:10, samples=100, color=blue,] {x^2 + 2*x + 1};
 \addlegendentry{\(x^2 + 2x + 1\)}
 \end{axis}
 \end{tikzpicture}
 
 
 \begin{tikzpicture}
-\begin{axis}[title={Temperature dependence of CuSO\(_4\cdot\)5H\(_2\)O solubility},xlabel={Temperature [$^\circ$C]}, ylabel={Solubility [g per 100 g water]}, xmin=0, xmax=100, ymin=0, ymax=120,
+\begin{axis}[title={Temperature dependence of CuSO\(_4\cdot\)5H\(_2\)O solubility}, xlabel={Temperature [$^\circ$C]}, ylabel={Solubility [g per 100 g water]}, xmin=0, xmax=100, ymin=0, ymax=120,
 xtick={0,20,40,60,80,100}, ytick={0,20,40,60,80,100,120},
-legend pos=north west, ymajorgrids=true, grid style=dashed,]
+legend pos=north west, xmajorgrids=true, ymajorgrids=true, grid style=dashed,]
 \addplot[color=blue, mark=square,]
 coordinates {	(0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,114)};
 \legend{CuSO\(_4\cdot\)5H\(_2\)O}
@@ -106,9 +111,9 @@ coordinates {	(0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,1
 
 
 \begin{tikzpicture}
-\begin{axis}[enlargelimits=false,]
-	\addplot+[only marks,scatter,mark=halfcircle*,mark size=2.9pt]
-	table[meta=ma]{scattered_example.dat};
+\begin{axis}[enlargelimits=false, title={Empty line in file causes graph break}]
+\addplot[compat=1.4,] table[meta=ma]{scattered_example.dat};
+\addplot+[only marks,scatter,mark=halfcircle*,mark size=2.9pt] table[meta=ma]{scattered_example.dat};
 \end{axis}
 \end{tikzpicture}
 
@@ -122,13 +127,13 @@ coordinates {	(0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,1
 \end{tikzpicture}
 
 
-\begin{tikzpicture}
-\begin{axis}[title=Example using the mesh parameter,hide axis,colormap/cool,]
-\addplot3[mesh, samples=50, domain=-8:8,]
-{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
-\addlegendentry{\(\frac{sin(r)}{r}\)}
-\end{axis}
-\end{tikzpicture}
+%\begin{tikzpicture}
+%\begin{axis}[title=Example using the mesh parameter,hide axis,colormap/cool,]
+%\addplot3[mesh, samples=50, domain=-7:7,]
+%{sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};
+%\addlegendentry{\(\frac{sin(r)}{r}\)}
+%\end{axis}
+%\end{tikzpicture}
 
 
 \begin{tikzpicture}
@@ -162,8 +167,8 @@ coordinates {(0,0,0) (0,1,0) (0,2,0)
 
 % ================================================
 
-from https://stackoverflow.com/questions/36386656/how-to-plot-in-latex-with-gnuplot
-
+\subsection{from https://stackoverflow.com/questions/36386656/how-to-plot-in-latex-with-gnuplot
+}
 
 \begin{figure}[h]  \centering
 \begin{gnuplot}[terminal=epslatex]
@@ -181,7 +186,7 @@ from https://stackoverflow.com/questions/36386656/how-to-plot-in-latex-with-gnup
 
 % ================================================
 
-from https://tex.stackexchange.com/questions/136288/pgfplots-how-to-fill-area-under-a-curve-in-a-3d-plot-similar-to-closedcycle-in
+\subsection{from https://tex.stackexchange.com/questions/136288/pgfplots-how-to-fill-area-under-a-curve-in-a-3d-plot-similar-to-closedcycle-in}
 
 \begin{tikzpicture}
 \begin{axis}[xmin=0,xmax=3,zmin=0,zmax=2]
@@ -192,6 +197,1662 @@ from https://tex.stackexchange.com/questions/136288/pgfplots-how-to-fill-area-un
 
 
 % ================================================
+
+\subsection{from https://tex.stackexchange.com/questions/16232/how-to-plot-fx-sinx-kx-cosx-and-ux-x\%C2\%B2-with-tikz}
+
+\begin{tikzpicture}
+\begin{axis}[domain=0:1,legend pos=outer north east, mark=x,mark size=3pt]
+\addplot[color=red!20!blue, thick] {sin(deg(x))}; 
+\addplot[color=red!80!blue, thick] {cos(deg(x))}; 
+\addplot[green!50!black, thick] {x^2};
+\legend{$\sin(x)$,$\cos(x)$,$x^2$}
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}[domain=0:4]
+\draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+\draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+\draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+\draw[color=red]    plot (\x,\x)    node[right] {$f(x) =x$};
+\draw[color=blue]   plot (\x,{sin(\x r)})   node[right] {$f(x) = \sin x$};
+\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right]
+{$f(x) = \frac{1}{20} \mathrm e^x$};
+\end{tikzpicture}
+
+
+
+% ================================================
+
+\subsection{from }
+
+\begin{tikzpicture}
+\begin{axis}[height=6cm, width=8cm, title={ Plot Title }, 
+xlabel={Temperature [$^\circ$C]}, ylabel={Time [s]}, 
+xmin=-6, xmax=6, ymin=-4000, ymax=4000,
+xtick={-6,-3,0,3,6}, ytick={-4000,-2000,0,2000,4000},
+xmajorgrids=true, ymajorgrids=true, grid style=dashed, 
+legend pos=north east, ]
+\addplot[const plot mark mid, color=blue!90!red!80, mark=square*,fill=blue, fill opacity=0.3]  coordinates {	(-5,2121)(-2,21)(0,-210)(3,-1111)(5,-3311)  } ;
+\addlegendentry{Data 1}
+\addplot[color=red!80!blue!80] {- 25*x^3 - 241};
+\addlegendentry{Fitted 1}
+\end{axis}
+\end{tikzpicture}
+
+
+
+
+% ================================================
+
+\subsection{from }
+
+
+\begin{tikzpicture}
+\begin{axis}[colormap/redyellow,colorbar] % hot hot2 jet blackwhite bluered cool greenyellow redyellow violet 
+\addplot3[surf,
+domain=0:360,samples=40]
+{sin(x)*sin(y)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{semilogyaxis}[
+xlabel=Index,ylabel=Value]
+\addplot[color=blue,mark=*] coordinates { (1,8) 	(2,16) 	(3,32) 	(4,64) (5,128) (6,256) (7,512) };
+\end{semilogyaxis}%
+\end{tikzpicture}
+
+
+\subsection{from https://tex.stackexchange.com/questions/361915/tikz-or-pgfplots-plotting-a-trigonometric-function-cos-sin-tan}
+
+
+\begin{tikzpicture}
+\begin{axis} [grid=both, minor tick num=4, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, axis lines=middle, enlargelimits={abs=0.2}]
+\addplot[domain=-1:3,samples=50,smooth,cyan] {cos(deg(pi*x))};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [axis lines=middle, clip=false, xmin=-3, xmax=4, ymin=-2, ymax=2, ytick={-1,1}, xtick={-2,-1,0,1,2}, xticklabels={$-2$,$-1$,$0$,$1$,$2$}, xticklabel style={black}, xlabel=$x$, ylabel=$y$]
+\addplot [domain=-2:2,samples=200,orange]{sin(deg(pi*x))} node[right,pos=0.9,font=\footnotesize]{$f(x)=\sin \pi x$};
+\addplot [domain=-2:2,samples=200,violet]{cos(deg(pi*x))} node[right,pos=1,font=\footnotesize]{$f(x)=\cos \pi x$};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Line Plots}
+
+
+\begin{tikzpicture}
+\begin{loglogaxis}[ xlabel={Degrees of freedom}, ylabel={$L_2$ Error}, 
+cycle list={ {blue,mark=*}, {red,mark=square},  {loosely dashed,mark=o}, {loosely dotted,mark=+}, 
+{brown!60!black, mark  options={fill=brown!40}, mark=otimes*} } ]
+\addplot coordinates { (49,7.407e-03) (321,5.874e-04) (1793,4.442e-05) (9217,3.261e-06) };
+\addplot coordinates{ (31,3.044e-02) (111,1.022e-02) (1023,1.039e-03) (7423,9.658e-05) (48943,8.873e-06) };
+\addplot coordinates{ (49,3.243e-02) (209,1.232e-02)  (2561,1.551e-03) (23297,1.723e-04) (178177,1.751e-05) };
+\addplot coordinates{ (71,3.177e-02) (351,1.341e-02) (1471,5.334e-03) (5503,2.027e-03) (61183,2.628e-04) (553983,3.053e-05) };
+\addplot coordinates{ (97,3.925e-02) (845,1.351e-02) (10625,2.397e-03) (141569,3.564e-04)  (1496065,4.670e-05) };
+\legend{$d=2$,$d=3$,$d=4$,$d=5$,$d=6$}
+\end{loglogaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot {sin(deg(x))};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}
+\addplot [only marks] {sin(deg(x))};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[error bars/.cd,x dir=both,x explicit]
+coordinates {
+	(0,0) +- (0.1,0.1)
+	(0.5,1) +- (0.4,0.2)
+	(1,2)
+	(2,5) +- (1,0.5)
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{loglogaxis}[ xlabel=Dof, ylabel=$L_2$ error ] 
+\addplot[blue,mark=o] table[x=dof,y index={2}] {datafile.dat}; 
+\addplot[color=orange, mark=*] table[x=dof,y index={3}] {datafile.dat}; % or y=L2
+\end{loglogaxis}
+\end{tikzpicture}
+
+
+\subsection{Bar Plots}
+
+
+\begin{tikzpicture}
+\begin{axis}[xbar,enlargelimits=0.15]
+\addplot [draw=blue,pattern=horizontal lines light blue]
+coordinates {(10,5) (15,10) (5,15) (24,20) (30,25)};
+\addplot [draw=black,pattern=horizontal lines dark blue]
+coordinates {(3,5) (5,10) (15,15) (20,20) (35,25)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[ybar] plot coordinates {(0,3) (1,2) (2,4) (3,1) (4,2)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [x tick label style={/pgf/number format/1000 sep=}, ylabel=Population, enlargelimits=0.15, legend style={at={(0.5,-0.15)}, 	anchor=north,legend columns=-1}, ybar, bar width=7pt, ]
+\addplot coordinates {(1930,50e6) (1940,33e6) (1950,40e6) (1960,50e6) (1970,70e6)};
+\addplot coordinates {(1930,38e6) (1940,42e6) (1950,43e6) (1960,45e6) (1970,65e6)};
+\addplot coordinates {(1930,15e6) (1940,12e6) (1950,13e6) (1960,25e6) (1970,35e6)};
+\addplot[red,sharp plot,update limits=false] coordinates {(1910,4.3e7) (1990,4.3e7)} node[above] at (axis cs:1950,4.3e7) {Houses};
+\legend{Far,Near,Here,Annot}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ybar, enlargelimits=0.15, legend style={at={(0.5,-0.15)}, 	anchor=north,legend columns=-1},
+ylabel={\#participants}, symbolic x coords={tool8,tool9,tool10}, xtick=data, nodes near coords, nodes near coords align={vertical}, ]
+\addplot coordinates {(tool8,7) (tool9,9) (tool10,4)};
+\addplot coordinates {(tool8,4) (tool9,4) (tool10,4)};
+\addplot coordinates {(tool8,1) (tool9,1) (tool10,1)};
+\legend{used,understood,not understood}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [x tick label style={/pgf/number format/1000 sep=}, ylabel=Population, enlargelimits=0.15, legend style={at={(0.5,-0.15)}, anchor=north,legend columns=-1}, ybar=5pt,% configures ?bar shift?
+bar width=9pt, nodes near coords, point meta=y *10^-7 % the displayed number
+]
+\addplot coordinates {(1930,50e6) (1940,33e6) (1950,40e6) (1960,50e6) (1970,70e6)};
+\addplot coordinates {(1930,38e6) (1940,42e6) (1950,43e6) (1960,45e6) (1970,65e6)};
+\legend{Far,Near}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[ybar interval] plot coordinates {(0,2) (0.1,1) (0.3,0.5) (0.35,4) (0.5,3)
+	(0.6,2) (0.7,1.5) (1,1.5)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ybar interval, xtick=data, xticklabel interval boundaries, x tick label style={rotate=90,anchor=east} ]
+\addplot coordinates {(0,2) (0.1,1) (0.3,0.5) (0.35,4) (0.5,3) (0.6,2) (0.7,1.5) (1,1.5)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ xmin=0,xmax=53, ylabel=Age, xlabel=Quantity, enlargelimits=false, ytick=data, yticklabel interval boundaries, xbar interval, ]
+\addplot coordinates {(10,5) (10.5,10) (15,13) (24,18) (50,21) (23,25) (10,30) (3,50) (3,70)};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Quiver Plots}
+
+
+\begin{tikzpicture}
+\begin{axis}[ title={$x \exp(-x^2-y^2)$ and its gradient}, domain=-2:2, view={0}{90}, axis background/.style={fill=white}, ]
+\addplot3[contour gnuplot={number=9, labels=false},thick] {x*exp(0-x^2-y^2)};
+\addplot3[blue, quiver={ scale arrows=0.3, u={exp(0-x^2-y^2)*(1-2*x^2)}, 	v={exp(0-x^2-y^2)*(-2*x*y)}, }, -stealth,samples=15] {exp(0-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[ domain=0:1, xmax=1, ymax=1, ]
+\addplot3 [surf] {x*y};
+\addplot3 [blue,/pgfplots/quiver, quiver/u=y, quiver/v=x, quiver/w=0, quiver/scale arrows=0.1, -stealth,samples=10] {1};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[title=Quiver and plot table] 
+\addplot [blue, quiver={u=\thisrow{u}, v=\thisrow{v}}, -stealth]
+table {
+	x y u v
+	0 0 1 0
+	1 1 1 1
+	2 4 1 4
+	3 9 1 6
+	4 16 1 8 
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Stacked Plots}
+
+
+\begin{tikzpicture}
+\begin{axis}[ybar stacked]
+\addplot coordinates {(0,1) (1,1) (2,3) (3,2) (4,1.5)};
+\addplot coordinates {(0,1) (1,1) (2,3) (3,2) (4,1.5)};
+\addplot coordinates {(0,1) (1,1) (2,3) (3,2) (4,1.5)};
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis} [ybar stacked, enlargelimits=0.15, legend style={at={(0.5,-0.20)}, 	anchor=north,legend columns=-1}, ylabel={\#participants}, symbolic x coords={tool1, tool2, tool3, tool4, tool5, tool6, tool7}, xtick=data, x tick label style={rotate=45,anchor=east}, ]
+\addplot+[ybar] plot coordinates {(tool1,0) (tool2,2) (tool3,2) (tool4,3) (tool5,0) (tool6,2) (tool7,0)};
+\addplot+[ybar] plot coordinates {(tool1,0) (tool2,0) (tool3,0) (tool4,3) (tool5,1) (tool6,1) (tool7,0)};
+\addplot+[ybar] plot coordinates {(tool1,6) (tool2,6) (tool3,8) (tool4,2) (tool5,6) (tool6,5) (tool7,6)};
+\addplot+[ybar] plot coordinates {(tool1,4) (tool2,2) (tool3,0) (tool4,2) (tool5,3) (tool6,2) (tool7,4)};
+\legend{never, rarely, sometimes, often}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[xbar stacked]
+\addplot coordinates {(1,0) (2,1) (2,2) (3,3)};
+\addplot coordinates {(1,0) (2,1) (2,2) (3,3)};
+\addplot coordinates {(1,0) (2,1) (2,2) (3,3)};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Area Plots}
+
+
+\begin{tikzpicture}
+\begin{axis} [stack plots=y, area style, enlarge x limits=false] 
+	\addplot coordinates {(0,1) (1,1) (2,2) (3,2)} 	\closedcycle;
+	\addplot coordinates {(0,1) (1,1) (2,2) (3,2)} 	\closedcycle;
+	\addplot coordinates {(0,1) (1,1) (2,2) (3,2)} 	\closedcycle;
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [smooth, stack plots=y, area style, enlarge x limits=false] 
+\addplot coordinates {(0,1) (1,1) (2,2) (3,2)} 	\closedcycle;
+\addplot coordinates {(0,1) (1,1) (2,2) (3,2)} 	\closedcycle;
+\addplot coordinates {(0,1) (1,1) (2,2) (3,2)} 	\closedcycle;
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Scatter Plots}
+
+
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=false]
+\addplot+[only marks,samples=400] {rand};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[scatter,only marks, samples=50,scatter src=y] {x-x^2};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ title=Black draw color and varying fill color, scatter/use mapped color={draw=black,fill=mapped color} ]
+\addplot+[scatter,scatter src=y] {2*x+3};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[legend pos=south east]
+\addplot[
+% clickable coords={\thisrow{label}},
+scatter/classes={a={mark=square*,blue}, b={mark=triangle*,red}, c={mark=o,draw=black,fill=black}}, scatter,only marks, scatter src=explicit symbolic]
+table[x=x,y=y,meta=label] {scattercl.dat};
+\addplot coordinates {(0.1,0.1) (0.5,0.3) (0.85,0.5)};
+\legend{Class 1,Class 2,Class 3,Line}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[nodes near coords]
+\addplot+[only marks] coordinates {	(0.5,0.2) (0.2,0.1) (0.7,0.6) (0.35,0.4) (0.65,0.1)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[nodes near coords,enlargelimits=0.2]
+\addplot+[only marks, point meta=explicit symbolic]
+coordinates {
+	(0.5,0.2) [(1)]
+	(0.2,0.1) [(2)]
+	(0.7,0.6) [(3)]
+	(0.35,0.4) [(4)]
+	(0.65,0.1) [(5)]
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=0.2]
+\addplot [scatter,mark=*,only marks,
+% we use ?point meta? as color data...
+point meta=\thisrow{color},
+% ... therefore, we can?t use it as argument for nodes near coords ...
+nodes near coords*={$(\pgfmathprintnumber[frac]\myvalue)$},
+% ... which requires to define a visualization dependency:
+visualization depends on={\thisrow{myvalue} \as \myvalue}, ]
+table {
+	x		y		color	myvalue
+	0.5		0.2		1		0.25
+	0.2		0.1		2		1.5
+	0.7		0.6		3		0.75
+	0.35	0.4		4		0.125
+	0.65	0.1		5		2
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+% Low-Level scatter plot interface Example:
+% use three different marker classes
+% 0% - 30% : first class
+% 30% - 60% : second class
+% 60% - 100% : third class
+\begin{axis} [ scatter/@pre marker code/.code={%
+	\ifdim\pgfplotspointmetatransformed pt<300pt
+	\def\markopts{mark=square*,draw=blue, fill=orange}%
+	\else
+	\ifdim\pgfplotspointmetatransformed pt<600pt
+	\def\markopts{mark=triangle*,draw=blue, fill=cyan}%
+	\else
+	\def\markopts{mark=pentagon*,draw=blue, fill=magenta}%
+	\fi
+	\fi
+	\expandafter\scope\expandafter[\markopts]
+}, scatter/@post marker code/.code={ \endscope } ]
+\addplot+[scatter,scatter src=y, samples=40] { sin(deg(x)) };
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{3d plots}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3[surf] coordinates {	(0,0,0) (1,0,0) (2,0,0) (3,0,0)
+	
+	(0,1,0) (1,1,0.6) (2,1,0.7) (3,1,0.5)
+	
+	(0,2,0) (1,2,0.7) (2,2,0.8) (3,2,0.5) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+% this yields also a 3x4 matrix:
+\addplot3 [surf,mesh/rows=3] coordinates { (0,0,0) (1,0,0) (2,0,0) (3,0,0) (0,1,0) (1,1,0.6) (2,1,0.7) (3,1,0.5) (0,2,0) (1,2,0.7) (2,2,0.8) (3,2,0.5) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3[surf] file {first3d.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}
+\begin{axis}[colorbar]
+\addplot3 [surf,faceted color=blue, samples=15, domain=0:1,y domain=-1:1] {x^2 - y^2};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[view={60}{30}]
+\addplot3+[domain=0:5*pi,samples=60,samples y=0]
+( {sin(deg(x))}, {cos(deg(x))}, {2*x/(5*pi)} );
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3 table { x y z
+	0 0 0
+	0.1 0.1 0.1
+	0.1 0.2 0.2
+	0.3 0.3 0.3
+	1 1 1
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ xmin=3,xmax=6, extra x ticks={4,5}, extra x tick style={xticklabel=\empty,grid=major} ]
+\addplot3 table [x expr=4,y=a,z=b] { a b
+	-3 9
+	-2 4
+	-1 1
+	0 0
+	1 1
+	2 4
+	3 9 
+};
+\addplot3[red,domain=-3:3,samples y=0] (5,x,x^2);
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ xlabel=$x$, ylabel=$y$, zlabel={$f(x,y) = x\cdot y$}, title=A Scatter Plot Example]
+% ?pgfplotsexample4_grid.dat? contains x_0 x_1 f(x)
+\addplot3+[only marks] table {pgfplotsexample4_grid.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ xlabel=$x$, ylabel=$y$, zlabel={$f(x,y) = x\cdot y$}, title=A Scatter Plot Example]
+% ?pgfplotsexample4_grid.dat? contains x_0 x_1 f(x)
+\addplot3+[only marks, scatter] table {pgfplotsexample4_grid.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+%\begin{tikzpicture}
+%\begin{axis} [ 3d box, zmax=1.4, colorbar, xlabel=$x$, ylabel=$y$, zlabel={$f(x,y) = x\cdot y$}, title={Using Coordinate Filters to fix $z=1.4$}]
+%% ?pgfplotsexample4.dat? contains similar data as in
+%% ?pgfplotsexample4_grid.dat?, but it uses a uniform
+%% matrix structure (same number of points in every scanline).
+%% See examples above for extracts.
+%\addplot3 [surf,mesh/ordering=y varies] table {plotdata/pgfplotsexample4.dat};
+%\addplot3 [scatter,scatter src=\thisrow{f(x)},only marks, z filter/.code={\def\pgfmathresult{1.4}}] table {plotdata/pgfplotsexample4_grid.dat};
+%\end{axis}
+%\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ view={120}{40}, width=220pt, height=220pt, grid=major,
+z buffer=sort, xmin=-1, xmax=9, ymin=-1, ymax=9, zmin=-1, zmax=9, enlargelimits=upper, xtick={-1,1,...,19}, ytick={-1,1,...,19}, ztick={-1,1,...,19}, xlabel={$l_1$}, ylabel={$l_2$}, zlabel={$l_3$}, point meta={x+y+z+3}, colormap={summap}{ color=(black); color=(blue); color=(black); color=(white) 	color=(orange) color=(violet) color=(red) },
+scatter/use mapped color={draw=mapped color,fill=mapped color!70}, ] \addplot3[only marks,scatter,mark=cube*,mark size=7]  table {pgfplots_scatterdata4.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{3d scatter plots}
+
+
+\begin{tikzpicture}
+\begin{axis}[grid=major,view={210}{30}]
+\addplot3 [mesh,scatter,samples=10,domain=0:1]
+{5*x*sin(2*deg(x)) * y*(1-y)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ grid=major, view={150}{30}, ]
+\addplot3 [surf, draw=cyan, fill=yellow, fill opacity=.5, samples=20,domain=0:1] {x*(1-x)*y*(1-y)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3 [surf, shader=interp] {x*y};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ grid=major, colormap/greenyellow ]
+\addplot3 [surf,samples=30,domain=0:1] {5*x*sin(2*deg(x)) * y};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3 [surf,faceted color=blue] {x+y};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [colormap/cool]
+\addplot3 [surf, samples=10, domain=0:1, shader=interp] {exp(-x) * sin(pi*deg(y))};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [colormap/cool]
+\addplot3 [surf,samples=25,domain=0:1, shader=flat] {exp(-x) * sin(pi*deg(y))};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[colormap/viridis]
+\addplot3 [surf,shader=faceted, samples=10,domain=0:1] {x^2*y};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[colormap/viridis]
+\addplot3 [surf,shader=faceted interp, scatter, draw=blue, samples=10, domain=0:1] {x^2*y};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ axis lines=center, axis on top, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}, domain=0:1, y domain=0:2*pi, xmin=-1.5, xmax=1.5, ymin=-1.5, ymax=1.5, zmin=0.0, mesh/interior colormap={blueblack}{color=(violet) color=(yellow)}, colormap/blackwhite, samples=10, samples y=40, z buffer=sort, ]
+\addplot3 [surf] ( {x*cos(deg(y))}, {x*sin(deg(y))}, {x} );
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [hide axis, xlabel=$x$,ylabel=$y$, mesh/interior colormap name=hot, colormap/viridis, ]
+\addplot3 [domain=-1.5:1.5,surf] {-exp(-x^2-y^2)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [title=Example needing fine-tuning, xlabel=$x$, ylabel=$y$]
+\addplot3 [surf, mesh/interior colormap={cool}{color=(yellow) color=(blue)}, colormap/blackwhite, domain=0:1] { sin(deg(8*pi*x))* exp(-20*(y-0.5)^2) + exp( -(x-0.5)^2*30 - (y-0.25)^2 - (x-0.5)*(y-0.25) ) };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [title=Example needing fine-tuning, xlabel=$x$, ylabel=$y$]
+\addplot3 [surf, mesh/interior colormap={cool}{color=(yellow) color=(violet)}, samples=31, miter limit=1, mesh/interior colormap thresh=0.1, colormap/blackwhite, domain=0:1] { sin(deg(8*pi*x))* exp(-20*(y-0.5)^2) + exp( -(x-0.5)^2*30 - (y-0.25)^2 - (x-0.5)*(y-0.25) ) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[small,view={0}{90}, colorbar]
+\addplot3[surf,shader=interp,patch type=bilinear]
+coordinates { (0,0,0) (1,0,0) 
+	
+	(0,1,0) (1,1,1) 
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[small,view={0}{90}]
+\addplot3 [surf, shader=interp, patch type=bilinear, mesh/color input=explicit]
+coordinates { (0,0,0) [color=blue] (1,0,0) [color=green]
+	
+	 (0,1,0) [color=yellow] (1,1,1) [color=red] 
+ };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [minor x tick num=1]
+\addplot [ patch, shader=interp, mesh/color input=explicit, ] table[meta=c] { x y c
+	0 0 color=green
+	% default color model is rgb:
+	1 1 1,0,0
+	2 0 1,1,0
+	
+	1.5 1 cmyk=1,0,0,0
+	2.5 0 gray=0.5
+	3.5 1 color=red!80!black
+	
+	3 0 1,0,1
+	4 1 0,0,1
+	5 0 rgb255=0,128,128 
+};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[title=CMYK shading]
+\addplot [ patch, shader=interp, mesh/color input=explicit, mesh/colorspace explicit color output=cmyk, data cs=polar, ]
+coordinates { (90,4) [color=red] (210,4) [color=green] (-30,4) [color=blue] };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[title=RGB shading]
+\addplot [patch, shader=interp, mesh/color input=explicit, mesh/colorspace explicit color output=rgb, data cs=polar, ] coordinates { (90,4) [color=red] (210,4) [color=green] (-30,4) [color=blue] };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}
+\addplot [patch, shader=interp, mesh/color input=explicit, point meta={symbolic= {\thisrow{R},\thisrow{G},\thisrow{B}} }, ] table { 	x y R G B
+	0 0 0 1 0
+	1 1 1 0 0
+	2 0 0 0 1
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3 [ patch, patch type=bilinear, mesh/color input=explicit mathparse, domain=0:1, samples=30, point meta={symbolic={ (sin(deg(x*pi*2))+1)/2, 		(sin(deg(y*pi*2))+1)/2, 0 } }, ]
+{sin(deg(x*pi*2))+sin(deg(y*pi*2))};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}
+\addplot3 [ patch, patch type=bilinear, mesh/color input=explicit mathparse, mesh/colorspace explicit color output=cmyk, domain=0:1, samples=30, point meta={symbolic={ (sin(deg(x*pi*2))+1)/2, (sin(deg(y*pi*2))+1)/2, 0 } }, ]
+{sin(deg(x*pi*2))+sin(deg(y*pi*2))};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Contour Plots}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot3 [contour gnuplot] {exp(0-x^2-y^2)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [view={0}{90}] 
+\addplot3[contour gnuplot] 
+coordinates { (0,0,0) (1,0,0) (2,0,0) (3,0,0)
+	
+	(0,1,0) (1,1,0.6) (2,1,0.7) (3,1,0.5)
+	
+	(0,2,0) (1,2,0.7) (2,2,0.8) (3,2,0.5)
+};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}%
+\addplot3[surf,shader=interp]
+coordinates { (0,0,0) (1,0,0) (2,0,0) (3,0,0)
+	
+	(0,1,0) (1,1,0.6) (2,1,0.7) (3,1,0.5)
+	
+	(0,2,0) (1,2,0.7) (2,2,0.8) (3,2,0.5)
+};
+\addplot3 [ contour gnuplot={output point meta=rawz,}, z filter/.code={\def\pgfmathresult{1}}, ]
+coordinates { 	(0,0,0) (1,0,0) (2,0,0) (3,0,0)
+	
+	(0,1,0) (1,1,0.6) (2,1,0.7) (3,1,0.5)
+	
+	(0,2,0) (1,2,0.7) (2,2,0.8) (3,2,0.5)
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ title={$x \exp(-x^2-y^2)$}, domain=-2:2,enlarge x limits, view={0}{90}, ]
+\addplot3 [contour gnuplot={number=14},thick] {exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ title={$x \exp(-x^2-y^2)$}, domain=-2:2, enlargelimits, view={0}{90}, ] 
+\addplot3 [contour gnuplot={levels={-0.1,-0.2,-0.6}}, thick] {exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ title={$x \exp(-x^2-y^2)$}, domain=-2:2, ]
+\addplot3 [contour gnuplot={contour dir=x,labels=false,number=15}, thick] {exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [title={$x \exp(-x^2-y^2)$}, domain=-2:2, xlabel=$x$, ylabel=$y$]
+\addplot3 [	samples y=10, samples=25, mesh, patch type=line, thick] 	{exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}
+\begin{axis}[view={60}{30}, axis equal image]
+\addplot3 [ contour gnuplot={contour dir=x, number=20, labels=false,}, samples=30,domain=-1:1,y domain=0:2*pi] ( {sqrt(1-x^2) * cos(deg(y))}, {sqrt( 1-x^2 ) * sin(deg(y))}, x );
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [xlabel=$x$, ylabel=$y$, enlargelimits=false, 3d box=complete]
+\addplot3 [surf] {x^2-y^2};
+\addplot3 [contour gnuplot={contour dir=y, draw color=red, labels=false}, y filter/.code=\def\pgfmathresult{-5}] {x^2-y^2};
+\addplot3 [contour gnuplot={contour dir=x, draw color=blue,labels=false}, x filter/.code=\def\pgfmathresult{5}] {x^2-y^2};
+\addplot3 [contour gnuplot={contour dir=z, draw color=black,labels=false}, z filter/.code=\def\pgfmathresult{25}] {x^2-y^2};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [title=Separating $z$ from Color Value, xlabel=$x$, ylabel=$y$,]
+\addplot3[contour prepared, point meta=\thisrow{level}]
+table { 	x y z level
+	0.857143 2 0.4 0.6
+	1 1 0.6 0.6
+	2 0.857143 0.6 0.6
+	2.5 1 0.6 0.6
+	2.66667 2 0.4 0.6
+	
+	0.571429 2 0.2 0.4
+	0.666667 1 0.4 0.4
+	1 0.666667 0.4 0.4
+	2 0.571429 0.4 0.4
+	3 0.8 0.2 0.4
+	
+	0.285714 2 0 0.2
+	0.333333 1 0.2 0.2
+	1 0.333333 0.2 0.2
+	2 0.285714 0.2 0.2
+	3 0.4 0 0.2
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Parameterized Plots}
+
+
+\begin{tikzpicture}
+\begin{axis}[view={60}{30}]
+\addplot3 [domain=0:5*pi,samples=60,samples y=0]
+( {sin(deg(x))}, {cos(deg(x))}, {2*x/(5*pi)} );
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[view={60}{30}]
+\addplot3 [mesh, z buffer=sort, scatter,only marks,scatter src=z, samples=30, domain=-1:1, y domain=0:2*pi]
+( {sqrt(1-x^2) * cos(deg(y))}, {sqrt( 1-x^2 ) * sin(deg(y))}, x );
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[view={60}{30}]
+\addplot3 [mesh,z buffer=sort, samples=20,domain=-1:0,y domain=0:2*pi]
+( {sqrt(1-x^2) * cos(deg(y))}, {sqrt( 1-x^2 ) * sin(deg(y))}, x );
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[view={60}{30}]
+\addplot3 [surf,shader=interp ,z buffer=sort, samples=30,domain=-1:0,y domain=0:2*pi]
+( {sqrt(1-x^2) * cos(deg(y))}, {sqrt( 1-x^2 ) * sin(deg(y))}, x );
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot[patch,shader=interp]
+table[point meta=\thisrow{c}] { x y c
+	0 0 0.2
+	1 1 0
+	2 0 1
+	
+	1 1 0
+	2 0 1
+	3 1 0
+	
+	2 0 1
+	3 1 0
+	4 0 0.5
+};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[patch,shader=interp, table/row sep=\\, patch table with individual point meta={
+	0 1 2 100 100 100\\% V_0 V_1 V_2 C_0 C_1 C_2
+	1 2 3 10 0 50\\
+	4 3 5 0 0 100\\
+}]
+table[row sep=\\] { x y \\
+	0 0 \\% 0
+	1 1 \\% 1
+	2 0 \\% 2
+	3 1 \\% 3
+	2 0 \\% 4
+	4 0 \\% 5
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[colormap name=viridis,colorbar]
+\addplot3 [contour filled] {x^2*y};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[title={$x \exp(-x^2-y^2)$}, domain=-2:2, view={0}{90}, colorbar horizontal, ]
+\addplot3 [contour filled={	number=14,},] {exp(-x^2-y^2)*x};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [xlabel={$x$}, ylabel={$y$}, view/h=-10, title=url{http://en.wikipedia.org/wiki/Klein\_bottle},]
+\addplot3 [surf, z buffer=sort, colormap=
+{periodic}{ color=(blue) color=(yellow) color=(orange) color=(red) color=(orange) color=(yellow) color=(blue) }, 
+domain=0:180, domain y=0:360, samples=41, samples y=25, variable=\u, variable y=\v, point meta=u, ] 
+( { -2/15 * cos(u) * ( 3*cos(v) - 30*sin(u) + 90 *cos(u)^4 * sin(u) - 60 *cos(u)^6 * sin(u) + 5 * cos(u)*cos(v) * sin(u) ) }, 
+{ -1/15 * sin(u) * ( 3*cos(v) - 3*cos(u)^2 * cos(v) - 48 * cos(u)^4*cos(v) + 48*cos(u)^6 *cos(v) - 60 *sin(u) + 5*cos(u)*cos(v)*sin(u) - 5*cos(u)^3 * cos(v) *sin(u) - 80*cos(u)^5 * cos(v)*sin(u) + 80*cos(u)^7 * cos(v) * sin(u) ) },
+{ 2/15 * (3 + 5*cos(u) *sin(u))*sin(v) } );
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=false]
+\addplot [matrix plot, mark=*, nodes near coords=\coordindex, mesh/color input=explicit,] coordinates { (0,0)[color=red] (1,0)[color=blue] (2,0)[color=yellow]
+
+	(0,1)[color=black] (1,1)[color=brown] (2,1)[color=magenta]
+
+	(0,2)[color=green] (1,2)[color=red] (2,2)[color=white]
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=false,colorbar]
+\addplot [matrix plot, nodes near coords=\coordindex,mark=*, point meta=explicit, ] coordinates { (0,0) [0] (1,0) [1] (2,0) [2]
+	
+	(0,1) [3] (1,1) [4] (2,1) [5]
+	
+	(0,2) [6] (1,2) [7] (2,2) [8]
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=false,colorbar]
+\addplot [matrix plot, shader=interp, point meta=explicit, ] coordinates {
+	(0,0) [0] (1,0) [1] (2,0) [2] 
+	
+	(0,1) [3] (1,1) [nan] (2,1) [5]
+	
+	(0,2) [6] (1,2) [7] (2,2) [8]
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=0.2,colorbar]
+\addplot [matrix plot, nodes near coords=\coordindex,mark=*, point meta=\coordindex, ] table {
+	x y
+	0 0
+	1 -0.1
+	2 0.2
+	
+	-0.2 1
+	1 1
+	2 1
+	
+	0 2
+	1.3 2
+	2 2.5
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Specialty graphs and settings}
+
+
+\begin{tikzpicture}[spy using outlines={circle, magnification=6, connect spies}]
+\begin{axis} [no markers,grid=major, every axis plot post/.append style={thick}]
+\addplot coordinates {(0, 0.0) (0, 0.9) (1, 0.9) (2, 1) (3, 0.9) (80, 0)};
+\addplot +[line join=round] coordinates {(0, 0.0) (0, 0.9) (2, 0.9) (3, 1) (4, 0.9) (80, 0)};
+\addplot +[line join=bevel] coordinates {(0, 0.0) (0, 0.9) (3, 0.9) (4, 1) (5, 0.9) (80, 0)};
+\addplot +[miter limit=5] coordinates {(0, 0.0) (0, 0.9) (4, 0.9) (5, 1) (6, 0.9) (80, 0)};
+\coordinate (spypoint) at (axis cs:3,1);
+\coordinate (magnifyglass) at (axis cs:60,0.7);
+\end{axis}
+\spy [blue, size=2.5cm] on (spypoint) in node[fill=white] at (magnifyglass);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\tikzset{ every pin/.style={fill=yellow!50!white,rectangle,rounded corners=3pt,font=\tiny}, small dot/.style={fill=black,circle,scale=0.3} }
+\begin{axis}[ clip=false, title=How \texttt{axis description cs} works, legend entries={$x$,$x^2$}, legend style={	at={(1.03,0.5)},anchor=north west}, ]
+\addplot {x};
+\addplot {x^2};
+\node[small dot,pin=120:{$(0,0)$}] at (axis description cs:0,0) {};
+\node[small dot,pin=-30:{$(1,1)$}] at (axis description cs:1,1) {};
+\node[small dot,pin=90:{$(1.03,0.5)$}] at (axis description cs:1.03,0.5) {};
+\node[small dot,pin=125:{$(0.5,0.5)$}] at (axis description cs:0.5,0.5) {};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[legend pos=north west]
+\addplot {x^3};
+\addplot[ybar, fill=red, draw=red!60, ybar legend, mark=none, samples=5] {-30*(x +4)};
+\legend{first, second}
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}[baseline]
+\begin{axis}
+\addplot [only marks, samples=15, error bars/y dir=both, error bars/y fixed=2.5] 	{3*x+2.5*rand}; \label{pgfplots:label1}
+\addplot [mark=none] {3*x};	\label{pgfplots:label2}
+\addplot {4*cos(deg(x))}; 	\label{pgfplots:label3}
+\end{axis}
+\end{tikzpicture}
+
+The picture shows the estimations \ref{pgfplots:label1} which are subjected to noise. It appears the model \ref{pgfplots:label2} fits the data appropriately. Finally, \ref{pgfplots:label3} is only here to get three examples.
+
+
+
+\begin{center}% note that \centering uses less vspace...
+\pgfplotsset{footnotesize,samples=10}
+\begin{tikzpicture}
+\begin{axis}[ legend columns=-1, legend entries={ $(x+0)^k$;, $(x+1)^k$;, $(x+2)^k$;, $(x+3)^k$ }, legend to name=named, title={$k=1$}]
+\addplot {x};  \addplot {x+1};  \addplot {x+2};  \addplot {x+3};
+\end{axis}
+\end{tikzpicture}
+%
+\begin{tikzpicture}
+\begin{axis}[title={$k=2$}]
+\addplot {x^2};  \addplot {(x+1)^2};  \addplot {(x+2)^2};  \addplot {(x+3)^2};
+\end{axis}
+\end{tikzpicture}
+%
+\begin{tikzpicture}
+\begin{axis}[title={$k=3$}]
+\addplot {x^3};  \addplot {(x+1)^3};  \addplot {(x+2)^3};  \addplot {(x+3)^3};
+\end{axis}
+\end{tikzpicture}
+\\
+\ref{named}
+\end{center}
+
+
+\begin{tikzpicture}
+\begin{semilogyaxis}[domain=0:4,]
+\addplot {x}; \addlegendentry{$x$}
+\addplot {x^2}; \addlegendentry{$x^2$}
+\addplot {x^3}; \addlegendentry{$x^3$}
+\addlegendimage{empty legend} \addlegendentry[text width=25pt,text depth=]
+{Neg. Sign:}
+\addplot {x^(-1)}; \addlegendentry{$x^{-1}$}
+\addplot {x^(-2)}; \addlegendentry{$x^{-2}$}
+\addplot {x^(-3)}; \addlegendentry{$x^{-3}$}
+\end{semilogyaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ minor tick num=3, axis y line=center, axis x line=middle, xlabel=$x$,ylabel=$\sin x$ ]
+\addplot[smooth, blue, mark=none, domain=-5:5, samples=40] {sin(deg(x))};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ minor tick num=1, axis x line=middle, axis y line=middle, every inner x axis line/.append style={|->>}, every inner y axis line/.append style={|->>}, xlabel=$x$, ylabel=$y^3$ ]
+\addplot[blue,domain=-3:5] {x^3};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture} % let both axes use the same layers
+\pgfplotsset{set layers}
+\begin{axis} [ scale only axis, xmin=-5,xmax=5, axis y line*=left,% the ?*? avoids arrow heads
+xlabel=$x$, ylabel=First ordinate] 
+\addplot {x^2};
+\end{axis}
+\begin{axis} [ scale only axis, xmin=-5,xmax=5, axis y line*=right, axis x line=none, ylabel=Second ordinate ]
+\addplot[red] {3*x};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ axis x line=bottom, axis x discontinuity=parallel, axis y line=left, xmin=360, xmax=600, ymin=0, ymax=7, enlargelimits=false ]
+\addplot coordinates { 	(420,2) (500,6) (590,4) };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ axis x line=bottom, axis y line=center, tick align=outside, axis y discontinuity=crunch, ymin=95, enlargelimits=false ]
+\addplot[blue, mark=none, domain=-4:4,samples=20] {x*x+x+104};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{center}% note that \centering uses less vspace...
+\pgfplotsset{footnotesize,samples=10, domain=0:1,point meta min=0, point meta max=1}
+\begin{tikzpicture}
+\begin{axis}[colorbar,colorbar horizontal,colorbar to name={storedcolorbar}]
+\addplot[scatter,only marks,mark=*] {rnd};
+\end{axis}
+\end{tikzpicture}
+%
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[domain=0:1,mark=none,mesh] {x^2};
+\end{axis}
+\end{tikzpicture}
+%
+\begin{tikzpicture}
+\begin{axis}[view={0}{90}]
+\addplot3[surf] {x*y};
+\end{axis}
+\end{tikzpicture}
+\\
+\ref{storedcolorbar}
+\end{center}
+
+
+\begin{tikzpicture}
+\begin{axis}[x=1cm,y=0.5cm,y dir=reverse]
+\addplot expression[domain=0:3] {2*x};
+\end{axis}
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}
+\begin{axis}[x={(1cm,0.25cm)},y=1cm]
+\addplot expression[domain=0:3] {2*x};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{loglogaxis}[title={Unequal Axis}, axis equal=false,grid=major]
+\addplot expression[domain=1:1e4] {x^-2};
+\end{loglogaxis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{loglogaxis}[title={Equal Axis}, axis equal=true,grid=major]
+\addplot expression[domain=1:10000] {x^-2};
+\end{loglogaxis}
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}
+\begin{axis} [ 3d box=background, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, ]
+\addplot3[surf] {x*y};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ 3d box=complete, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, ]
+\addplot3[surf] {x*y};
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis} [ 3d box=complete, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, grid=major]
+\addplot3[surf] {x*y};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ 3d box=complete*, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, grid=major]
+\addplot3[surf] {x*y};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ axis lines=center, axis on top, samples=5, domain=-4:4, xtick=data, ytick=data, ztick=\empty ]
+\addplot3[surf] {x*y};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [axis lines*=right, samples=5, domain=-4:4, xtick=data, ytick=data,]
+\addplot3[surf] {x*y};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[error bars/.cd, y dir=both, y explicit, x dir=both,x explicit, error mark=diamond*] % x fixed=0.05 instead of x explicit
+coordinates {
+	(0,0) +- (0.3,0.1)
+	(0.1,0.1) +- (0.05,0.2)
+	(0.2,0.2) +- (0,0.05)
+	(0.5,0.5) +- (0.1,0.2)
+	(1,1) +- (0.3,0.1)};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[enlargelimits=false]
+\addplot [red,mark=*] plot [error bars/.cd, y dir=minus,y fixed relative=1, x dir=minus,x fixed relative=1, error mark=none, error bar style={dotted}] coordinates {(0,0) (0.1,0.1) (0.2,0.2) 	(0.5,0.5) (1,1)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[
+% Show (automatically) computed limits:
+title={	Axis limits are $ [\pgfmathprintnumber{\pgfkeysvalueof{/pgfplots/xmin}} 	: \pgfmathprintnumber{\pgfkeysvalueof{/pgfplots/xmax}} ] \times 	[\pgfmathprintnumber{\pgfkeysvalueof{/pgfplots/ymin}}  : \pgfmathprintnumber{\pgfkeysvalueof{/pgfplots/ymax}} ] $ }, ]
+\addplot {x^2};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\begin{axis} [ ylabel=$y$ \emph{decreasing} $\to$, xlabel=$x$ normal, title=reversed y axis, y dir=reverse, colorbar, colorbar style={y dir=reverse} ]
+\addplot+[mesh,scatter] {x^15};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[small]
+\addplot {5 * x^3 - x^2 + 4*x -2};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[small,enlarge x limits=0.2]
+\addplot {5 * x^3 - x^2 + 4*x -2};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ small, minor x tick num=1, enlarge x limits={rel=0.5,upper} ]
+\addplot {5 * x^3 - x^2 + 4*x -2};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ small,minor x tick num=1, enlarge x limits={abs=1cm} ] %abs=3
+\addplot {5 * x^3 - x^2 + 4*x -2} coordinate[pos=0] (first)  coordinate[pos=1] (last);
+\draw[red,->] (first) -- ++(-1cm,0pt);
+\draw[red,->] (last) -- ++(1cm,0pt);
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[minor x tick num=1, minor y tick num=3, xtick align=center]
+\addplot {x^3};
+\addplot {-20*x};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[minor xtick={-3,1}, grid=minor, xtick align=outside]
+\addplot {x^3};
+\addplot {-20*x};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[scaled ticks=true]
+\addplot coordinates { (20000,0.0005) (40000,0.0010) (60000,0.0020) };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[scaled ticks=false]
+\addplot coordinates { (20000,0.0005) (40000,0.0010) (60000,0.0020) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[minor ytick=data]
+\addplot {x^2};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ xmin=0, xmax=3, ymin=0, ymax=15, extra y ticks={2.71828}, extra y tick labels={$e$}, extra x ticks={2.2}, extra x tick style={ grid=major,	tick label style={rotate=90,anchor=east} }, extra x tick labels={Cut}, ]
+\addplot {exp(x)};
+\addlegendentry{$e^x$}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ xtick={0,1.5708,...,10}, domain=0:2*pi, scaled x ticks={real:3.1415}, xtick scale label code/.code={$\cdot \pi$} ]
+\addplot { sin(deg(x)) };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ scaled y ticks=manual:{$+65\,535$}{ \pgfmathparse{#1-65535} }, yticklabel style={ 	/pgf/number format/fixed, /pgf/number format/precision=1}, ]
+\addplot coordinates { (0,65535) (13,65535) (14,65536) (15,65537) (30,65537) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [title=\texttt{tick scale binop=\textbackslash cdot}]
+\addplot [mark=none,blue,samples=250,domain=0:5] {exp(10*x)};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [title=\texttt{tick scale binop=\textbackslash times}, tick scale binop=\times]
+\addplot [mark=none,blue,samples=250, domain=0:5] {exp(10*x)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{semilogyaxis}[log basis y=2,grid=major,samples at={-4,...,4}]
+\addplot {2^x};
+\end{semilogyaxis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{semilogyaxis}[log basis y=10,samples at={-4,...,4}, grid=major, tick align=outside, tickpos=left]
+\addplot {2^x};
+\end{semilogyaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{semilogyaxis} [ log ticks with fixed point, xticklabel={$\pgfmathprintnumber{\tick}_e$}, ]
+\addplot {exp(x)};
+\end{semilogyaxis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[% x ticks explicitly formatted:
+xtick={0,1,0.5,0.25,0.75}, xticklabels={$0$,$1$,$\frac12$,$\frac14$,$\frac34$},
+% y ticks automatically by some code fragment:
+ytick=data, %yticklabel={ \scriptsize
+%	\ifdim\tick pt<0pt % a TeX \if -- see TeX Book
+%	\pgfmathparse{-10*\tick} $-\nicefrac{\pgfmathprintnumber{\pgfmathresult}}{10}$%
+%	\else
+%	\ifdim\tick pt=0pt
+%	\else 
+%	\pgfmathparse{10*\tick} 	$\nicefrac{\pgfmathprintnumber{\pgfmathresult}}{10}$%
+%	\fi    
+%	\fi    
+%},
+% NOTE: this here does the same:
+ yticklabel style={/pgf/number format/.cd,frac, frac TeX=\nicefrac,frac whole=false,frac denom=10},
+ymajorgrids, title=A special Prewavelet, axis x line=center, axis y line=left, ] \addplot coordinates { (0,-1.2) (0.25,1.1) (0.5,-0.6) (0.75,0.1) (1,0) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ ybar interval=0.9, x tick label as interval, xmin=2003,xmax=2030, ymin=0,ymax=140, xticklabel={ 	$\pgfmathprintnumber{\tick}$ 	-- $\pgfmathprintnumber{\nexttick}$}, xtick=data, x tick label style={ 	rotate=90,anchor=east, 	/pgf/number format/1000 sep=} ]
+\addplot[draw=blue,fill=blue!40!white] coordinates { (2003,40) (2005,100) (2006,15) (2010,90) (2020,120) (2030,3) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{loglogaxis}[xlabel=\textsc{Dof},ylabel=$L_2$ Error]
+\draw(axis cs:1793,4.442e-05) |- (axis cs:4097,1.207e-05) node [near start,left] {$\frac{dy}{dx} = -1.58$};
+\addplot coordinates { (5, 8.312e-02) (17, 2.547e-02) (49, 7.407e-03) (129, 2.102e-03) (321, 5.874e-04) (769, 1.623e-04) (1793, 4.442e-05) (4097, 1.207e-05) (9217, 3.261e-06) };
+\node[coordinate,pin=above:{Bad!}] at (axis cs:321, 5.874e-04) {};
+\node[coordinate,pin=left:{Good!}] at (axis cs:49, 7.407e-03) {};
+\end{loglogaxis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}
+\addplot3[surf] {x^2 - y^2};
+\draw (rel axis cs:0,0,1) -- (rel axis cs:1,1,1);
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot[blue,domain=0:360, samples=31] {sin(x)} 
+[every node/.style={yshift=8pt}, sloped]  node[pos=0] {$0$}  node[pos=0.25] {$\pi/2$}  node[pos=0.5] {$\pi$}  node[pos=0.75] {$3/2\pi$}  node[pos=1] {$2\pi$};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}[]
+\begin{axis}[axis lines=middle, title=Decorated Graphics, xmin=-2, xmax=2, ymin=-2, ymax=2, xtick={-1,1}, ytick={-1,1}, % this disables the standard % tick label *text* (but not the line)
+yticklabel=\ , extra description/.code={ % this generates custom y labels to implement individual styles for every tick:
+	\node[below left] at (axis cs:0,-1) {$-1$};
+	\node[above left] at (axis cs:0,1) {$1$}; }, axis line style={->}, ]
+\addplot[blue,samples=100,domain=0:2*pi, postaction={decorate}, decoration={markings, mark=at position 0.25 with {\arrow{stealth}}, mark=at position 0.5 with {\arrow{stealth}}, mark=at position 0.75 with {\arrow{stealth}}} ] ({sin(deg(2*x))}, {sin(deg(x))});
+\end{axis}
+\end{tikzpicture}
+
+
+Aligning at .......
+\begin{tikzpicture}[baseline]
+\begin{axis}[small,anchor=aninnernode.center]
+\addplot {sin(deg(x))};
+\node [pin=-90:(aninnernode),fill=black,circle,scale=0.3] (aninnernode) at (axis cs:-2,0.75) {};
+\draw[help lines] (axis cs:-6,0.75) -- (axis cs:6,0.75);
+\end{axis}
+\end{tikzpicture}
+
+This is \tikz[baseline]\fill[red] (0,0) circle(3pt); a picture,
+here \tikz[baseline]\fill[red] (0,10pt) circle(3pt); another one.
+
+Aligning top edge of graphs:\\
+\pgfplotsset{domain=-1:1}
+\begin{tikzpicture}[baseline]
+\begin{axis}[xlabel=A normal sized $x$ label]
+\addplot[smooth,blue,mark=*] {x^2};
+\end{axis}
+\end{tikzpicture}%
+\hspace{0.15cm}
+\begin{tikzpicture}[baseline]
+\begin{axis}[xlabel={$\displaystyle \sum_{i=0}^N n_i $ }]
+\addplot[smooth,blue,mark=*] {x^2};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\pgfplotsset{every axis/.append style={ cycle list={ {red,only marks,mark options={ fill=red,scale=0.8},mark=*}, {black,only marks,mark options={ fill=black,scale=0.8}, mark=square*} } } }
+\begin{axis} [ width=4cm, scale only axis, name=main plot]
+\addplot file {plotdata/pgfplots_scatterdata1.dat};
+\addplot file {plotdata/pgfplots_scatterdata2.dat};
+\addplot[blue] coordinates { (0.093947, -0.011481) (0.101957, 0.494273) (0.109967, 1.000027) };
+\end{axis}
+\begin{axis} [ at={(main plot.below south west)}, yshift=-0.1cm, anchor=north west, width=4cm, scale only axis, height=0.8cm, ytick=\empty]
+\addplot file {plotdata/pgfplots_scatterdata1_latent.dat};
+\addplot file {plotdata/pgfplots_scatterdata2_latent.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [domain=0:6.2832, samples=200, legend style={overlay, at={(-0.5,0.5)}, anchor=center}, every axis plot post/.append style={mark=none}, enlargelimits=false]
+\addplot { sin(deg(x)+3) + rand*0.05 };
+\addplot { cos(deg(x)+2) + rand*0.05 };
+\legend{Signal 1,Signal 2}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[stack plots=y]
+\addplot+[fill, fill opacity=0.3] coordinates {(0,1) (1,1) (2,2) (3,2)} \closedcycle;
+\addplot+[fill, fill opacity=0.3] coordinates {(0,1) (1,1) (2,2) (3,2)} \closedcycle;
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis} [domain=0:6.2832, samples=72, legend style={overlay, at={(-0.5,0.5)}, anchor=center}, every axis plot post/.append style={mark=none}, enlargelimits=false]
+\addplot [draw opacity=0, fill=red!10] { sin(deg(x)+3) + 5+0.25 + rand*0.05 } \closedcycle;
+\addplot [draw opacity=0, fill=white] { sin(deg(x)+3) + 5-0.25 + rand*0.05 } \closedcycle;
+\addplot [draw=red] { sin(deg(x)+3) + 5 + rand*0.05 };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[symbolic x coords={a,b,c,d,e,f,g,h,i}]
+\addplot+[smooth] coordinates { (a,42) (b,50) (c,80) (f,60) (g,62) (i,90) };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ xtick={0,1,2,...,20}, xticklabels={a,b,c,d,e,f,g,h,i}, xticklabel style={anchor=base, yshift=-\baselineskip}, ]
+\addplot+[smooth] coordinates { (0,42) (1,50) (2,80) (5,60) (6,62) (8,90) };
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ samples=20, x filter/.code={ \ifnum\coordindex>4  \ifnum\coordindex<11  \def\pgfmathresult{}  \fi  \fi  } ]
+\addplot {x^2};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ samples=20, skip coords between index={5}{11}, skip coords between index={15}{18} ]
+\addplot {x^2};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[data cs=polarrad,domain=0:2*pi] (\x,1);
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ axis equal, minor tick num=1, ]
+\def\FREQUENCY{3}
+\addplot[ red, domain=0:360, samples=200, smooth,data cs=polar ] ( x, {30-8*sin(\FREQUENCY*x)} );
+\addplot[ samples=40, domain=0:2*pi, dashed, data cs=polar] ( deg(x), 30 );
+\addplot[mark=oplus,only marks] coordinates {(0,0)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{polaraxis}
+\addplot coordinates {(90,1) (180,1)};
+\addplot+[data cs=cart]
+coordinates {(1,0) (0.5,0.5)};
+\end{polaraxis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ date coordinates in=x, xtick=data, xticklabel style={rotate=90,anchor=near xticklabel}, xticklabel=\day. \hour:\minute, date ZERO=2009-08-18, ]
+\addplot coordinates { (2009-08-18 09:00, 050) (2009-08-18 12:00, 100) (2009-08-18 15:00, 100) (2009-08-18 18:35, 100) (2009-08-18 21:30, 040) (2009-08-19, 020) (2009-08-19 3:00, 000) (2009-08-19 6:0, 035) };
+\end{axis}
+\end{tikzpicture}
+
+Attention: If you intend to use hours and minutes, you should always provide the date ZERO to maintain adequate precision!
+
+
+\begin{tikzpicture}
+\begin{axis}[legend pos=north west] % outer north east
+\addplot table {% plot X versus Y. This is original data.
+	X Y
+	1 1
+	2 4
+	3 9
+	4 16
+	5 25
+	6 36
+};
+\addplot table[y={create col/linear regression={y=Y}}] % compute a linear regression from the input table
+{
+	X Y
+	1 1
+	2 4
+	3 9
+	4 16
+	5 25
+	6 36
+};
+% \xdef\slope{\pgfplotstableregressiona} %<-- might be handy occasionally
+\addlegendentry{$y(x)$}
+\addlegendentry{ $\pgfmathprintnumber{\pgfplotstableregressiona} \cdot x \pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[clickable coords={(xy): \thisrow{label}},scatter/classes={	a={mark=square*,blue},	b={mark=triangle*,red},	c={mark=o,draw=black}}]
+\addplot[scatter,only marks,scatter src=explicit symbolic]
+table[meta=label] { x  y  label
+	0.1 0.15 a
+	0.45 0.27 c
+	0.02 0.17 a
+	0.06 0.1 a
+	0.9 0.5 b
+	0.5 0.3 c
+	0.85 0.52 b
+	0.12 0.05 a
+	0.73 0.45 b
+	0.53 0.25 c
+	0.76 0.5 b
+	0.55 0.32 c
+};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{loglogaxis}
+\addplot table[x=dof,y=error2]
+{pgfplotstable.example1.dat};
+\addlegendentry{$y(x)$}
+\addplot table[x=dof,y={create col/linear regression={y=error2}}]
+{pgfplotstable.example1.dat};
+% might be handy occasionally:
+% \xdef\slope{\pgfplotstableregressiona}
+\addlegendentry{slope $\pgfmathprintnumber{\pgfplotstableregressiona}$}
+\end{loglogaxis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{loglogaxis}
+\addplot table[x=dof,y=error2] {pgfplotstable.example1.dat};
+\addlegendentry{$y(x)$}
+\addplot table[ x=dof, y={ create col/linear regression={	y=error2, variance list={1000,800,600,500,400} } } ] {pgfplotstable.example1.dat};
+\addlegendentry{slope 	$\pgfmathprintnumber{\pgfplotstableregressiona}$}
+\end{loglogaxis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot+[scatter, scatter src=y, samples=40, visualization depends on={5*cos(deg(x)) \as \perpointmarksize}, scatter/@pre marker code/.append style={/tikz/mark size=\perpointmarksize}] {sin(deg(x))};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{groupplot}[ group style={group name=my plots, group size=2 by 2, x descriptions at=edge bottom, y descriptions at=edge left, horizontal sep=0.5cm, vertical sep=0.5cm, yticklabels at=edge right,}, footnotesize, width=4cm, height=4cm, xlabel=time $t$ / h, ylabel=$c$ / mol/L, ]
+\nextgroupplot [group/empty plot]
+\nextgroupplot \addplot coordinates {(0,2) (1,1) (2,0)};
+\nextgroupplot \addplot coordinates {(0,2) (1,1) (2,1)};
+\nextgroupplot \addplot coordinates {(0,2) (1,1) (1,0)};
+\end{groupplot}
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1},xmin=0,ymin=0,height=4cm,width=5cm,no markers]
+\nextgroupplot \addplot[very thick] file {plotdata/group-1.dat};
+\draw[red,dashed,thick] (axis cs:0,0) rectangle (axis cs:5,30);
+\nextgroupplot[xmax=5,ymax=30] \addplot[very thick] file {plotdata/group-1.dat};
+\draw[red,dashed,thick] (axis cs:3,10) rectangle (axis cs:5,25);
+\nextgroupplot[xmin=3,xmax=5,ymin=10,ymax=25] \addplot[very thick] file {plotdata/group-1.dat};
+\end{groupplot}
+\draw[thick,blue,->,shorten >=2pt,shorten <=2pt] (group c1r1.east) -- (group c2r1.west);
+\draw[thick,blue,->,shorten >=2pt,shorten <=2pt] (group c2r1.east) -- (group c3r1.west);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ nodes near coords={(\coordindex)}, title={\texttt{patch type=quadratic spline}} ]
+\addplot [ mark=*, patch, patch type=quadratic spline ]
+coordinates {
+	(0,0) (1,1) (0.5,0.5^2)
+	(1.2,1) (2.2,1) (1.7,2)
+};% left, right, middle
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ nodes near coords={(\coordindex)}, title={\texttt{patch type=cubic spline}} ]
+\addplot [ mark=*, patch, patch type=cubic spline ]
+coordinates { (-1,-1) (1,1) (-1/3,{(-1/3)^3}) (1/3,{(1/3)^3}) };  % left, right, left middle, right middle
+\end{axis}
+\end{tikzpicture}
+
+
+\subsection{Statistics}
+
+
+\begin{tikzpicture}
+\begin{axis} [ y=1.5cm, ]
+\addplot+[ boxplot prepared={ lower whisker=5, lower quartile=7, median=8.5, upper quartile=9.5, upper whisker=10, }, ]
+table[row sep=\\,y index=0] { data\\ 1\\ 3\\ };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[y=1.5cm, ymax=2]
+\addplot+[boxplot]
+table[row sep=\\,y index=0] { data\\ 1\\ 2\\ 1\\ 5\\ 4\\ 10\\7\\ 10\\ 9\\ 8\\ 9\\ 9\\}
+[above] node at (boxplot box cs: \boxplotvalue{lower whisker},1) { \pgfmathprintnumber{\boxplotvalue{lower whisker}} }
+node at (boxplot box cs: \boxplotvalue{lower quartile},1) { \pgfmathprintnumber{\boxplotvalue{lower quartile}} }
+node [left] at (boxplot box cs: \boxplotvalue{median},0.5) { \pgfmathprintnumber{\boxplotvalue{median}} }
+node at (boxplot box cs: \boxplotvalue{upper quartile},1) { \pgfmathprintnumber{\boxplotvalue{upper quartile}} }
+node at (boxplot box cs: \boxplotvalue{upper whisker},1) { \pgfmathprintnumber{\boxplotvalue{upper whisker}} } ;
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis} [ ytick={1,2,3}, yticklabels={Group A, Group B, Group C}, ]
+\addplot+[ boxplot prepared={ lower whisker=42, lower quartile=45, median=47, upper quartile=47.5, upper whisker=48, }, ]
+table[row sep=\\,y index=0] { 40\\ 34\\ 56\\ };
+\addplot+[ boxplot prepared={ lower whisker=36, lower quartile=39, median=40, upper quartile=41, upper whisker=43, }, ] % no outliers:
+coordinates {};
+\addplot+[ boxplot prepared={ lower whisker=41, lower quartile=44, median=45, upper quartile=46, upper whisker=47, }, ]  coordinates {(0,35) (0,55)};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ boxplot/draw direction=y, x axis line style={opacity=0}, axis x line*=bottom, axis y line=left, enlarge y limits, ymajorgrids, xtick={1,2,3}, xticklabels={Group A, Group B, Group C}, ]
+\addplot+[ boxplot prepared={ lower whisker=42, lower quartile=45, median=47, upper quartile=47.5, upper whisker=48, }, ]  table[row sep=\\,y index=0] { 40\\ 34\\ 56\\ };
+\addplot+[ boxplot prepared={ lower whisker=36, lower quartile=39, median=40, upper quartile=41, upper whisker=43, }, ]  coordinates {};
+\addplot+[ boxplot prepared={ lower whisker=41, lower quartile=44, median=45, upper quartile=46, upper whisker=47, }, ]  coordinates {(0,35) (0,55)};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[ ybar interval, xticklabel=\pgfmathprintnumber\tick--\pgfmathprintnumber\nexttick ]
+\addplot+[hist={bins=3}] table[row sep=\\,y index=0] {data\\ 1\\ 2\\ 1\\ 5\\ 4\\ 10\\ 7\\ 10\\ 9\\ 8\\ 9\\ 9\\ };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[ ybar interval,xtick=, % reset from ybar interval
+xticklabel={$[\pgfmathprintnumber\tick, \pgfmathprintnumber\nexttick)$} ] ] % a data file containing 8000 normally distributed % random numbers of mean 0 and variance 1
+\addplot+[hist={data=x}] file {plotdata/pgfplots.randn.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[small,ymin=0,title=\texttt{hist}]
+\addplot [ hist, fill=orange!75, draw=orange!50!black]
+table [y index=0] {plotdata/pgfplots.randn.dat}; 
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[small,ymin=0, title=\texttt{hist=density}]
+\addplot [ hist=density, fill=orange!75, draw=orange!50!black]
+table [y index=0] {plotdata/pgfplots.randn.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\begin{axis}[small,ymin=0, title=\texttt{hist=cumulative}]
+\addplot [ hist=cumulative, fill=orange!75, draw=orange!50!black ]
+table [y index=0] {plotdata/pgfplots.randn.dat};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[small,ymin=0, title=\texttt{hist=\{cumulative,density\}}]
+\addplot [ hist={cumulative,density}, fill=orange!75, draw=orange!50!black ]
+table [y index=0] {plotdata/pgfplots.randn.dat};
+\end{axis}
+\end{tikzpicture}
+
+
+
 
 
 
