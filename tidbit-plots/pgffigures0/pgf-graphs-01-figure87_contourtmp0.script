@@ -1,1 +1,0 @@
-unset surface; set cntrparam levels 20; set contour; set table "pgffigures/pgf-graphs-01-figure87_contourtmp0.table"; splot "pgffigures/pgf-graphs-01-figure87_contourtmp0.dat";
