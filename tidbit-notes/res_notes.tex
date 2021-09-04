@@ -5,9 +5,9 @@
 \usepackage{amsmath,amssymb,
 	amsthm} % amssymb loads amsfonts
 \usepackage{bm} % bm for math italic-bold
-%\usepackage{pxfonts}  % [charter]{mathdesign} {lmodern} {fourier} {pxfonts} {mathptmx} {newtxtext,newtxmath} {mathpazo} {txfonts} {cmbright} [math]{iwona} [light,condensed,math]{kurier} {arev} {nimbusserif} {crimson} {stix} {times} {bera} [sfdefault]{roboto}
+\usepackage{mathptmx}  % [charter]{mathdesign} {lmodern} {fourier} {pxfonts} {mathptmx} {newtxtext,newtxmath} {mathpazo} {txfonts} {cmbright} [math]{iwona} [light,condensed,math]{kurier} {arev} {nimbusserif} {crimson} {stix} {times} {bera} [sfdefault]{roboto}
 %\usepackage{newtxtext}  \usepackage[libertine]{newtxmath}
-\usepackage[charter]{mathdesign} %[charter][utopia][garamond] put % before amsfonts,amssymb
+%\usepackage[charter]{mathdesign} %[charter][utopia][garamond] put % before amsfonts,amssymb
 
 \usepackage[margin=2cm]{geometry}
 \usepackage{lscape,enumitem,microtype}
@@ -72,9 +72,10 @@
 
 
 %\usetikzlibrary{dsp,fit}
+%\usepackage{natbib}
+%\setcitestyle{authoryear,square,citesep={,}}
 
-
-
+\usepackage{littsumm}
 
 
 
@@ -107,6 +108,23 @@
 \date{\today}
 \maketitle
 
+\LScitekey{{hol2008}}:\\
+\LSauth{Jeroen Hol.
+	\newblock {\em Pose Estimation and Calibration Algorithms for Vision and
+		Inertial Sensors}.
+	\newblock PhD thesis, Link\"{o}ping University, Sweden, 2008.}:\\
+\LSjour{Jeroen Hol.
+	\newblock {\em Pose Estimation and Calibration Algorithms for Vision and
+		Inertial Sensors}.
+	\newblock PhD thesis, Link\"{o}ping University, Sweden, 2008.}:\\
+\LSyr{Jeroen Hol.
+\newblock {\em Pose Estimation and Calibration Algorithms for Vision and
+	Inertial Sensors}.
+	\newblock PhD thesis, Link\"{o}ping University, Sweden, 2008.}:\\
+\LSlink{Jeroen Hol.
+	\newblock {\em Pose Estimation and Calibration Algorithms for Vision and
+		Inertial Sensors}.
+	\newblock PhD thesis, Link\"{o}ping University, Sweden, 2008.}:\\
 
 	
 Hello World! \cite{lentin2019}
@@ -148,7 +166,7 @@ Hello World! \cite{lentin2019}
 
 
 
-\input{res01}
+%\input{res01}
 
 
 \input{res02}
@@ -160,8 +178,7 @@ Hello World! \cite{lentin2019}
 
 
 
-
 \bibliographystyle{unsrt}
-\bibliography{mybibliography} 
+\bibliography{../../biblio/md_biblio} % mybibliography
 
 \end{document}

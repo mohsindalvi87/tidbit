@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  17 AUG 2021 02:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  2 SEP 2021 09:01
 entering extended mode
 **./tikz-diag-01.tex
 (tikz-diag-01.tex
@@ -1086,17 +1086,15 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write5
-runsystem(echo t > "w18-test-2021817120.tex")...disabled (restricted).
+runsystem(echo t > "w18-test-202192541.tex")...executed.
 
-runsystem(del "w18-test-2021817120.tex")...disabled (restricted).
+runsystem(del "w18-test-202192541.tex")...executed.
 
-
-
-Package gnuplottex Warning: Shell escape not enabled.
-(gnuplottex)                You'll need to convert the graphs yourself..
-
+Package gnuplottex Info: Automatically converting gnuplot files. on input line 
+110.
 \c@fignum=\count301
-) (tikz-diag-01.aux)
+)
+(tikz-diag-01.aux)
 \openout1 = `tikz-diag-01.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1367,30 +1365,36 @@ ndicate-a-right-
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[16] [17] [18] (tikz-diag-01.aux) ) 
+[16] [17]
+Overfull \hbox (18.00066pt too wide) in paragraph at lines 1325--1326
+[]\OT1/cmr/m/n/10 from https://newbedev.com/how-to-create-curved-lines-in-tikz-
+that-go-through-
+ []
+
+[18] [19] (tikz-diag-01.aux) ) 
 Here is how much of TeX's memory you used:
- 47748 strings out of 493308
- 1242053 string characters out of 3138735
- 1597648 words of memory out of 3000000
- 50712 multiletter control sequences out of 15000+200000
+ 47787 strings out of 493308
+ 1242804 string characters out of 3138735
+ 1597649 words of memory out of 3000000
+ 50751 multiletter control sequences out of 15000+200000
  534056 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,424p,10390b,2154s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler
-/eurm10.pfb>
-Output written on tikz-diag-01.pdf (18 pages, 212193 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm
+10.pfb>
+Output written on tikz-diag-01.pdf (19 pages, 215806 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

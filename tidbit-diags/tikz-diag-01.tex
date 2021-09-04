@@ -1306,20 +1306,40 @@ from https://tex.stackexchange.com/questions/46682/making-a-3d-colored-pyramid-i
 %(O) edge (tip);
 %\end{tikzpicture}
 
+% ================================================
+
+from http://5.9.10.113/68788367/cylinder-node-with-opacity
+
+\begin{tikzpicture}
+\node (n1) [cylinder, shape border rotate=150, draw, minimum height=20mm, minimum width=8.5mm,fill=blue!20,opacity=.5,rotate=18] {};
+
+\node (n2) [cylinder, shape border rotate=180, draw, minimum height=18mm, minimum width=6.5mm,fill=blue!30,opacity=.5,rotate=18,xshift=-0.95mm,aspect=0.75] {};
+
+\node (n3) [cylinder, shape border rotate=180, draw, minimum height=16mm, minimum width=4.5mm,fill=purple!30,opacity=.5,rotate=18,xshift=-1.9mm,aspect=0.5] {};
+\end{tikzpicture}
 
 
 
+% ================================================
 
+from https://newbedev.com/how-to-create-curved-lines-in-tikz-that-go-through-specific-points
 
+\begin{tikzpicture}[ scale=1.5, axis/.style={very thick, ->, >=stealth'},
+important line/.style={thick}, dashed line/.style={dashed, thick}, every node/.style={color=black,} ]
+\draw[axis] (0,0)  -- (6,0) node(xline)[right] {$k$};
+\draw[axis] (0,-2) -- (0,2) node(yline)[above] {$\dot{k}$};
+\draw (0,0) .. controls +(1.5,3) and +(-1,2) .. (4,0);
+\draw (4,0) .. controls +(0.5,-1) and +(-0.8,0.5) .. (6,-2);
+\fill[black] (4,0) circle (1pt) node[above right] {$k^*$};
 
-
-
-
-
-
-
-
-
+% just for the explanation
+\begin{scope}[->,blue,every node/.style={blue,sloped}]
+\draw (0,0) -- node[yshift=1.5ex]{$(1.5,3)$} ($(0,0)+(1.5,3)$);
+\draw (4,0) -- node[yshift=1.5ex]{$(-1,2)$} ($(4,0)+(-1,2)$);
+\draw (4,0) -- node[yshift=-1.5ex]{$(0.5,-1)$} ($(4,0)+(0.5,-1)$);
+\draw (6,-2) -- node[yshift=-1.5ex]{$(-0.8,0.5)$} ($(6,-2)+(-0.8,0.5)$);
+\end{scope}
+\end{tikzpicture}
 
 
 

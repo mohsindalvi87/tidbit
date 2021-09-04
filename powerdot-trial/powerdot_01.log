@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=latex 2018.1.19)  4 AUG 2021 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=latex 2018.1.19)  27 AUG 2021 23:26
 entering extended mode
 **./powerdot_01.tex
 (powerdot_01.tex
@@ -439,25 +439,16 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 )
 \pd@logobox=\box35
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\powerdot\powerdot-default.sty"
-Package: powerdot-default 2014/01/01 v1.5 default style (HA)
+("C:\Program Files\MiKTeX 2.9\tex\latex\powerdot\powerdot-fyma.sty"
+Package: powerdot-fyma 2005/12/10 v1.3 fyma style (SA,HA)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
-Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
-LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+("C:\Program Files\MiKTeX 2.9\tex\latex\pst-grad\pst-grad.sty"
+Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
-File: upzd.fd 2001/06/04 font definitions for U/pzd.
-)
-LaTeX Font Info:    Try loading font information for U+psy on input line 64.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
-File: upsy.fd 2001/06/04 font definitions for U/psy.
-))
-\pd@imagebox=\box36
-File: powerdot-default.ps Graphic file (type eps)
-
-<powerdot-default.ps>))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pst-grad\pst-grad.tex"
+`pst-grad' v1.06, 2006/11/27 (tvz,dg,hv))
+File: pst-grad.tex 2006/11/27 1.06 `pst-grad' (tvz)
+)))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks37
@@ -780,20 +771,27 @@ Now handling font encoding PD1 ...
 )) (powerdot_01.aux)
 \openout1 = `powerdot_01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 18.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 9.41699pt on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -829,8 +827,8 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 11.
+\AtBeginShipoutBox=\box36
+Package hyperref Info: Link coloring OFF on input line 18.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -842,9 +840,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count140
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 (powerdot_01.bm) (powerdot_01.bm)
 \openout3 = `powerdot_01.bm'.
@@ -852,33 +850,66 @@ LaTeX Info: Redefining \nameref on input line 11.
  (powerdot_01.toc)
 \openout4 = `powerdot_01.toc'.
 
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 10.32pt on input line 22.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 22.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 10.32pt on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 15.
+(Font)              <10.95> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
+(Font)              <6> on input line 22.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 6.88pt on input line 22.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.6pt on input line 22.
  [1
 
-] [2] [3] [4] [5]
+]
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 5.16pt on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 9.41699pt on input line 25.
+ [2]
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 12.384pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 12.384pt on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 27.
+ [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 34.
+ [4] [5]
 [6] [7] [8]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 42.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
+(Font)              <12> on input line 49.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 49.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 6.88pt on input line 49.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
  (powerdot_01.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 46.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 46.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 53.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 53.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 13343 strings out of 493309
- 226276 string characters out of 3138761
- 321809 words of memory out of 3000000
- 16669 multiletter control sequences out of 15000+200000
- 11648 words of font info for 40 fonts, out of 3000000 for 9000
+ 13397 strings out of 493309
+ 227465 string characters out of 3138761
+ 323501 words of memory out of 3000000
+ 16728 multiletter control sequences out of 15000+200000
+ 13072 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,9n,70p,455b,518s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,9n,70p,455b,562s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on powerdot_01.dvi (9 pages, 39880 bytes).
+Output written on powerdot_01.dvi (9 pages, 60252 bytes).

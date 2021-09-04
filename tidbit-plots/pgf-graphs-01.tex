@@ -16,13 +16,13 @@
 
 \usepackage{pgfplots,pgfplotstable}
 \usetikzlibrary{plotmarks,patterns,spy,decorations.markings}
-\usepgfplotslibrary{patchplots,dateplot,polar,clickable}
-\usepgfplotslibrary{groupplots,statistics}
+\pgfplotsset{width=6cm}
+\usepgfplotslibrary{patchplots,groupplots,statistics,fillbetween,}
+\usepgfplotslibrary{dateplot,polar,clickable}
 \usepackage{nicefrac}
 \usepgfplotslibrary{external}
 \tikzexternalize[prefix=pgffigures/]
 \usepackage[miktex]{gnuplottex}
-\pgfplotsset{width=7cm}
 
 
 \begin{document}
@@ -198,6 +198,19 @@ coordinates {(0,0,0) (0,1,0) (0,2,0)
 
 % ================================================
 
+from https://tex.stackexchange.com/questions/311161/pgfplots-shift-the-entire-axis-environment-to-the-right
+
+\begin{tikzpicture}
+\begin{groupplot}[ group style={ group size=2 by 1, y descriptions at=edge left, horizontal sep=2mm }, scale only axis, height=6cm, ymin=0,ymax=7, ]
+\nextgroupplot[width=2cm,xlabel=Something] \addplot{5*rnd};
+\nextgroupplot[width=6cm,xlabel=Else] \addplot{4*rnd};
+\end{groupplot}
+\end{tikzpicture}
+
+
+
+% ================================================
+
 \subsection{from https://tex.stackexchange.com/questions/16232/how-to-plot-fx-sinx-kx-cosx-and-ux-x\%C2\%B2-with-tikz}
 
 \begin{tikzpicture}
@@ -240,10 +253,6 @@ legend pos=north east, ]
 \end{tikzpicture}
 
 
-
-
-% ================================================
-
 \subsection{from }
 
 
@@ -274,15 +283,40 @@ xlabel=Index,ylabel=Value]
 \end{tikzpicture}
 
 
+\subsection{https://newbedev.com/plotting-function-2-with-pole-at-00-smoothly}
+
+
+\begin{tikzpicture}[]
+\begin{axis}[ axis lines=center, axis on top, xtick=\empty, ytick=\empty, ztick=\empty, xrange=-2:2, yrange=-2:2 ]
+% function
+\addplot3[domain=-2:2,y domain=-2:2, colormap/viridis, surf, opacity=0.5, samples = 25] { ifthenelse( x^2+y^2>0.05, (x*y)/(x^2+y^2), 0.5*sin(2*atan2(y,x)) )};
+\end{axis}
+\node[align=left,above,text width=10cm] at (current axis.north) 
+{ In polar coordinates, 
+	\[x=r\,\cos\varphi\quad\mbox{and}\quad y=r\,\sin\varphi\;,\]
+such that
+	\[\frac{x\,y}{x^2+y^2}=\frac{r^2\,\cos\varphi\,\sin\varphi}{r^2}=\cos\varphi\,\sin\varphi\]
+with $\varphi=\arctan(y/x)$. So we can replace
+	\[\frac{x\,y}{x^2+y^2}\to \sin(2\arctan(y/x))/2\;.\]  };
+\end{tikzpicture}
+
+\begin{tikzpicture}[]
+\begin{axis}[ axis lines=center, axis on top, xtick=\empty, ytick=\empty, ztick=\empty, xrange=-2:2, yrange=-2:2 ]
+\addplot3[domain=-2:2,y domain=-2:2, colormap/viridis, surf, opacity=0.5, samples = 25] {0.5*sin(2*atan2(y,x))};
+\end{axis}
+\end{tikzpicture}
+
+
+
+\subsection{Line Plots}
+
+
 \begin{tikzpicture}
 \begin{axis} [axis lines=middle, clip=false, xmin=-3, xmax=4, ymin=-2, ymax=2, ytick={-1,1}, xtick={-2,-1,0,1,2}, xticklabels={$-2$,$-1$,$0$,$1$,$2$}, xticklabel style={black}, xlabel=$x$, ylabel=$y$]
 \addplot [domain=-2:2,samples=200,orange]{sin(deg(pi*x))} node[right,pos=0.9,font=\footnotesize]{$f(x)=\sin \pi x$};
 \addplot [domain=-2:2,samples=200,violet]{cos(deg(pi*x))} node[right,pos=1,font=\footnotesize]{$f(x)=\cos \pi x$};
 \end{axis}
 \end{tikzpicture}
-
-
-\subsection{Line Plots}
 
 
 \begin{tikzpicture}
@@ -1234,7 +1268,7 @@ The picture shows the estimations \ref{pgfplots:label1} which are subjected to n
 xlabel=$x$, ylabel=First ordinate] 
 \addplot {x^2};
 \end{axis}
-\begin{axis} [ scale only axis, xmin=-5,xmax=5, axis y line*=right, axis x line=none, ylabel=Second ordinate ]
+\begin{axis} [ scale only axis, xmin=-5,xmax=5, axis y line*=right, axis x line=none, ylabel=Second ordinate, ylabel shift = 1cm ]
 \addplot[red] {3*x};
 \end{axis}
 \end{tikzpicture}
@@ -1314,12 +1348,12 @@ xlabel=$x$, ylabel=First ordinate]
 \end{tikzpicture}
 
 \begin{tikzpicture}
-\begin{axis} [ 3d box=complete, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, grid=major]
+\begin{axis} [ 3d box=complete, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, grid=major, colormap/viridis]
 \addplot3[surf] {x*y};
 \end{axis}
 \end{tikzpicture}
 \begin{tikzpicture}
-\begin{axis} [ 3d box=complete*, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, grid=major]
+\begin{axis} [ 3d box=complete*, title={3d box=background}, samples=5, domain=-4:4, xtick=data, ytick=data, grid=major, colormap/viridis]
 \addplot3[surf] {x*y};
 \end{axis}
 \end{tikzpicture}
@@ -1590,10 +1624,20 @@ Aligning top edge of graphs:\\
 \end{axis}
 \end{tikzpicture}
 
+
 \begin{tikzpicture}
-\begin{axis} [domain=0:6.2832, samples=72, legend style={overlay, at={(-0.5,0.5)}, anchor=center}, every axis plot post/.append style={mark=none}, enlargelimits=false]
+\begin{axis} [ domain=0:6.2832, samples=72, legend style={overlay, at={(-0.5,0.5)}, anchor=center}, every axis plot post/.append style={mark=none}, enlargelimits=false, enlargelimits={abs=0.05}, ]
 \addplot [draw opacity=0, fill=red!10] { sin(deg(x)+3) + 5+0.25 + rand*0.05 } \closedcycle;
 \addplot [draw opacity=0, fill=white] { sin(deg(x)+3) + 5-0.25 + rand*0.05 } \closedcycle;
+\addplot [draw=red] { sin(deg(x)+3) + 5 + rand*0.05 };
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis} [ domain=0:6.2832, samples=72, legend style={overlay, at={(-0.5,0.5)}, anchor=center}, every axis plot post/.append style={mark=none}, enlargelimits={abs=0.05}, ]
+\addplot [name path=A, draw opacity=0] { sin(deg(x)+3) + 5+0.25 + rand*0.05 };
+\addplot [name path=B, draw opacity=0] { sin(deg(x)+3) + 5-0.25 + rand*0.05 };
+\addplot [pink, fill opacity=0.5] fill between [of=A and B];
+%\addplot [pink] fill between [of=A and B, soft clip={ (0,6) rectangle (1.57,4) }, ]; % {domain=0:1.57}, ];
 \addplot [draw=red] { sin(deg(x)+3) + 5 + rand*0.05 };
 \end{axis}
 \end{tikzpicture}
@@ -1850,6 +1894,33 @@ table [y index=0] {plotdata/pgfplots.randn.dat};
 table [y index=0] {plotdata/pgfplots.randn.dat};
 \end{axis}
 \end{tikzpicture}
+
+
+
+\subsection{title}
+
+
+\begin{tikzpicture}
+\pgfplotstableread{
+	s       f
+	0.0     75.9638
+	0.380665    75.9638
+	0.380665    206.565
+	0.58711     206.565
+	0.58711     243.435
+	0.793555    243.435
+	0.793555    333.435
+	1.0     333.435
+}\data
+\begin{axis}[ xmin=0, xmax=1, ymin=0, ymax=360, xlabel=$s$, ylabel=$f(s)$, no markers ]
+\addplot[color=blue!80!red] table[x=s,y=f] \data;
+\addplot +[color=orange, shift={(-0.5,10)}] table \data;
+\addplot +[color=green!60!black, x filter/.code={\pgfmathparse{\pgfmathresult+0.1}}, y filter/.code={\pgfmathparse{\pgfmathresult-10}}] table \data;
+\addplot +[color=magenta, x filter/.code={\pgfmathparse{\pgfmathresult+0.05}}, y filter/.code={\pgfmathparse{\pgfmathresult-5}}] table \data;
+\end{axis}
+\end{tikzpicture}
+
+
 
 
 

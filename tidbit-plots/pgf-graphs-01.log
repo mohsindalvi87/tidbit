@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  21 AUG 2021 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  2 SEP 2021 07:21
 entering extended mode
 **./pgf-graphs-01.tex
 (pgf-graphs-01.tex
@@ -1080,12 +1080,36 @@ librarydecorations.markings.code.tex"
 ecorations.markings.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.pat
 chplots.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.gro
+upplots.code.tex"
+\pgfplots@group@current@plot=\count300
+\pgfplots@group@current@row=\count301
+\pgfplots@group@current@column=\count302
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.sta
+tistics.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.fil
+lbetween.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfcontrib\tikzlibraryfillbe
+tween.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryintersections.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryintersections
+.code.tex"
+\pgf@intersect@solutions=\count303
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfcontrib\tikzlibrarydecora
+tions.softclip.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfcontrib\pgflibraryfillbet
+ween.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.dec
+orations.softclip.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.dat
 eplot.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfcalendar.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfcalendar.code.tex"
 File: pgfcalendar.code.tex 2007/07/23 v3.0.1a (rcs-revision 1.11)
-\pgfcalendarcurrentjulian=\count300
+\pgfcalendarcurrentjulian=\count304
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.pol
 ar.code.tex")
@@ -1101,7 +1125,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks37
 \XKV@tempa@toks=\toks38
 )
-\XKV@depth=\count301
+\XKV@depth=\count305
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
@@ -1165,8 +1189,8 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen299
-\Hy@linkcounter=\count302
-\Hy@pagecounter=\count303
+\Hy@linkcounter=\count306
+\Hy@pagecounter=\count307
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
@@ -1174,7 +1198,7 @@ File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty"
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count304
+\Hy@SavedSpaceFactor=\count308
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1186,7 +1210,7 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count305
+\c@Hy@tempcnt=\count309
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip16
@@ -1202,7 +1226,7 @@ Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count306
+\Fld@menulength=\count310
 \Field@Width=\dimen301
 \Fld@charsize=\dimen302
 Package hyperref Info: Hyper figures OFF on input line 6358.
@@ -1218,9 +1242,9 @@ LaTeX Info: Redefining \pageref on input line 6432.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 )
-\Hy@abspage=\count307
-\c@Item=\count308
-\c@Hfootnote=\count309
+\Hy@abspage=\count311
+\c@Item=\count312
+\c@Hfootnote=\count313
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
@@ -1232,8 +1256,8 @@ File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count310
-\c@bookmark@seq@number=\count311
+\Fld@listcount=\count314
+\c@bookmark@seq@number=\count315
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1257,8 +1281,8 @@ Package: conv-xkv 2017/02/17 v1.1c convert xkeyval format (dps)
 \cxkv@tmptoks=\toks41
 )
 \js@verbatim@out=\write5
-\c@dljs@cnt=\count312
-\c@dljssegs=\count313
+\c@dljs@cnt=\count316
+\c@dljssegs=\count317
 \JStoks=\toks42
 \importfdftoks=\toks43
 \dljsobjtoks=\toks44
@@ -1282,14 +1306,7 @@ er only (dps)
 \openout5 = `pgfplotsJS.djs'.
 
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.gro
-upplots.code.tex"
-\pgfplots@group@current@plot=\count314
-\pgfplots@group@current@row=\count315
-\pgfplots@group@current@column=\count316
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\tikzlibrarypgfplots.sta
-tistics.code.tex") ("C:\Program Files\MiKTeX 2.9\tex\latex\units\nicefrac.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\units\nicefrac.sty"
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip61
 \L@UnitsRaiseTextstyle=\skip62
@@ -1321,21 +1338,21 @@ Package: gnuplottex 2016/08/21 v0.9.2 gnuplot graphs in LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\moreverb\moreverb.sty"
 Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
-\tab@position=\count317
-\tab@size=\count318
-\listing@line=\count319
+\tab@position=\count318
+\tab@size=\count319
+\listing@line=\count320
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty"
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 \verbatim@out=\write6
-runsystem(echo t > "w18-test-20218211043.tex")...executed.
+runsystem(echo t > "w18-test-202192441.tex")...executed.
 
-runsystem(del "w18-test-20218211043.tex")...executed.
+runsystem(del "w18-test-202192441.tex")...executed.
 
 Package gnuplottex Info: Automatically converting gnuplot files. on input line 
 110.
-\c@fignum=\count320
+\c@fignum=\count321
 )
 (pgf-graphs-01.aux)
 \openout1 = `pgf-graphs-01.aux'.
@@ -1395,16 +1412,16 @@ Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
+\scratchcounter=\count322
 \scratchdimen=\dimen306
 \scratchbox=\box86
-\nofMPsegments=\count322
-\nofMParguments=\count323
+\nofMPsegments=\count323
+\nofMParguments=\count324
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count324
+\MPscratchCnt=\count325
 \MPscratchDim=\dimen307
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
 \everyMPtoPDFconversion=\toks47
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1447,7 +1464,7 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count328
 )
 LaTeX Info: Redefining \ref on input line 28.
 LaTeX Info: Redefining \pageref on input line 28.
@@ -1464,195 +1481,47 @@ File: upzd.fd 2001/06/04 font definitions for U/pzd.
 ){C:/Users/alakshendra.veer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} 
 (pgfplotsJS.djs
 ("C:\Program Files\MiKTeX 2.9\tex\latex\acrotex\dljscc.def"))
-\c__siunitx_mathsf_int=\count328
+\c__siunitx_mathsf_int=\count329
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 28.
-\c__siunitx_mathtt_int=\count329
+\c__siunitx_mathtt_int=\count330
 
 Overfull \hbox (18.53265pt too wide) in paragraph at lines 33--33
 []\OT1/cmr/bx/n/12 from https://tex.stackexchange.com/questions/9386/difference
 -between-right-
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure0.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure0" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure0" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure1.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure1" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure1" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure0' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure1' is up-to-date. ======
 
 Overfull \hbox (15.48409pt too wide) in paragraph at lines 55--55
 []\OT1/cmr/bx/n/12 from https://tex.stackexchange.com/questions/354401/how-to-d
 raw-a-vector-
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure2.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure2" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure2" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure3.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure3" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure3" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure4.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure4" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure4" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure2' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure3' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure4' is up-to-date. ======
 [1
 
  <./pgffigures/pgf-graphs-01-figure0.pdf> <./pgffigures/pgf-graphs-01-figure1.p
 df> <./pgffigures/pgf-graphs-01-figure2.pdf> <./pgffigures/pgf-graphs-01-figure
 3.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure5.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure5" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure5" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure6.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure6" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure6" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure5' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure6' is up-to-date. ======
 [2 <./pgffigures/pgf-graphs-01-figure4.pdf> <./pgffigures/pgf-graphs-01-figure5
 .pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure7.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure7" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure7" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure8.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure8" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure8" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure7' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure8' is up-to-date. ======
 [3 <./pgffigures/pgf-graphs-01-figure6.pdf> <./pgffigures/pgf-graphs-01-figure7
 .pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure9.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure9" "\de
-f\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure9" "\def\tikzexternalrealjob{pgf-graphs-01}\in
-put{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure10.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure10" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure10" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure9' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure10' is up-to-date. ======
 [4 <./pgffigures/pgf-graphs-01-figure8.pdf> <./pgffigures/pgf-graphs-01-figure9
 .pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure11.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure11" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure11" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure11' is up-to-date. ======
 
 Overfull \hbox (23.90076pt too wide) in paragraph at lines 171--171
 []\OT1/cmr/bx/n/12 from https://stackoverflow.com/questions/36386656/how-to-plo
@@ -1675,11 +1544,11 @@ File: cp1252.def 2015/03/17 v1.2c Input encoding file
 \gptboxwidth=\skip65
 \gptboxtext=\box88
 Package epstopdf Info: Source file: <pgf-graphs-01-gnuplottex-fig1.eps>
-(epstopdf)                    date: 2021-08-21 17:24:55
+(epstopdf)                    date: 2021-09-02 07:21:12
 (epstopdf)                    size: 19175 bytes
 (epstopdf)             Output file: <pgf-graphs-01-gnuplottex-fig1-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2021-08-21 17:14:37
+(epstopdf)                    date: 2021-09-02 07:18:49
 (epstopdf)                    size: 3401 bytes
 (epstopdf)             Command: <epstopdf --outfile=pgf-graphs-01-gnuplottex-fi
 g1-eps-converted-to.pdf pgf-graphs-01-gnuplottex-fig1.eps>
@@ -1689,9 +1558,9 @@ runsystem(epstopdf --outfile=pgf-graphs-01-gnuplottex-fig1-eps-converted-to.pdf
 
 Package epstopdf Info: Result file: <pgf-graphs-01-gnuplottex-fig1-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2021-08-21 17:24:56
-(epstopdf)                    size: 3393 bytes.
-<pgf-graphs-01-gnuplottex-fig1-eps-converted-to.pdf, id=273, 412.54124pt x 170.
+(epstopdf)                    date: 2021-09-02 07:21:13
+(epstopdf)                    size: 3401 bytes.
+<pgf-graphs-01-gnuplottex-fig1-eps-converted-to.pdf, id=281, 412.54124pt x 170.
 6375pt>
 File: pgf-graphs-01-gnuplottex-fig1-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1709,2441 +1578,457 @@ Overfull \hbox (0.99658pt too wide) in paragraph at lines 189--189
 -how-to-fill-
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure12.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure12" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure12" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure12' is up-to-date. ======
 [5 <./pgffigures/pgf-graphs-01-figure10.pdf> <./pgffigures/pgf-graphs-01-figure
 11.pdf>]
-Overfull \hbox (13.74658pt too wide) in paragraph at lines 201--201
+===== Image 'pgffigures/pgf-graphs-01-figure13' is up-to-date. ======
+[6 <./pgf-graphs-01-gnuplottex-fig1-eps-converted-to.pdf> <./pgffigures/pgf-gra
+phs-01-figure12.pdf>]
+Overfull \hbox (13.74658pt too wide) in paragraph at lines 214--214
 []\OT1/cmr/bx/n/12 from https://tex.stackexchange.com/questions/16232/how-to-pl
 ot-fx-sinx-kx-
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure13.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure13" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure13" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[6 <./pgf-graphs-01-gnuplottex-fig1-eps-converted-to.pdf> <./pgffigures/pgf-gra
-phs-01-figure12.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure14.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure14" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure14" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure15.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure15" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure15" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure16.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure16" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure16" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure14' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure15' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure16' is up-to-date. ======
 [7 <./pgffigures/pgf-graphs-01-figure13.pdf> <./pgffigures/pgf-graphs-01-figure
 14.pdf> <./pgffigures/pgf-graphs-01-figure15.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure17.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure17" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure17" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (31.26048pt too wide) in paragraph at lines 267--267
+===== Image 'pgffigures/pgf-graphs-01-figure17' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure18' is up-to-date. ======
+[8 <./pgffigures/pgf-graphs-01-figure16.pdf> <./pgffigures/pgf-graphs-01-figure
+17.pdf>]
+Overfull \hbox (31.26048pt too wide) in paragraph at lines 276--276
 []\OT1/cmr/bx/n/12 from https://tex.stackexchange.com/questions/361915/tikz-or-
 pgfplots-plotting-
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure18.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure18" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure18" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[8 <./pgffigures/pgf-graphs-01-figure16.pdf> <./pgffigures/pgf-graphs-01-figure
-17.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure19.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure19" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure19" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure20.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure20" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure20" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure19' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure20' is up-to-date. ======
 [9 <./pgffigures/pgf-graphs-01-figure18.pdf> <./pgffigures/pgf-graphs-01-figure
 19.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure21.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure21' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure22' is up-to-date. ======
+[10 <./pgffigures/pgf-graphs-01-figure20.pdf> <./pgffigures/pgf-graphs-01-figur
+e21.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure23' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure24' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure25' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure21" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure21" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure22.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure22" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure22" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (90.74313pt too wide) in paragraph at lines 302--312
+Overfull \hbox (90.74313pt too wide) in paragraph at lines 336--346
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure23.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure23" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure23" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[10 <./pgffigures/pgf-graphs-01-figure20.pdf> <./pgffigures/pgf-graphs-01-figur
-e21.pdf> <./pgffigures/pgf-graphs-01-figure22.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure24.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure24" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure24" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure25.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure25" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure25" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[11 <./pgffigures/pgf-graphs-01-figure23.pdf> <./pgffigures/pgf-graphs-01-figur
-e24.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure26.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure26" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure26" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure27.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure27" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure27" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[12 <./pgffigures/pgf-graphs-01-figure25.pdf> <./pgffigures/pgf-graphs-01-figur
-e26.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure28.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure28" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure28" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure29.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure29" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure29" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+[11 <./pgffigures/pgf-graphs-01-figure22.pdf> <./pgffigures/pgf-graphs-01-figur
+e23.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure26' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure27' is up-to-date. ======
+[12 <./pgffigures/pgf-graphs-01-figure24.pdf> <./pgffigures/pgf-graphs-01-figur
+e25.pdf> <./pgffigures/pgf-graphs-01-figure26.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure28' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure29' is up-to-date. ======
 [13 <./pgffigures/pgf-graphs-01-figure27.pdf> <./pgffigures/pgf-graphs-01-figur
 e28.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure30.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure30" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure30" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure31.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure31" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure31" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure30' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure31' is up-to-date. ======
 [14 <./pgffigures/pgf-graphs-01-figure29.pdf> <./pgffigures/pgf-graphs-01-figur
 e30.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure32.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure32" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure32" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure33.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure33" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure33" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure32' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure33' is up-to-date. ======
 [15 <./pgffigures/pgf-graphs-01-figure31.pdf> <./pgffigures/pgf-graphs-01-figur
 e32.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure34.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure34" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure34" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure35.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure35" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure35" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure34' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure35' is up-to-date. ======
 [16 <./pgffigures/pgf-graphs-01-figure33.pdf> <./pgffigures/pgf-graphs-01-figur
 e34.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure36.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure36" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure36" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure37.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure37" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure37" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure36' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure37' is up-to-date. ======
 [17 <./pgffigures/pgf-graphs-01-figure35.pdf> <./pgffigures/pgf-graphs-01-figur
 e36.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure38.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure38" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure38" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure39.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure39" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure39" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure38' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure39' is up-to-date. ======
 [18 <./pgffigures/pgf-graphs-01-figure37.pdf> <./pgffigures/pgf-graphs-01-figur
 e38.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure40.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure40" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure40" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure41.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure41" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure41" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure40' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure41' is up-to-date. ======
 [19 <./pgffigures/pgf-graphs-01-figure39.pdf> <./pgffigures/pgf-graphs-01-figur
 e40.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure42.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure42" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure42" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure43.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure43" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure43" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure42' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure43' is up-to-date. ======
 [20 <./pgffigures/pgf-graphs-01-figure41.pdf> <./pgffigures/pgf-graphs-01-figur
 e42.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure44.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure44" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure44" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure45.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure45" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure45" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure44' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure45' is up-to-date. ======
 [21 <./pgffigures/pgf-graphs-01-figure43.pdf> <./pgffigures/pgf-graphs-01-figur
 e44.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure46.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure46" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure46" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure47.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure47" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure47" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure46' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure47' is up-to-date. ======
 [22 <./pgffigures/pgf-graphs-01-figure45.pdf> <./pgffigures/pgf-graphs-01-figur
 e46.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure48.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure48" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure48" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure49.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure49" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure49" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure48' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure49' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure50' is up-to-date. ======
 [23 <./pgffigures/pgf-graphs-01-figure47.pdf> <./pgffigures/pgf-graphs-01-figur
-e48.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure50.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure50" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure50" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure51.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure51" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure51" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[24 <./pgffigures/pgf-graphs-01-figure49.pdf> <./pgffigures/pgf-graphs-01-figur
-e50.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure52.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure52" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure52" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure53.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure53" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure53" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[25 <./pgffigures/pgf-graphs-01-figure51.pdf> <./pgffigures/pgf-graphs-01-figur
-e52.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure54.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure54" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure54" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure55.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure55" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure55" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure56.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure56" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure56" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[26 <./pgffigures/pgf-graphs-01-figure53.pdf> <./pgffigures/pgf-graphs-01-figur
-e54.pdf> <./pgffigures/pgf-graphs-01-figure55.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure57.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure57" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure57" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure58.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure58" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure58" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+e48.pdf> <./pgffigures/pgf-graphs-01-figure49.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure51' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure52' is up-to-date. ======
+[24 <./pgffigures/pgf-graphs-01-figure50.pdf> <./pgffigures/pgf-graphs-01-figur
+e51.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure53' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure54' is up-to-date. ======
+[25 <./pgffigures/pgf-graphs-01-figure52.pdf> <./pgffigures/pgf-graphs-01-figur
+e53.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure55' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure56' is up-to-date. ======
+[26 <./pgffigures/pgf-graphs-01-figure54.pdf> <./pgffigures/pgf-graphs-01-figur
+e55.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure57' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure58' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure59' is up-to-date. ======
 [27 <./pgffigures/pgf-graphs-01-figure56.pdf> <./pgffigures/pgf-graphs-01-figur
-e57.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure59.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure59" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure59" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure60.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure60" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure60" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[28 <./pgffigures/pgf-graphs-01-figure58.pdf> <./pgffigures/pgf-graphs-01-figur
-e59.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure61.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure61" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure61" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure62.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure62" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure62" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure63.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure63" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure63" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[29 <./pgffigures/pgf-graphs-01-figure60.pdf> <./pgffigures/pgf-graphs-01-figur
-e61.pdf> <./pgffigures/pgf-graphs-01-figure62.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure64.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure64" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure64" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure65.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure65" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure65" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (86.83156pt too wide) in paragraph at lines 746--756
-[][] [] 
- []
-
-\openout3 = `pgffigures/pgf-graphs-01-figure66.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure66" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure66" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure67.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure67" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure67" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (86.81851pt too wide) in paragraph at lines 758--768
-[][] [] 
- []
-
-\openout3 = `pgffigures/pgf-graphs-01-figure68.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure68" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure68" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+e57.pdf> <./pgffigures/pgf-graphs-01-figure58.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure60' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure61' is up-to-date. ======
+[28 <./pgffigures/pgf-graphs-01-figure59.pdf> <./pgffigures/pgf-graphs-01-figur
+e60.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure62' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure63' is up-to-date. ======
+[29 <./pgffigures/pgf-graphs-01-figure61.pdf> <./pgffigures/pgf-graphs-01-figur
+e62.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure64' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure65' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure66' is up-to-date. ======
 [30 <./pgffigures/pgf-graphs-01-figure63.pdf> <./pgffigures/pgf-graphs-01-figur
-e64.pdf> <./pgffigures/pgf-graphs-01-figure65.pdf> <./pgffigures/pgf-graphs-01-
-figure66.pdf> <./pgffigures/pgf-graphs-01-figure67.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure69.md5'.
+e64.pdf> <./pgffigures/pgf-graphs-01-figure65.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure67' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure68' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure69" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure69" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure70.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure70" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure70" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure71.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure71" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure71" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (86.84561pt too wide) in paragraph at lines 784--794
+Overfull \hbox (86.83156pt too wide) in paragraph at lines 780--790
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure72.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure69' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure70' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure72" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure72" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[31 <./pgffigures/pgf-graphs-01-figure68.pdf> <./pgffigures/pgf-graphs-01-figur
-e69.pdf> <./pgffigures/pgf-graphs-01-figure70.pdf> <./pgffigures/pgf-graphs-01-
-figure71.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure73.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure73" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure73" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure74.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure74" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure74" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure75.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure75" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure75" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (65.04715pt too wide) in paragraph at lines 818--842
+Overfull \hbox (86.81851pt too wide) in paragraph at lines 792--802
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure76.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure71' is up-to-date. ======
+[31 <./pgffigures/pgf-graphs-01-figure66.pdf> <./pgffigures/pgf-graphs-01-figur
+e67.pdf> <./pgffigures/pgf-graphs-01-figure68.pdf> <./pgffigures/pgf-graphs-01-
+figure69.pdf> <./pgffigures/pgf-graphs-01-figure70.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure72' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure73' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure74' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure76" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure76" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure77.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure77" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure77" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (65.04112pt too wide) in paragraph at lines 844--858
+Overfull \hbox (86.84561pt too wide) in paragraph at lines 818--828
 [][] [] 
  []
 
-[32 <./pgffigures/pgf-graphs-01-figure72.pdf> <./pgffigures/pgf-graphs-01-figur
-e73.pdf> <./pgffigures/pgf-graphs-01-figure74.pdf> <./pgffigures/pgf-graphs-01-
-figure75.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure78.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure75' is up-to-date. ======
+[32 <./pgffigures/pgf-graphs-01-figure71.pdf> <./pgffigures/pgf-graphs-01-figur
+e72.pdf> <./pgffigures/pgf-graphs-01-figure73.pdf> <./pgffigures/pgf-graphs-01-
+figure74.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure76' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure77' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure78' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure78" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure78" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure79.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure79" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure79" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (86.84256pt too wide) in paragraph at lines 860--872
+Overfull \hbox (65.04715pt too wide) in paragraph at lines 852--876
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure80.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure79' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure80' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure80" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure80" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[33 <./pgffigures/pgf-graphs-01-figure76.pdf> <./pgffigures/pgf-graphs-01-figur
-e77.pdf> <./pgffigures/pgf-graphs-01-figure78.pdf> <./pgffigures/pgf-graphs-01-
-figure79.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure81.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure81" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure81" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure82.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure82" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure82" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (81.03085pt too wide) in paragraph at lines 884--913
+Overfull \hbox (65.04112pt too wide) in paragraph at lines 878--892
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure83.md5'.
+[33 <./pgffigures/pgf-graphs-01-figure75.pdf> <./pgffigures/pgf-graphs-01-figur
+e76.pdf> <./pgffigures/pgf-graphs-01-figure77.pdf> <./pgffigures/pgf-graphs-01-
+figure78.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure81' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure82' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure83" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure83" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure84.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure84" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure84" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (76.27411pt too wide) in paragraph at lines 915--925
+Overfull \hbox (86.84256pt too wide) in paragraph at lines 894--906
 [][] [] 
  []
 
-[34 <./pgffigures/pgf-graphs-01-figure80.pdf> <./pgffigures/pgf-graphs-01-figur
-e81.pdf> <./pgffigures/pgf-graphs-01-figure82.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure85.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure83' is up-to-date. ======
+[34 <./pgffigures/pgf-graphs-01-figure79.pdf> <./pgffigures/pgf-graphs-01-figur
+e80.pdf> <./pgffigures/pgf-graphs-01-figure81.pdf> <./pgffigures/pgf-graphs-01-
+figure82.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure84' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure85' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure85" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure85" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure86.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure86" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure86" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (102.42181pt too wide) in paragraph at lines 927--937
+Overfull \hbox (81.03085pt too wide) in paragraph at lines 918--947
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure87.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure86' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure87' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure87" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure87" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure88.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure88" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure88" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
+Overfull \hbox (76.27411pt too wide) in paragraph at lines 949--959
+[][] [] 
+ []
 
 [35 <./pgffigures/pgf-graphs-01-figure83.pdf> <./pgffigures/pgf-graphs-01-figur
-e84.pdf> <./pgffigures/pgf-graphs-01-figure85.pdf> <./pgffigures/pgf-graphs-01-
-figure86.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure89.md5'.
+e84.pdf> <./pgffigures/pgf-graphs-01-figure85.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure88' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure89' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
+Overfull \hbox (102.42181pt too wide) in paragraph at lines 961--971
+[][] [] 
+ []
 
+===== Image 'pgffigures/pgf-graphs-01-figure90' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure91' is up-to-date. ======
+[36 <./pgffigures/pgf-graphs-01-figure86.pdf> <./pgffigures/pgf-graphs-01-figur
+e87.pdf> <./pgffigures/pgf-graphs-01-figure88.pdf> <./pgffigures/pgf-graphs-01-
+figure89.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure92' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure93' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure94' is up-to-date. ======
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure89" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure89" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure90.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure90" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure90" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure91.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure91" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure91" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (50.70964pt too wide) in paragraph at lines 984--996
+Overfull \hbox (50.70964pt too wide) in paragraph at lines 1018--1030
 [] [] 
  []
 
-[36 <./pgffigures/pgf-graphs-01-figure87.pdf> <./pgffigures/pgf-graphs-01-figur
-e88.pdf> <./pgffigures/pgf-graphs-01-figure89.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure92.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure92" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure92" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure93.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure93" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure93" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (79.42589pt too wide) in paragraph at lines 998--1010
-[][] [] 
- []
-
-\openout3 = `pgffigures/pgf-graphs-01-figure94.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure94" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure94" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure95.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure95" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure95" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (63.931pt too wide) in paragraph at lines 1012--1047
-[][] [] 
- []
-
 [37 <./pgffigures/pgf-graphs-01-figure90.pdf> <./pgffigures/pgf-graphs-01-figur
-e91.pdf> <./pgffigures/pgf-graphs-01-figure92.pdf> <./pgffigures/pgf-graphs-01-
-figure93.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure96.md5'.
+e91.pdf> <./pgffigures/pgf-graphs-01-figure92.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure95' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure96' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
+Overfull \hbox (79.42589pt too wide) in paragraph at lines 1032--1044
+[][] [] 
+ []
 
+===== Image 'pgffigures/pgf-graphs-01-figure97' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure98' is up-to-date. ======
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure96" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure96" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
+Overfull \hbox (63.931pt too wide) in paragraph at lines 1046--1081
+[][] [] 
+ []
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure97.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure97" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure97" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[38 <./pgffigures/pgf-graphs-01-figure94.pdf> <./pgffigures/pgf-graphs-01-figur
-e95.pdf> <./pgffigures/pgf-graphs-01-figure96.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure98.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure98" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure98" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure99.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure99" "\d
-ef\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure99" "\def\tikzexternalrealjob{pgf-graphs-01}\i
-nput{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+[38 <./pgffigures/pgf-graphs-01-figure93.pdf> <./pgffigures/pgf-graphs-01-figur
+e94.pdf> <./pgffigures/pgf-graphs-01-figure95.pdf> <./pgffigures/pgf-graphs-01-
+figure96.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure99' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure100' is up-to-date. ======
 [39 <./pgffigures/pgf-graphs-01-figure97.pdf> <./pgffigures/pgf-graphs-01-figur
-e98.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure100.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure100" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure100" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure101.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure101" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure101" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[40 <./pgffigures/pgf-graphs-01-figure99.pdf> <./pgffigures/pgf-graphs-01-figur
-e100.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure102.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure102" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure102" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure103.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure103" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure103" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[41 <./pgffigures/pgf-graphs-01-figure101.pdf> <./pgffigures/pgf-graphs-01-figu
-re102.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure104.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure104" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure104" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure105.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure105" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure105" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[42 <./pgffigures/pgf-graphs-01-figure103.pdf> <./pgffigures/pgf-graphs-01-figu
-re104.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure106.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure106" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure106" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure_crossref0.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef0" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref0" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== The last system call resulted in an EMPTY output file. Maybe it is part o
-f \ref. Rescheduling it for \end{document}. ========
-\openout3 = `pgffigures/pgf-graphs-01-figure_crossref1.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef1" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref1" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== The last system call resulted in an EMPTY output file. Maybe it is part o
-f \ref. Rescheduling it for \end{document}. ========
-\openout3 = `pgffigures/pgf-graphs-01-figure_crossref2.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef2" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref2" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== The last system call resulted in an EMPTY output file. Maybe it is part o
-f \ref. Rescheduling it for \end{document}. ========
-\openout3 = `pgffigures/pgf-graphs-01-figure107.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure107" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure107" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure108.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure108" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure108" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure109.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure109" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure109" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure_crossref3.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef3" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref3" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== The last system call resulted in an EMPTY output file. Maybe it is part o
-f \ref. Rescheduling it for \end{document}. ========
-\openout3 = `pgffigures/pgf-graphs-01-figure110.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure110" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure110" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[43 <./pgffigures/pgf-graphs-01-figure105.pdf> <./pgffigures/pgf-graphs-01-figu
-re106.pdf> <./pgffigures/pgf-graphs-01-figure107.pdf> <./pgffigures/pgf-graphs-
-01-figure108.pdf> <./pgffigures/pgf-graphs-01-figure109.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure111.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure111" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure111" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure112.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure112" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure112" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (40.20433pt too wide) in paragraph at lines 1219--1229
+e98.pdf> <./pgffigures/pgf-graphs-01-figure99.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure101' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure102' is up-to-date. ======
+[40 <./pgffigures/pgf-graphs-01-figure100.pdf> <./pgffigures/pgf-graphs-01-figu
+re101.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure103' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure104' is up-to-date. ======
+[41 <./pgffigures/pgf-graphs-01-figure102.pdf> <./pgffigures/pgf-graphs-01-figu
+re103.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure105' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure106' is up-to-date. ======
+[42 <./pgffigures/pgf-graphs-01-figure104.pdf> <./pgffigures/pgf-graphs-01-figu
+re105.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure107' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure108' is up-to-date. ======
+[43 <./pgffigures/pgf-graphs-01-figure106.pdf> <./pgffigures/pgf-graphs-01-figu
+re107.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure109' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure_crossref0' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure_crossref1' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure_crossref2' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure110' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure111' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure112' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure_crossref3' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure113' is up-to-date. ======
+[44 <./pgffigures/pgf-graphs-01-figure108.pdf> <./pgffigures/pgf-graphs-01-figu
+re109.pdf> <./pgffigures/pgf-graphs-01-figure_crossref0.pdf> <./pgffigures/pgf-
+graphs-01-figure_crossref1.pdf> <./pgffigures/pgf-graphs-01-figure_crossref2.pd
+f> <./pgffigures/pgf-graphs-01-figure110.pdf> <./pgffigures/pgf-graphs-01-figur
+e111.pdf> <./pgffigures/pgf-graphs-01-figure112.pdf> <./pgffigures/pgf-graphs-0
+1-figure_crossref3.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure114' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure115' is up-to-date. ======
+
+Overfull \hbox (40.20433pt too wide) in paragraph at lines 1253--1263
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure113.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure113" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure113" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[44 <./pgffigures/pgf-graphs-01-figure110.pdf> <./pgffigures/pgf-graphs-01-figu
-re111.pdf> <./pgffigures/pgf-graphs-01-figure112.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure114.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure114" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure114" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure115.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure115" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure115" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (64.6326pt too wide) in paragraph at lines 1243--1253
-[][] [] 
- []
-
-\openout3 = `pgffigures/pgf-graphs-01-figure116.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure116" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure116" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure117.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure117" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure117" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure118.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure118" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure118" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure_crossref4.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef4" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref4" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== The last system call resulted in an EMPTY output file. Maybe it is part o
-f \ref. Rescheduling it for \end{document}. ========
-\openout3 = `pgffigures/pgf-graphs-01-figure119.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure119" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure119" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure120.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure120" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure120" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
+===== Image 'pgffigures/pgf-graphs-01-figure116' is up-to-date. ======
 [45 <./pgffigures/pgf-graphs-01-figure113.pdf> <./pgffigures/pgf-graphs-01-figu
-re114.pdf> <./pgffigures/pgf-graphs-01-figure115.pdf> <./pgffigures/pgf-graphs-
-01-figure116.pdf> <./pgffigures/pgf-graphs-01-figure117.pdf> <./pgffigures/pgf-
-graphs-01-figure118.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure121.md5'.
+re114.pdf> <./pgffigures/pgf-graphs-01-figure115.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure117' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure118' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure121" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure121" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure122.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure122" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure122" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (79.84644pt too wide) in paragraph at lines 1292--1302
+Overfull \hbox (64.6326pt too wide) in paragraph at lines 1277--1287
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure123.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure119' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure120' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure121' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure_crossref4' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure122' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure123' is up-to-date. ======
+[46 <./pgffigures/pgf-graphs-01-figure116.pdf> <./pgffigures/pgf-graphs-01-figu
+re117.pdf> <./pgffigures/pgf-graphs-01-figure118.pdf> <./pgffigures/pgf-graphs-
+01-figure119.pdf> <./pgffigures/pgf-graphs-01-figure120.pdf> <./pgffigures/pgf-
+graphs-01-figure121.pdf> <./pgffigures/pgf-graphs-01-figure_crossref4.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure124' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure125' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure123" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure123" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure124.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure124" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure124" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (96.84393pt too wide) in paragraph at lines 1305--1315
+Overfull \hbox (79.84644pt too wide) in paragraph at lines 1326--1336
 [][] [] 
  []
 
-[46 <./pgffigures/pgf-graphs-01-figure119.pdf> <./pgffigures/pgf-graphs-01-figu
-re120.pdf> <./pgffigures/pgf-graphs-01-figure121.pdf> <./pgffigures/pgf-graphs-
-01-figure122.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure125.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure126' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure127' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure125" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure125" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure126.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure126" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure126" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (96.84393pt too wide) in paragraph at lines 1316--1326
+Overfull \hbox (96.84393pt too wide) in paragraph at lines 1339--1349
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure127.md5'.
+[47 <./pgffigures/pgf-graphs-01-figure122.pdf> <./pgffigures/pgf-graphs-01-figu
+re123.pdf> <./pgffigures/pgf-graphs-01-figure124.pdf> <./pgffigures/pgf-graphs-
+01-figure125.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure128' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure129' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure127" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure127" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure128.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure128" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure128" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (66.17639pt too wide) in paragraph at lines 1328--1338
+Overfull \hbox (96.84393pt too wide) in paragraph at lines 1350--1360
 [][] [] 
  []
 
-[47 <./pgffigures/pgf-graphs-01-figure123.pdf> <./pgffigures/pgf-graphs-01-figu
-re124.pdf> <./pgffigures/pgf-graphs-01-figure125.pdf> <./pgffigures/pgf-graphs-
-01-figure126.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure129.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure130' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure131' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure129" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure129" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure130.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure130" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure130" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (79.37569pt too wide) in paragraph at lines 1340--1356
+Overfull \hbox (66.17639pt too wide) in paragraph at lines 1362--1372
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure131.md5'.
+[48 <./pgffigures/pgf-graphs-01-figure126.pdf> <./pgffigures/pgf-graphs-01-figu
+re127.pdf> <./pgffigures/pgf-graphs-01-figure128.pdf> <./pgffigures/pgf-graphs-
+01-figure129.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure132' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure133' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure131" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure131" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure132.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure132" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure132" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (130.56892pt too wide) in paragraph at lines 1358--1370
+Overfull \hbox (79.37569pt too wide) in paragraph at lines 1374--1390
 [][] [] 
  []
 
-[48 <./pgffigures/pgf-graphs-01-figure127.pdf> <./pgffigures/pgf-graphs-01-figu
-re128.pdf> <./pgffigures/pgf-graphs-01-figure129.pdf> <./pgffigures/pgf-graphs-
-01-figure130.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure133.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure134' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure135' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure133" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure133" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure134.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure134" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure134" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure135.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure135" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure135" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure136.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure136" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure136" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure137.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure137" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure137" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure138.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure138" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure138" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (95.18777pt too wide) in paragraph at lines 1398--1410
+Overfull \hbox (130.56892pt too wide) in paragraph at lines 1392--1404
 [][] [] 
  []
 
-[49 <./pgffigures/pgf-graphs-01-figure131.pdf> <./pgffigures/pgf-graphs-01-figu
-re132.pdf> <./pgffigures/pgf-graphs-01-figure133.pdf> <./pgffigures/pgf-graphs-
-01-figure134.pdf> <./pgffigures/pgf-graphs-01-figure135.pdf> <./pgffigures/pgf-
-graphs-01-figure136.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure139.md5'.
+[49 <./pgffigures/pgf-graphs-01-figure130.pdf> <./pgffigures/pgf-graphs-01-figu
+re131.pdf> <./pgffigures/pgf-graphs-01-figure132.pdf> <./pgffigures/pgf-graphs-
+01-figure133.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure136' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure137' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure138' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure139' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure140' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure141' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure139" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure139" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure140.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure140" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure140" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (91.88945pt too wide) in paragraph at lines 1412--1422
+Overfull \hbox (95.18777pt too wide) in paragraph at lines 1432--1444
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure141.md5'.
+[50 <./pgffigures/pgf-graphs-01-figure134.pdf> <./pgffigures/pgf-graphs-01-figu
+re135.pdf> <./pgffigures/pgf-graphs-01-figure136.pdf> <./pgffigures/pgf-graphs-
+01-figure137.pdf> <./pgffigures/pgf-graphs-01-figure138.pdf> <./pgffigures/pgf-
+graphs-01-figure139.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure142' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure143' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure141" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure141" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure142.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure142" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure142" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (69.63426pt too wide) in paragraph at lines 1424--1435
+Overfull \hbox (91.88945pt too wide) in paragraph at lines 1446--1456
 [][] [] 
  []
 
-[50 <./pgffigures/pgf-graphs-01-figure137.pdf> <./pgffigures/pgf-graphs-01-figu
-re138.pdf> <./pgffigures/pgf-graphs-01-figure139.pdf> <./pgffigures/pgf-graphs-
-01-figure140.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure143.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure144' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure145' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure143" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure143" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure144.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure144" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure144" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (71.71509pt too wide) in paragraph at lines 1437--1447
+Overfull \hbox (69.63426pt too wide) in paragraph at lines 1458--1469
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure145.md5'.
+[51 <./pgffigures/pgf-graphs-01-figure140.pdf> <./pgffigures/pgf-graphs-01-figu
+re141.pdf> <./pgffigures/pgf-graphs-01-figure142.pdf> <./pgffigures/pgf-graphs-
+01-figure143.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure146' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure147' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure145" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure145" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure146.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure146" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure146" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (48.38489pt too wide) in paragraph at lines 1449--1459
+Overfull \hbox (71.71509pt too wide) in paragraph at lines 1471--1481
 [][] [] 
  []
 
-[51 <./pgffigures/pgf-graphs-01-figure141.pdf> <./pgffigures/pgf-graphs-01-figu
-re142.pdf> <./pgffigures/pgf-graphs-01-figure143.pdf> <./pgffigures/pgf-graphs-
-01-figure144.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure147.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure148' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure149' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure147" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure147" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure148.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure148" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure148" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (79.13075pt too wide) in paragraph at lines 1461--1471
+Overfull \hbox (48.38489pt too wide) in paragraph at lines 1483--1493
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure149.md5'.
+[52 <./pgffigures/pgf-graphs-01-figure144.pdf> <./pgffigures/pgf-graphs-01-figu
+re145.pdf> <./pgffigures/pgf-graphs-01-figure146.pdf> <./pgffigures/pgf-graphs-
+01-figure147.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure150' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure151' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure149" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure149" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure150.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure150" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure150" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (98.75006pt too wide) in paragraph at lines 1473--1497
+Overfull \hbox (79.13075pt too wide) in paragraph at lines 1495--1505
 [][] [] 
  []
 
-[52 <./pgffigures/pgf-graphs-01-figure145.pdf> <./pgffigures/pgf-graphs-01-figu
-re146.pdf> <./pgffigures/pgf-graphs-01-figure147.pdf> <./pgffigures/pgf-graphs-
-01-figure148.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure151.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure152' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure153' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure151" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure151" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure152.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure152" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure152" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure153.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure153" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure153" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (103.552pt too wide) in paragraph at lines 1506--1520
+Overfull \hbox (98.75006pt too wide) in paragraph at lines 1507--1531
 [][] [] 
  []
 
-[53 <./pgffigures/pgf-graphs-01-figure149.pdf> <./pgffigures/pgf-graphs-01-figu
-re150.pdf> <./pgffigures/pgf-graphs-01-figure151.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure154.md5'.
+[53 <./pgffigures/pgf-graphs-01-figure148.pdf> <./pgffigures/pgf-graphs-01-figu
+re149.pdf> <./pgffigures/pgf-graphs-01-figure150.pdf> <./pgffigures/pgf-graphs-
+01-figure151.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure154' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure155' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure156' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure154" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure154" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure155.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure155" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure155" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (52.26743pt too wide) in paragraph at lines 1522--1536
+Overfull \hbox (103.552pt too wide) in paragraph at lines 1540--1554
 [][] [] 
- []
-
-\openout3 = `pgffigures/pgf-graphs-01-figure156.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure156" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure156" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure157.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure157" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure157" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure158.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure158" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure158" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure159.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure159" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure159" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure160.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure160" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure160" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (53.19669pt too wide) in paragraph at lines 1550--1563
-[]  [] 
  []
 
 [54 <./pgffigures/pgf-graphs-01-figure152.pdf> <./pgffigures/pgf-graphs-01-figu
-re153.pdf> <./pgffigures/pgf-graphs-01-figure154.pdf> <./pgffigures/pgf-graphs-
-01-figure155.pdf> <./pgffigures/pgf-graphs-01-figure156.pdf> <./pgffigures/pgf-
-graphs-01-figure157.pdf> <./pgffigures/pgf-graphs-01-figure158.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure161.md5'.
+re153.pdf> <./pgffigures/pgf-graphs-01-figure154.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure157' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure158' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure161" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure161" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure162.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure162" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure162" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure163.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure163" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure163" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (71.71407pt too wide) in paragraph at lines 1579--1592
+Overfull \hbox (52.26743pt too wide) in paragraph at lines 1556--1570
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure164.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure159' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure160' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure161' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure162' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure163' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
+Overfull \hbox (53.19669pt too wide) in paragraph at lines 1584--1597
+[]  [] 
+ []
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure164" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure164" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
+[55 <./pgffigures/pgf-graphs-01-figure155.pdf> <./pgffigures/pgf-graphs-01-figu
+re156.pdf> <./pgffigures/pgf-graphs-01-figure157.pdf> <./pgffigures/pgf-graphs-
+01-figure158.pdf> <./pgffigures/pgf-graphs-01-figure159.pdf> <./pgffigures/pgf-
+graphs-01-figure160.pdf> <./pgffigures/pgf-graphs-01-figure161.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure164' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure165' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure166' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[55 <./pgffigures/pgf-graphs-01-figure159.pdf> <./pgffigures/pgf-graphs-01-figu
-re160.pdf> <./pgffigures/pgf-graphs-01-figure161.pdf> <./pgffigures/pgf-graphs-
-01-figure162.pdf> <./pgffigures/pgf-graphs-01-figure163.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure165.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure165" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure165" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure166.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure166" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure166" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (58.39029pt too wide) in paragraph at lines 1602--1612
+Overfull \hbox (71.71407pt too wide) in paragraph at lines 1613--1626
 [][] [] 
  []
 
@@ -4174,439 +2059,137 @@ input{pgf-graphs-01}")...executed.
 \openout3 = `pgf-graphs-01.auxlock'.
 
 
-Overfull \hbox (63.92896pt too wide) in paragraph at lines 1614--1624
+Overfull \hbox (63.945pt too wide) in paragraph at lines 1628--1644
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure169.md5'.
+[56 <./pgffigures/pgf-graphs-01-figure162.pdf> <./pgffigures/pgf-graphs-01-figu
+re163.pdf> <./pgffigures/pgf-graphs-01-figure164.pdf> <./pgffigures/pgf-graphs-
+01-figure165.pdf> <./pgffigures/pgf-graphs-01-figure166.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure169' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure170' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure169" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure169" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure170.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure170" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure170" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (76.71474pt too wide) in paragraph at lines 1626--1639
+Overfull \hbox (58.39029pt too wide) in paragraph at lines 1646--1656
 [][] [] 
  []
 
-[56 <./pgffigures/pgf-graphs-01-figure164.pdf> <./pgffigures/pgf-graphs-01-figu
-re165.pdf> <./pgffigures/pgf-graphs-01-figure166.pdf> <./pgffigures/pgf-graphs-
-01-figure167.pdf> <./pgffigures/pgf-graphs-01-figure168.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure171.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure171' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure172' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure171" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure171" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure172.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure172" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure172" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (86.90984pt too wide) in paragraph at lines 1641--1653
+Overfull \hbox (63.92896pt too wide) in paragraph at lines 1658--1668
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure173.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure173' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure174' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure173" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure173" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[57 <./pgffigures/pgf-graphs-01-figure169.pdf> <./pgffigures/pgf-graphs-01-figu
-re170.pdf> <./pgffigures/pgf-graphs-01-figure171.pdf> <./pgffigures/pgf-graphs-
-01-figure172.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure174.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure174" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure174" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure175.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure175" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure175" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure176.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure176" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure176" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (79.84647pt too wide) in paragraph at lines 1706--1726
+Overfull \hbox (76.71474pt too wide) in paragraph at lines 1670--1683
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure177.md5'.
+[57 <./pgffigures/pgf-graphs-01-figure167.pdf> <./pgffigures/pgf-graphs-01-figu
+re168.pdf> <./pgffigures/pgf-graphs-01-figure169.pdf> <./pgffigures/pgf-graphs-
+01-figure170.pdf> <./pgffigures/pgf-graphs-01-figure171.pdf> <./pgffigures/pgf-
+graphs-01-figure172.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure175' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure176' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure177" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure177" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure178.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure178" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure178" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (4.64749pt too wide) in paragraph at lines 1728--1741
+Overfull \hbox (86.90984pt too wide) in paragraph at lines 1685--1697
 [][] [] 
  []
 
+===== Image 'pgffigures/pgf-graphs-01-figure177' is up-to-date. ======
 [58 <./pgffigures/pgf-graphs-01-figure173.pdf> <./pgffigures/pgf-graphs-01-figu
 re174.pdf> <./pgffigures/pgf-graphs-01-figure175.pdf> <./pgffigures/pgf-graphs-
 01-figure176.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure179.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure178' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure179' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure180' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure179" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure179" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure180.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure180" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure180" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure181.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure181" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure181" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (71.70905pt too wide) in paragraph at lines 1757--1772
+Overfull \hbox (79.84647pt too wide) in paragraph at lines 1750--1770
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure182.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure181' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure182' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure182" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure182" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure183.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure183" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure183" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (48.94305pt too wide) in paragraph at lines 1777--1794
-[] [] 
+Overfull \hbox (4.64749pt too wide) in paragraph at lines 1772--1785
+[][] [] 
  []
 
 [59 <./pgffigures/pgf-graphs-01-figure177.pdf> <./pgffigures/pgf-graphs-01-figu
 re178.pdf> <./pgffigures/pgf-graphs-01-figure179.pdf> <./pgffigures/pgf-graphs-
-01-figure180.pdf> <./pgffigures/pgf-graphs-01-figure181.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure184.md5'.
+01-figure180.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure183' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure184' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure185' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure184" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure184" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure185.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure185" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure185" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (89.22046pt too wide) in paragraph at lines 1796--1812
+Overfull \hbox (71.70905pt too wide) in paragraph at lines 1801--1816
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure186.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure186' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure187' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
+Overfull \hbox (48.94305pt too wide) in paragraph at lines 1821--1838
+[] [] 
+ []
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure186" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure186" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
+[60 <./pgffigures/pgf-graphs-01-figure181.pdf> <./pgffigures/pgf-graphs-01-figu
+re182.pdf> <./pgffigures/pgf-graphs-01-figure183.pdf> <./pgffigures/pgf-graphs-
+01-figure184.pdf> <./pgffigures/pgf-graphs-01-figure185.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure188' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure189' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure187.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure187" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure187" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-Overfull \hbox (66.15833pt too wide) in paragraph at lines 1814--1825
+Overfull \hbox (89.22046pt too wide) in paragraph at lines 1840--1856
 [][] [] 
  []
 
-\openout3 = `pgffigures/pgf-graphs-01-figure188.md5'.
+===== Image 'pgffigures/pgf-graphs-01-figure190' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure191' is up-to-date. ======
 
-\openout3 = `pgf-graphs-01.auxlock'.
+Overfull \hbox (66.15833pt too wide) in paragraph at lines 1858--1869
+[][] [] 
+ []
 
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure188" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure188" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
+===== Image 'pgffigures/pgf-graphs-01-figure192' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure193' is up-to-date. ======
+[61 <./pgffigures/pgf-graphs-01-figure186.pdf> <./pgffigures/pgf-graphs-01-figu
+re187.pdf> <./pgffigures/pgf-graphs-01-figure188.pdf> <./pgffigures/pgf-graphs-
+01-figure189.pdf> <./pgffigures/pgf-graphs-01-figure190.pdf> <./pgffigures/pgf-
+graphs-01-figure191.pdf>]
+===== Image 'pgffigures/pgf-graphs-01-figure194' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure195' is up-to-date. ======
+===== Image 'pgffigures/pgf-graphs-01-figure196' is up-to-date. ======
+[62 <./pgffigures/pgf-graphs-01-figure192.pdf> <./pgffigures/pgf-graphs-01-figu
+re193.pdf> <./pgffigures/pgf-graphs-01-figure194.pdf> <./pgffigures/pgf-graphs-
+01-figure195.pdf> <./pgffigures/pgf-graphs-01-figure196.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1933.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1933.
 
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure189.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure189" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure189" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[60 <./pgffigures/pgf-graphs-01-figure182.pdf> <./pgffigures/pgf-graphs-01-figu
-re183.pdf> <./pgffigures/pgf-graphs-01-figure184.pdf> <./pgffigures/pgf-graphs-
-01-figure185.pdf> <./pgffigures/pgf-graphs-01-figure186.pdf> <./pgffigures/pgf-
-graphs-01-figure187.pdf>]
-\openout3 = `pgffigures/pgf-graphs-01-figure190.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure190" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure190" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-\openout3 = `pgffigures/pgf-graphs-01-figure191.md5'.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure191" "\
-def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure191" "\def\tikzexternalrealjob{pgf-graphs-01}\
-input{pgf-graphs-01}")...executed.
-
-\openout3 = `pgf-graphs-01.auxlock'.
-
-[61 <./pgffigures/pgf-graphs-01-figure188.pdf> <./pgffigures/pgf-graphs-01-figu
-re189.pdf> <./pgffigures/pgf-graphs-01-figure190.pdf> <./pgffigures/pgf-graphs-
-01-figure191.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1862.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1862.
- (pgf-graphs-01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1862.
-
-===== tikzexternal: \end{document} reached. Working on rescheduled images to re
-solve references... ========
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef0" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref0" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef1" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref1" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef2" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref2" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef3" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref3" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pgffigures/pgf-graphs-01-figure_crossr
-ef4" "\def\tikzexternalrealjob{pgf-graphs-01}\input{pgf-graphs-01}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pgffigures/pgf-graphs-01-figure_crossref4" "\def\tikzexternalrealjob{pgf-grap
-hs-01}\input{pgf-graphs-01}")...executed.
-
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1862.
+(pgf-graphs-01.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1933.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1933.
 
 Package rerunfilecheck Info: File `pgf-graphs-01.out' has not changed.
-(rerunfilecheck)             Checksum: 0799E9FD39AF20C712B5A3D43701DA63;2022.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1862.
+(rerunfilecheck)             Checksum: 6976355427B8C9398C8509D51D2935AF;2196.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1933.
  ) 
 Here is how much of TeX's memory you used:
- 52098 strings out of 493308
- 1334818 string characters out of 3138735
- 1663402 words of memory out of 3000000
- 54579 multiletter control sequences out of 15000+200000
+ 52599 strings out of 493308
+ 1350543 string characters out of 3138735
+ 1680438 words of memory out of 3000000
+ 55050 multiletter control sequences out of 15000+200000
  533251 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,10n,96p,10391b,878s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{pgfplotslink.0.2} has been referenced but does no
+pdfTeX warning (dest): name{pgfplotslink.1.2} has been referenced but does no
 t exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{pgfplotslink.0.1} has been referenced but does not 
+pdfTeX warning (dest): name{pgfplotslink.1.1} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{pgfplotslink.0.0} has been referenced but does not 
+pdfTeX warning (dest): name{pgfplotslink.1.0} has been referenced but does not 
 exist, replaced by a fixed one
 
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
@@ -4615,22 +2198,23 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on pgf-graphs-01.pdf (61 pages, 1960288 bytes).
+amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on pgf-graphs-01.pdf (62 pages, 2130224 bytes).
 PDF statistics:
- 2871 PDF objects out of 2984 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 1292 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2959 PDF objects out of 2984 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 1358 words of extra memory for PDF output out of 10000 (max. 10000000)
 

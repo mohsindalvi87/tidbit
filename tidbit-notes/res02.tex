@@ -38,6 +38,12 @@
 &  \multiline {\item Results obtained by using double quaternions are coordinate frame invariant. } \\
 
 % ---------------------------------------------------------
+\hline  \multiline { \item\textbf{laviola2003} \cite{laviola2003a}    \item\textit{A Comparison of Unscented and Extended Kalrnan Filtering for Estimating Quaternion Motion}   \item Joseph J. LaViola Jr.    \item Proceedings of the American Control Conference Denver, Colorado June 4-6,2003 } 
+&  \multiline{ \item Quaternion    \item EKF \item UKF }
+&  \multiline{ \item objec    \item method sampling rates 25, 80, 215 \si{Hz}   \item Ground truth obtained by passing data through zero phase shift filter to remove high-frequency noise. \item Avg over Monte Carlo runs taken and RMS error of rotation parameter $ \theta $ is calculated as $ \sqrt{ \tfrac{1}{2} \sum \limits ^{n-1} _{i=0} e^{2}_{i}} $ where $ e_{i} = \tfrac{2(180)}{\pi} \arccos( \text{Sc}(q_{i} (\hat{q}_{i})^{-1} ) ) $   \item disc } 
+&  \multiline {\item concl    \item gap } \\
+
+% ---------------------------------------------------------
 \hline  \multiline { \item\textbf{lee2012a} \cite{lee2012a}    \item\textit{Estimation of {A}ttitude and {E}xternal {A}cceleration {U}sing {I}nertial {S}ensor {M}easurement {D}uring {V}arious {D}ynamic {C}onditions}    \item Jung Keun Lee and Edward J. Park and Stephen N. Robinovitch    \item IEEE Transactions on Instrumentation and Measurement } 
 &  \multiline{ \item IMU  \item  attitude estimation  \item Kalman filter }
 &  \multiline{ \item objec    \item method    \item disc } 

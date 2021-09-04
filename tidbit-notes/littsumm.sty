@@ -1,0 +1,45 @@
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{littsumm}%
+[2014/08/20 v2.5 Make summary of research literature]
+
+
+
+
+\typeout{* }
+\typeout{littsumm: Package to format the summary of a research paper.}
+\typeout{littsumm Copyright (C) 2021  Mohsin Dalvi}
+\typeout{* }
+\typeout{This program comes with ABSOLUTELY NO WARRANTY.}
+\typeout{This is free software, and you are welcome to redistribute it}
+\typeout{under certain conditions.}
+\typeout{* }
+
+\RequirePackage{xcolor}
+
+
+\newcommand{\LScitekey}[2][red]{%
+	\noindent \textcolor{#1}{\textbf{#2}}%
+}%
+
+\newcommand{\LSauth}[2][green!50!black]{%
+	\textcolor{#1}{\textbf{#2}}%
+}%
+
+\newcommand{\LSjour}[2][blue!90!green]{%
+	\textcolor{#1}{\textit{#2}}%
+}%
+
+\newcommand{\LSyr}[2][blue!40!green]{%
+	\textcolor{#1}{\textbf{#2}}%
+}%
+
+\newcommand{\LSlink}[2][blue!50!red]{%
+	\textcolor{#1}{\underline{#2}}%
+}%
+
+
+
+\endinput
+%%
+%% End of file `littsumm.sty'.
+

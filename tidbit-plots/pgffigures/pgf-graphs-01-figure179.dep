@@ -1,3 +1,2 @@
-pgffigures/pgf-graphs-01-figure179.pdf: plotdata/group-1.dat
-pgffigures/pgf-graphs-01-figure179.pdf: plotdata/group-1.dat
-pgffigures/pgf-graphs-01-figure179.pdf: plotdata/group-1.dat
+pgffigures/pgf-graphs-01-figure179.pdf: pgfplotstable.example1.dat
+pgffigures/pgf-graphs-01-figure179.pdf: pgfplotstable.example1.dat

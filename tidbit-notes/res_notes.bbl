@@ -3,15 +3,15 @@
 \bibitem{lentin2019}
 Ramkumar Gandhinathan and Lentin Joseph.
 \newblock {\em {ROS} {R}obotics {P}rojects: {B}uild and control robots powered
-  by the {R}obot {O}perating {S}ystem, {M}achine {L}earning, and {V}irtual
-  {R}eality}.
+  by the {R}obot {O}perating {S}ystem, machine learning, and virtual reality}.
 \newblock Packt Publishing, 2 edition, 2019.
 
-\bibitem{hol2008}
-Jeroen Hol.
-\newblock {\em Pose Estimation and Calibration Algorithms for Vision and
-  Inertial Sensors}.
-\newblock PhD thesis, Link\"{o}ping University, Sweden, 2008.
+\bibitem{laviola2003a}
+Joseph~J. {L}a{V}iola, Jr.
+\newblock A comparison of unscented and extended kalrnan filtering for
+  estimating quaternion motion.
+\newblock In {\em Proceedings of the 2003 American Control Conference}, pages
+  2435--2440, 2003.
 
 \bibitem{lee2012a}
 Jung~Keun Lee, Edward~J. Park, and Stephen~N. Robinovitch.
@@ -36,9 +36,9 @@ Andre~Schneider de~Oliveira, Edson Roberto~De Pieri, and Ubirajara~Franco
 
 \bibitem{wang2012a}
 Xiangke Wang, Dapeng Han, Changbin Yu, and Zhiqiang Zheng.
-\newblock The geometric structure of unit quaternion with application in
+\newblock The geometric structure of unit dual quaternion with application in
   kinematic control.
-\newblock {\em Journal of Mathematical Analysis and Applications},
-  389:1352--1364, 2012.
+\newblock {\em Journal of Mathematical Analysis and Applications}, 389(2):1352
+  -- 1364, 2012.
 
 \end{thebibliography}
