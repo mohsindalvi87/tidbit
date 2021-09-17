@@ -58,11 +58,11 @@ class Quat:
     def __rmul__(self, scalar):
         return Quat( scalar*self.s, scalar * self.v )
     
-    def mulML(self):
+    def mmatL(self):
         return np.vstack(( np.hstack(( self.s, -self.v.T )), np.hstack(( \
                self.v.reshape(3,1), self.s*np.eye(3) + v2mskew(self.v) )) ))
     
-    def mulMR(self):
+    def mmatR(self):
         return np.vstack(( np.hstack(( self.s, -self.v.T )), np.hstack(( \
                self.v.reshape(3,1), self.s*np.eye(3) - v2mskew(self.v) )) ))
 
@@ -110,6 +110,50 @@ class Quat:
     def q2YPR(self):
         R = self.q2rotmat()
         return rotmat2YPR(R)
+    
+
+    def getpolar(self):
+        # from https://math.stackexchange.com/questions/1496308/how-can-i-express-a-quaternion-in-polar-form
+        qnorm = self.norm()  # quatnorm
+        if qnorm > 1e-6: 
+            vnorm = Quat(v=self.v).norm()  # vecnorm
+            theta = np.arctan2(vnorm/qnorm, self.s/qnorm)
+            vec = np.array([0,0,0]) if vnorm < 1e-9 else 1/vnorm * self.v
+            return theta, vec
+        else:
+            return 0, [0,0,0]
+    
+    def exp(self):
+        qnorm = self.norm()  # quatnorm
+        if qnorm > 1e-6: 
+            vnorm = Quat(v=self.v).norm()  # vecnorm
+            es = np.exp(self.s) # scalexp
+            s = np.cos(vnorm/qnorm)
+            v = [0,0,0] if vnorm < 1e-9 else np.sin(vnorm/qnorm)/vnorm*self.v
+            return es * Quat(s, v)
+        else:
+            return Quat(0, [0,0,0])
+        
+    def power(self,m):
+        qnorm = self.norm()  # quatnorm
+        if qnorm > 1e-6: 
+            theta, vec = self.unit().getpolar()
+            s = np.cos(m * theta)
+            v = np.sin(m * theta) * vec  # vec is already self.v/vnorm
+#             print(qnorm**m, theta, vec, s, v)
+            return (qnorm ** m) * Quat(s, v)
+        else:
+            return Quat(0, [0,0,0])
+        
+    def log(self):
+        qnorm = self.norm()  # quatnorm
+        if qnorm > 1e-6: 
+            theta, vec = getpolar(self.unit())
+            return Quat(np.log(qnorm), theta*vec)
+        else:
+            return Quat(0, [0,0,0])
+        
+
         
 def q_iden():
     return Quat( s=1 )
@@ -118,7 +162,16 @@ def q_iden():
 ##########################################
 
 
+def axisangle2q(axis, angle):
+#     axis = np.array(axis).astype(float)
+#     print(axis, axis*axis, sum(axis*axis))
+#     axis *= 1/np.sqrt(sum(axis*axis))
+#     print(axis, angle/2)
+#     return Quat(np.cos(angle/2), np.sin(angle/2)*axis)
+    return (Quat(s=np.cos(angle/2)) + np.sin(angle/2)*(Quat(v=axis).unit()) )
+
 def rotmat2q(R):
+    R = np.array(R)
     s = np.sqrt( R[0,0] + R[1,1] + R[2,2] + 1 ) / 2
     print(s)
     v0 = (R[2,1]-R[1,2]) / (2*s)
@@ -153,7 +206,7 @@ def rotmat2YPR(R):
 
 class DualQuat(Quat):
     def __init__( self, Re = Quat(1, [0,0,0]), Du = Quat(0, [0,0,0]) ):
-        self.Rl = Re  # super().__init__(in_Re)
+        self.Re = Re  # super().__init__(in_Re)
         self.Du = Du  # super().__init__(in_Du)
     
     def __repr__(self):
@@ -175,7 +228,7 @@ class DualQuat(Quat):
         return DualQuat(self.Re-p.Re, self.Du-p.Du)
         
     def __mul__(self, p):
-        real = self.Re*p.Rl
+        real = self.Re*p.Re
         dual = self.Re*p.Du + self.Du*p.Re
         return DualQuat( real, dual )
     
@@ -204,7 +257,7 @@ class DualQuat(Quat):
     
     def dq2angleaxisdist(self):
         angle, axis = self.Re.angleaxis()
-        tran = Quat( 2 * self.Du * self.Rl.conj() ).v
+        tran = Quat( 2 * self.Du * self.Re.conj() ).v
         return angle, axis, tran
     
 #     def norm(self):
@@ -255,34 +308,38 @@ def htm2dq(T):
 
 
 
-class SensorModel(DualQuat):
-    def __init__(self, ):
+# class SensorModel(DualQuat):
+#     def __init__(self, ):
+#         self.q=0
+#         self.b=0
+#         self.p_dt2=0
         
-    def make_cov_mat(self, file):
-        # add code for making cov matrix from stationary sensor csv data
+#     def make_cov_mat(self, file):
+#         temp=file
+#         # add code for making cov matrix from stationary sensor csv data
     
-    def make_state_vec(self, dT)
-#         return hstack(( self.p(dT), self.p_dt(dT), self.p_dt2(dT), q))
-        return hstack(( self.q(dT), self.b(dT), self.p_dt2(dT), q))
+#     def make_state_vec(self, dT):
+# #         return hstack(( self.p(dT), self.p_dt(dT), self.p_dt2(dT), q))
+#         return hstack(( self.q(dT), self.b(dT), self.p_dt2(dT), q))
     
-    def make_noise_covmat(self, acc_covvec, gyr_covvec):
-        diag = np.stack(( acc_covvec, acc_covvec, gyr_covvec ))
-        a = np.eye(len(diag))
-        return np.fill_diagonal(a, diag )
+#     def make_noise_covmat(self, acc_covvec, gyr_covvec):
+#         diag = np.stack(( acc_covvec, acc_covvec, gyr_covvec ))
+#         a = np.eye(len(diag))
+#         return np.fill_diagonal(a, diag )
 
     
     
     
-class EKF(SensorModel):
-    def __init__(self, in_Gcov, in_Acov, ):
-        return in_Gcov
+# class EKF(SensorModel):
+#     def __init__(self, in_Gcov, in_Acov, ):
+#         return in_Gcov
     
-    def make_F_mat(self, T)
+#     def make_F_mat(self, T):
     
-    def time_update():
+#     def time_update():
         
         
-    def meas_update():
+#     def meas_update():
 
 
 
