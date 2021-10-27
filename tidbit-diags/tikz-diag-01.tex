@@ -5,7 +5,7 @@
 \usepackage{caption}
 \usepackage{upgreek}
 
-\usepackage{tikz}
+\usepackage{tikz,tikz-layers}
 \usepackage{tikz-3dplot}
 \usetikzlibrary{arrows,calc,positioning,shadows,shapes,matrix}
 \usetikzlibrary{fit,chains,arrows.meta,shapes.geometric}
@@ -1101,11 +1101,12 @@ from https://tex.stackexchange.com/questions/489682/drawing-a-simple-plane-in-3d
 \draw[thick,->] (O) --++ (4.5,0,0) node[anchor=north east]{spot 0};     
 \draw[thick,->] (O) --++ (0,4.5,0) node[anchor=north east]{spot 1};     
 \draw[thick,->] (O) --++ (0,0,4.5) node[anchor=east]{spot 2};
+\begin{scope}[rotate around z=58.5]
+\filldraw[fill=blue!10, opacity=0.6] (0,-2,2) -- (0,-2,-2) --  (0,2,-2) -- (0,2,2) -- cycle;  
+%\draw[ thick] (0,2,0) -- (0,-2,0);
+\end{scope}
 \draw[->, ultra thick] (O)--(A) node[anchor=west]{$\Phi$};
 \draw[thick] ($(O)!4cm!270:(A)$) -- ($(O)!3cm!90:(A)$)  node[anchor=south east]{$X$};
-\begin{scope}%[rotate around z=45]
-\filldraw[fill=blue!10, opacity=0.6] (0,-2,2) -- (0,-2,-2) --  (0,2,-2) -- (0,2,2) -- cycle;  \draw[very thick] (0,2,0) -- (0,-2,0);
-\end{scope}
 \end{tikzpicture}
 
 
@@ -1221,20 +1222,19 @@ figure is self-made.
 \begin{tikzpicture}%[z={(-0.4,-0.4)},x={(1,0)},y={(0,1)}]
 %\draw[style=help lines] (-1,-1) grid +(5,5);
 \coordinate (fO) at (0,0,0);
-\path [-latex, thick] (fO) edge (1.1,0,0) edge (0,1.1,0) edge (0,0,1.1) node [left, pos=0, anchor=east] {O};
 \coordinate (fN) at (7.5,0,3);
-\path [-latex, rotate around ={20:(10,0)}, rotate around y=10, thick] (fN) edge +(1.1,0,0) edge +(0,1.1,0) edge +(0,0,1.1) node [above, anchor=north west] {N};
-
 \coordinate (fD) at (7.7,0,8.5);
+\coordinate (ax) at (4,0,7);
+\path [-latex, blue, thick] (fO) edge (1.1,0,0) edge (0,1.1,0) edge (0,0,1.1) node [left, pos=0, anchor=east] {O};
+\path [-latex, blue, rotate around ={20:(10,0)}, rotate around y=10, thick] (fN) edge +(1.1,0,0) edge +(0,1.1,0) edge +(0,0,1.1) node [above, anchor=north west] {N};
 \draw [-latex, thin] (fO) -- (fD);
-\path[-latex, green!70!black, bend left=45] (fO) edge  node[right,pos=0.75]{$|\mathbf{\uptheta}|$} (fD);
+\path[-latex, green!70!black, bend left=35] (fO) edge  node[right,pos=0.75]{$|\mathbf{\uptheta}|$} (fD);
 \draw [green!70!black, -latex] (fD) -- node[right,pos=0.5]{$\mathbf{d}$} (fN);
 
-\coordinate (ax) at (4,0,7);
 \draw [-latex,] (ax) +(0,0,2)  --  node[right,pos=1]{$\mathbf{n}$}  +(0,0,-10);
 \path[dashed]  (ax)  edge  node[left,pos=0.5]{$\mathbf{c}$} (fO)  edge   node[below,pos=0.5]{$\mathbf{l}$}  (fD); 
 
-%\fill[fill=yellow,opacity=0.3]  (fO)  --  node[left,pos=0.5]{$\mathbf{c}$} (ax)  --   node[below,pos=0.5]{$\mathbf{l}$}  (fD) to[out=97,in=9] (fO) ; 
+\fill[fill=green!50!yellow,opacity=0.1]  (fO)  --  node[left,pos=0.5]{$\mathbf{c}$} (ax)  --   node[below,pos=0.5]{$\mathbf{l}$}  (fD) to[out=108,in=-2] (fO) ; 
 %\node at (6,0,8.5) {$l$};
 \draw [blue!20!red,-latex] (fO) to[out=0,in=160] node[above,pos=0.75]{$\mathbf{p}^b$} (fN);
 \RightAngle{(fO)}{(ax)}{(fD)}; 
@@ -1261,8 +1261,8 @@ from https://tex.stackexchange.com/questions/46682/making-a-3d-colored-pyramid-i
 \coordinate[label={$(5,0,0)$}] (A3) at (5,0,0);
 \coordinate[label={$(3,0,0)$}] (B1) at (3,0,0);
 \coordinate[label={$(0,0,2)$}] (B2) at (0,0,2);
-\coordinate[label={$(2,0,2)$}] (B3) at (2,0,2);
-\coordinate[label={$(0,3,3)$}] (C2) at (0,3,3);
+\coordinate[label={$(3,0,2)$}] (B3) at (3,0,2);
+\coordinate[label={$(0,3,2)$}] (C2) at (0,3,2);
 \coordinate[label={$(3,2,0)$}] (C3) at (3,2,0);
 
 %draw[fill=black,opacity=0.1] (O)--(B2)--(B3)--(B1)
@@ -1344,20 +1344,85 @@ important line/.style={thick}, dashed line/.style={dashed, thick}, every node/.s
 
 
 
+% ================================================
+
+from https://ctan.math.illinois.edu/graphics/pgf/contrib/tikz-layers/tikz-layers-doc.pdf
+
+
+\begin{tikzpicture}[ node distance=-1mm, every node/.style={circle, text width=2cm, align=center, node font=\scriptsize}]%
+
+\node[rectangle, fill=red, minimum height=1cm, opacity=.9, text width=6cm, align=left, outer sep=5mm] (main) at (0,0) {main layer};
+
+\begin{scope}[on glass layer]
+\node[fill=blue!20, above=of main.center] (glass) {glass\\layer};
+\end{scope}
+
+\begin{scope}[on background layer={fill=yellow!90!black}]
+\fill (main.south west) rectangle (main.north east)
+node [rectangle, anchor=north east, minimum size=0pt] {background};
+\end{scope}
+
+\begin{scope}[on above layer]
+\node[fill=green!80, below right=of main.center] (above) {above\\layer};
+\end{scope}
+
+\begin{scope}[on behind layer]
+\node[fill=magenta!90, below left=of main.center] (behind) {behind\\layer};
+\end{scope}
+\end{tikzpicture}
+
+
+
+
+% ================================================
+
+from https://tex.stackexchange.com/questions/17204/drawing-polyhedra-using-tikz-with-semi-transparent-and-shading-effect
+
+
+\begin{tikzpicture}[thick,scale=5]
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\coordinate (A1) at (0,0);
+\coordinate (A2) at (0.6,0.2);
+\coordinate (A3) at (1,0);
+\coordinate (A4) at (0.4,-0.2);
+\coordinate (B1) at (0.5,0.5);
+\coordinate (B2) at (0.5,-0.5);
+
+\begin{scope}[thick,dashed,,opacity=0.6]
+\draw (A1) -- (A2) -- (A3);
+\draw (B1) -- (A2) -- (B2);
+\end{scope}
+\draw[fill=cof,opacity=0.6] (A1) -- (A4) -- (B1);
+\draw[fill=pur,opacity=0.6] (A1) -- (A4) -- (B2);
+\draw[fill=greeo,opacity=0.6] (A3) -- (A4) -- (B1);
+\draw[fill=greet,opacity=0.6] (A3) -- (A4) -- (B2);
+\draw (B1) -- (A1) -- (B2) -- (A3) --cycle;
+\end{tikzpicture}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+\begin{tikzpicture} [thick, z={(0, 1)}, x={(-0.866, -0.5)}, y={(-1,-1)},] %
+\newcommand{\x}{2.5};  \newcommand{\y}{1.5};  \newcommand{\z}{.5};
+\coordinate (A1) at (\x,\y,\z); \coordinate (B1) at (\x,\y,-\z);
+\coordinate (A2) at (-\x,\y,\z); \coordinate (B2) at (-\x,\y,-\z);
+\coordinate (A3) at (-\x,-\y,\z); \coordinate (B3) at (-\x,-\y,-\z);
+\coordinate (A4) at (\x,-\y,\z); \coordinate (B4) at (\x,-\y,-\z);
+\filldraw[gray!8,draw=gray!20] (A1) -- (A2) -- (A3) -- (A4) -- cycle ;
+\fill[gray!32,draw=gray!40] (A1) -- (A2) -- (B2) -- (B1) -- cycle ;
+\fill[gray!16,draw=gray!25] (A1) -- (A4) -- (B4) -- (B1) -- cycle ;
+%\path[gray!60] (A1) edge (A4) edge (A2) edge (B1) ; 
+\path[gray!50, dashed] (B3) edge (B4) edge (B2) edge (A3) ; 
+%\draw[gray!40] (B4) -- (B1) -- (B2) -- (A2) -- (A3) -- (A4) -- cycle ;
+\path[-latex, thick] ($(A1)!.5!(B3)$) edge[red!80!purple] ($(A1)!.5!(B4)$) edge[green!60!brown]  ($(A1)!.5!(B2)$) edge[blue!80!cyan] ($(A1)!.5!(A3)$) ;
+\path[dotted, gray!50] ($(A1)!.5!(B3)$) edge[red!80!purple] ($(A2)!.5!(B3)$) edge[green!60!brown]  ($(A4)!.5!(B3)$) edge[blue!80!cyan] ($(B1)!.5!(B3)$) ;
+\end{tikzpicture}
 
 
 

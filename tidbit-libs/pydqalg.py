@@ -274,9 +274,6 @@ class DualQuat(Quat):
 def dq_iden():
     return DualQuat( q_iden(), Quat(0, [0,0,0]) )
 
-    
-##########################################
-
 def rqtq2dq(rotq, transq):
     dualpart = (0.5 * transq) * rotq.conj()
     return DualQuat( Rotq, dualpart )
@@ -286,6 +283,9 @@ def htm2dq(T):
     rq = Quat.rot2q( T[0:4,0:4] )
     return DualQuat.rqtq2dq( rq, tq )
 
+
+    
+##########################################
 
 
 
@@ -340,20 +340,6 @@ def htm2dq(T):
         
         
 #     def meas_update():
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -455,3 +441,6 @@ class SerialRobot:
             
             
 
+            
+            
+            

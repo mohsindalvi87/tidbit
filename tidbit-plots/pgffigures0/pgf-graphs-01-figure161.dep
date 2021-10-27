@@ -1,0 +1,4 @@
+pgffigures/pgf-graphs-01-figure161.pdf: plotdata/pgfplots_scatterdata1.dat
+pgffigures/pgf-graphs-01-figure161.pdf: plotdata/pgfplots_scatterdata2.dat
+pgffigures/pgf-graphs-01-figure161.pdf: plotdata/pgfplots_scatterdata1_latent.dat
+pgffigures/pgf-graphs-01-figure161.pdf: plotdata/pgfplots_scatterdata2_latent.dat
